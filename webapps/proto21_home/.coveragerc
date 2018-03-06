@@ -1,0 +1,3 @@
+[run]
+source = proto21_home
+omit = proto21_home/test*
