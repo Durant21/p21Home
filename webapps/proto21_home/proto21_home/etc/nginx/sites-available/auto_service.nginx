@@ -11,7 +11,7 @@ server {
         gzip_buffers    8 256k;
         uwsgi_buffers   8 256k;
 
-        alias /webapps/restful-services-in-pyramid/src/deployment/restful_auto_service/restful_auto_service/static;
+        alias /root/webapps/p21Home/webapps/proto21_home/proto21_home/static;
         expires 365d;
     }
     location / {
