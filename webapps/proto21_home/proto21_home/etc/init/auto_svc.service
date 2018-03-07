@@ -1,11 +1,11 @@
 [Unit]
-Description=uWSGI Auto Service server instance
+Description=uWSGI Proto21_home server instance
 After=syslog.target
 
 [Service]
-ExecStart=/usr/local/bin/uwsgi --ini-paste /webapps/restful-services-in-pyramid/src/deployment/restful_auto_service/production.ini
+ExecStart=/usr/local/bin/uwsgi --ini-paste /root/webapps/p21Home/webapps/proto21_home/production.ini
 # Requires systemd version 211 or newer
-RuntimeDirectory=/webapps/restful-services-in-pyramid/src/deployment/restful_auto_service/
+RuntimeDirectory=/root/webapps/p21Home/webapps/proto21_home/
 Restart=always
 KillSignal=SIGQUIT
 Type=notify
