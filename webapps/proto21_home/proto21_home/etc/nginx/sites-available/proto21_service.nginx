@@ -11,7 +11,7 @@ server {
         gzip_buffers    8 256k;
         uwsgi_buffers   8 256k;
 
-        alias /root/webapps/p21Home/webapps/proto21_home/proto21_home/static;
+        alias /webapps/proto21/p21Home/webapps/proto21_home/proto21_home/static;
         expires 365d;
     }
     location / {

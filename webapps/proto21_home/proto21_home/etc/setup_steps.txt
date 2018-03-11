@@ -27,6 +27,9 @@ mkdir /webapps/logs/auto_service
 mkdir /webapps/logs/auto_service/app_log
 cd /webapps
 
+# working dir
+/webapps/proto21/p21Home/webapps/proto21_home
+
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=360000'
 
@@ -37,7 +40,7 @@ cd /webapps/restful-services-in-pyramid/src/deployment/restful_auto_service/
 python3 setup.py develop
 
 
-/webapps/restful-services-in-pyramid/src/deployment/restful_auto_service/restful_auto_service/etc/init/auto_svc.service /etc/systemd/system/
+cp /webapps/proto21/p21Home/webapps/proto21_home/proto21_home/etc/init/proto_svc.service /etc/systemd/system/
 
 systemctl start auto_svc
 systemctl enable auto_svc
@@ -47,7 +50,7 @@ systemctl status auto_svc
 # CAREFUL HERE. If you are using default, maybe skip this
 rm /etc/nginx/sites-enabled/default
 
-cp /webapps/restful-services-in-pyramid/src/deployment/restful_auto_service/restful_auto_service/etc/nginx/sites-available/auto_service.nginx /etc/nginx/sites-available/
+cp /webapps/proto21/p21Home/webapps/proto21_home/proto21_home/etc/nginx/sites-available/proto21_service.nginx /etc/nginx/sites-available/
 
 update-rc.d nginx enable
 
