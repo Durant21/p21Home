@@ -1,5 +1,5 @@
 [Unit]
-Description=uWSGI Proto21_home server instance
+Description=uWSGI proto21_home server instance
 After=syslog.target
 
 [Service]

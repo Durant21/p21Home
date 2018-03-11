@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name dev1.proto21.com;
+    server_name www.dev1.proto21.com;
     server_tokens off;
 
     charset utf-8;
