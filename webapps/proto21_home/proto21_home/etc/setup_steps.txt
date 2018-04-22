@@ -33,10 +33,10 @@ cd /webapps
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=360000'
 
-git clone https://github.com/mikeckennedy/restful-services-in-pyramid.git
+git clone https://github.com/Durant21/p21Home.git
 
 
-cd /webapps/restful-services-in-pyramid/src/deployment/restful_auto_service/
+cd /webapps/proto21/p21Home/webapps/proto21_home/
 python3 setup.py develop
 
 
