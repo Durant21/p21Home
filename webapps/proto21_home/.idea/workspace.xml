@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.ini" pinned="false" current-in-tab="true">
+      <file leaf-file-name="production.ini" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/production.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="120">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mytemplate.pt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mytemplate.pt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proto21_home/templates/mytemplate.pt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -90,8 +90,8 @@
       <file leaf-file-name="proto21_svc.service" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto21_home/etc/init/proto21_svc.service">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="62" />
+            <state relative-caret-position="225">
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -133,10 +133,10 @@
         <option value="$PROJECT_DIR$/proto21_home/etc/nginx/sites-available/auto_service.nginx" />
         <option value="$PROJECT_DIR$/proto21_home/etc/init/proto21_svc.service" />
         <option value="$PROJECT_DIR$/proto21_home/templates/layout.pt" />
-        <option value="$PROJECT_DIR$/proto21_home/templates/mytemplate.pt" />
         <option value="$PROJECT_DIR$/proto21_home/etc/nginx/sites-available/proto21_service.nginx" />
         <option value="$PROJECT_DIR$/proto21_home/etc/setup_steps.txt" />
         <option value="$PROJECT_DIR$/production.ini" />
+        <option value="$PROJECT_DIR$/proto21_home/templates/mytemplate.pt" />
       </list>
     </option>
   </component>
@@ -183,13 +183,6 @@
               <item name="proto21_home" type="462c0819:PsiDirectoryNode" />
               <item name="proto21_home" type="462c0819:PsiDirectoryNode" />
               <item name="etc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proto21_home" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proto21_home" type="462c0819:PsiDirectoryNode" />
-              <item name="proto21_home" type="462c0819:PsiDirectoryNode" />
-              <item name="etc" type="462c0819:PsiDirectoryNode" />
-              <item name="init" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="proto21_home" type="b2602c69:ProjectViewProjectNode" />
@@ -677,17 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/mytemplate.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#311#317#0#HTML" expanded="true" />
-            <element signature="e#362#368#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proto21_home/etc/setup_steps.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -720,14 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/etc/init/proto21_svc.service">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/development.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -736,11 +710,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/etc/init/proto21_svc.service">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/production.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="120">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/mytemplate.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#311#317#0#HTML" expanded="true" />
+            <element signature="e#362#368#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
