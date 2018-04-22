@@ -8,13 +8,13 @@
     <meta name="author" content="Pylons Project">
     <link rel="shortcut icon" href="${request.static_url('proto21_home:static/pyramid-16x16.png')}">
 
-    <title>Proto21.com</title>
+    <title>Proto21 Blog</title>
 
     <!-- Bootstrap core CSS -->
     <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this scaffold -->
-    <link href="${request.static_url('proto21_home:static/theme.css')}" rel="stylesheet">
+    <link href="${request.static_url('proto21_home:static/blog_theme.css')}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
