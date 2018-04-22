@@ -40,7 +40,7 @@ cd /webapps/restful-services-in-pyramid/src/deployment/restful_auto_service/
 python3 setup.py develop
 
 
-cp /webapps/proto21/p21Home/webapps/proto21_home/proto21_home/etc/init/proto_svc.service /etc/systemd/system/
+cp /webapps/proto21/p21Home/webapps/proto21_home/proto21_home/etc/init/proto21_svc.service /etc/systemd/system/
 
 systemctl start auto_svc
 systemctl enable auto_svc
