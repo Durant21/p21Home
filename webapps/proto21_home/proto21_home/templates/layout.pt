@@ -7,6 +7,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .stickyfooter {
+           position: fixed;
+           left: 0;
+           bottom: 0;
+            height: 100px;
+           width: 100%;
+           background-color: dimgray;
+           color: white;
+           text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,22 +31,30 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h3>Column 1</h3>
+      <h3>iMii</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <input type="button" class="btn btn-info" value="iMii" onclick="location.href='iMii';">
     </div>
     <div class="col-sm-4">
-      <h3>Column 2</h3>
+      <h3>GIS</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <input type="button" class="btn btn-info" value="GIS" onclick="location.href='gis';">
     </div>
     <div class="col-sm-4">
-      <h3>Column 3</h3>
+      <h3>Blog</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <input type="button" class="btn btn-info" value="Blog" onclick="location.href='blog';">
     </div>
   </div>
 </div>
+
+
+<footer class="stickyfooter">
+  <p>Footer Text</p>
+</footer>
 
 </body>
 </html>
