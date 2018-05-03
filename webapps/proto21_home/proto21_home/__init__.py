@@ -11,6 +11,7 @@ def main(global_config, **settings):
     config.add_route('blog','/blog')
     config.add_route( 'gis', '/gis' )
     config.add_route( 'iMii', '/iMii' )
+    config.add_route( 'pythonwebdevelopment', '/pythonwebdevelopment' )
 
 
     config.add_route( 'MiningCycle', '/MiningCycle' )

@@ -19,13 +19,32 @@
            color: white;
            text-align: center;
         }
+
+        .mm {
+            background-image: url("static/trees.jpg");
+            }
+
+        .q {
+            background-color: lightgray;
+            color:dodgerblue;
+
+        }
     </style>
 </head>
 <body>
 
-<div class="jumbotron text-center">
-  <h1>Proto21</h1>
-  <p>Resize this responsive page to see the effect!</p>
+<div class="jumbotron text-center mm">
+  <!--?<h1 class="q">Proto21</h1>-->
+    <!--?<p style="color:deepskyblue; font-family: Helvetica; font-size:70px;">Proto21</p>-->
+    <!--?<p style="color:deepskyblue; font-family: Helvetica; font-size:70px;">PROTO21</p>-->
+
+    <!--?<p style="color:deepskyblue; font-family: Verdana; font-size:70px;">Proto21</p>-->
+
+    <!--?<p style="color:deepskyblue; font-family: Arial Black; font-size:70px;">Proto21</p>-->
+
+    <p style="color:deepskyblue; font-family: Impact; font-size:70px;">Proto21</p>
+  <!--?<p>Resize this responsive page to see the effect!</p>-->
+
 </div>
 
 <div class="container">
@@ -47,6 +66,12 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         <input type="button" class="btn btn-info" value="Blog" onclick="location.href='blog';">
+    </div>
+    <div class="col-sm-4">
+        <h3>Python Web Development</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='pythonwebdevelopment';">
     </div>
   </div>
 </div>

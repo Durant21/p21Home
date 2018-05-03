@@ -52,3 +52,7 @@ def my_view8(request):
 @view_config(route_name='Reclaim', renderer='templates/Reclaim.pt')
 def my_view9(request):
     return {'project': 'Reclaim'}
+
+@view_config(route_name='pythonwebdevelopment', renderer='templates/pythonwebdevelopment.pt')
+def my_view10(request):
+    return {'project': 'pythonwebdevelopment'}

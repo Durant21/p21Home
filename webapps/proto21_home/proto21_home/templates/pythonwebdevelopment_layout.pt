@@ -91,9 +91,42 @@
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left">
-      <h1>GIS</h1>
+      <h1>Python Web Development</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
+    <h3>Language</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>IDE</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>Packages</h3>
+    <p>Lorem ipsum...</p>
+
+
+    <h3>Web Framework</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>UI</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>Platform</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>Source Control</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>OS</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>Data Objects</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>Web Server</h3>
+    <p>Lorem ipsum...</p>
+
+    <h3>Add ons</h3>
+    <p>Lorem ipsum...</p>
     </div>
 
 
