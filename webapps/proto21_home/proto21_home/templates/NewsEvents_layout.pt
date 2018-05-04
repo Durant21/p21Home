@@ -204,8 +204,8 @@
                 <!--?<p>Some text in the Modal..</p>-->
 
                   <div class="container">
-                          <h2>Edit item</h2>
-                          <form>
+                      <h2>Edit item</h2>
+                      <form>
                             <div class="form-group">
                               <label for="headline">headline:</label>
                               <input type="headline" class="form-control control-width" id="headline" placeholder="Enter headline">
@@ -226,8 +226,8 @@
                               <label><input type="checkbox"> Remember me</label>
                             </div>
                             <button type="submit" class="btn btn-default">Submit</button>
-                          </form>
-                        </div>
+                      </form>
+                  </div>
               </div>
 
             </div>
