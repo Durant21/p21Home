@@ -17,6 +17,7 @@
           <!--?<li><input type="button" class="btn btn-info" value="Mining Cycle" onclick="location.href='Discover';" ></li>-->
           <li><input type="button" class="button" value="HOME" onclick="location.href='iMii';" ></li>
           <li><input type="button" class="button" value="MINING CYCLE" onclick="location.href='MiningCycle';" ></li>
+          <li><input type="button" class="button" value="ABOUT" onclick="location.href='About';" ></li>
           <li><input type="button" class="button" value="TEACHER RESOURCES" onclick="location.href='TeacherResources';" ></li>
           <li><input type="button" class="button" value="NEWS & EVENTS" onclick="location.href='NewsEvents';" ></li>
       </ul>
