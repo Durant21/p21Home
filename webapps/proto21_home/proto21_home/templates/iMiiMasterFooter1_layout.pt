@@ -1,6 +1,6 @@
 <style>
     .stickyfooter {
-        position: fixed;
+        /*position: fixed;*/
         padding: 0px;
         left: 0;
         bottom: 0;

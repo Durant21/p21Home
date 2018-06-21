@@ -22,12 +22,12 @@
             font-family: Verdana, Geneva, sans-serif;
         }
     /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
+    .navbaruuu {
       margin-bottom: 0;
       border-radius: 0;
     }
 
-    .navbtn {
+    .navbtnuuu {
         font-size : 20px;
         white-space: normal;
         word-wrap: break-word;
@@ -37,18 +37,18 @@
     .row.content {height: 450px}
 
     /* Set gray background color and 100% height */
-    .sidenav {
+    .sidenavuu {
       padding-top: 20px;
       background-color: #f1f1f1;
       height: 100%;
     }
 
     /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
+    /*footeruu {*/
+      /*background-color: #555;*/
+      /*color: white;*/
+      /*padding: 15px;*/
+    /*}*/
 
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -58,16 +58,7 @@
       }
       .row.content {height:auto;}
     }
-    .stickyfooter {
-           position: fixed;
-           left: 0;
-           bottom: 0;
-            height: 100px;
-           width: 100%;
-           background-color: dimgray;
-           color: white;
-           text-align: center;
-        }
+
 
       .img1 {
     display: block;
@@ -176,24 +167,15 @@
                 </div>
 
             </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--?<br><br><br><br><br><br><br><br><br><br><br><br>-->
     </div>
 
 
   </div>
 </div>
 
-<!--?<footer class="stickyfooter">-->
-  <!--?<p>Footer Text</p>-->
-<!--?</footer>-->
-
-<!--?<div id="footer"></div>-->
-    <!--?<script>-->
-        <!--?$(document).ready(function(){-->
-            <!--?$("#footer").load("static/iMii_master_footer.html");-->
-        <!--?});-->
-    <!--?</script>-->
-
+<br><br><br><br><br><br><br><br><br><br><br><br>
+   <br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="includedFooter">ddd4</div>
 
     <script>

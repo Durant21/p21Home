@@ -66,16 +66,16 @@
       }
       .row.content {height:auto;}
     }
-    .stickyfooter {
-           position: fixed;
-           left: 0;
-           bottom: 0;
-            height: 100px;
-           width: 100%;
-           background-color: dimgray;
-           color: white;
-           text-align: center;
-        }
+    /*.stickyfooter {*/
+           /*position: fixed;*/
+           /*left: 0;*/
+           /*bottom: 0;*/
+            /*height: 100px;*/
+           /*width: 100%;*/
+           /*background-color: dimgray;*/
+           /*color: white;*/
+           /*text-align: center;*/
+        /*}*/
   </style>
 </head>
 <body>

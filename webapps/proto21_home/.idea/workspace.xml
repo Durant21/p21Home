@@ -10,10 +10,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/proto21_home$proto21_home.coverage" NAME="proto21_home Coverage Results" MODIFIED="1529623717979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/proto21_home$proto21_home.coverage" NAME="proto21_home Coverage Results" MODIFIED="1529623923104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ContactUs_layout.pt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/proto21_home/templates/ContactUs_layout.pt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CareerPathways_layout.pt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proto21_home/templates/CareerPathways_layout.pt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="58" column="31" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="iMii_layout.pt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto21_home/templates/iMii_layout.pt">
           <provider selected="true" editor-type-id="text-editor">
@@ -24,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="About_layout.pt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="About_layout.pt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto21_home/templates/About_layout.pt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="201" column="11" lean-forward="true" selection-start-line="201" selection-start-column="11" selection-end-line="201" selection-end-column="11" />
+            <state relative-caret-position="237">
+              <caret line="177" column="51" lean-forward="false" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -39,6 +59,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iMiiMasterFooter1_layout.pt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proto21_home/templates/iMiiMasterFooter1_layout.pt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="82" lean-forward="true" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -57,38 +87,18 @@
       <file leaf-file-name="ParticipatingOrganizations_layout.pt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto21_home/templates/ParticipatingOrganizations_layout.pt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+            <state relative-caret-position="973">
+              <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="People_layout.pt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proto21_home/templates/People_layout.pt">
+      <file leaf-file-name="MiningCycle_layout.pt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proto21_home/templates/MiningCycle_layout.pt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="419" column="0" lean-forward="false" selection-start-line="419" selection-start-column="0" selection-end-line="419" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Plan_layout.pt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proto21_home/templates/Plan_layout.pt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pythonwebdevelopment_layout.pt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proto21_home/templates/pythonwebdevelopment_layout.pt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1430">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="183">
+              <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -97,8 +107,8 @@
       <file leaf-file-name="TeacherResources_layout.pt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto21_home/templates/TeacherResources_layout.pt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2115">
-              <caret line="141" column="33" lean-forward="true" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+            <state relative-caret-position="130">
+              <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -174,23 +184,23 @@
         <option value="$PROJECT_DIR$/proto21_home/templates/testHeader_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/testHeader.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/iMii_layout.pt" />
-        <option value="$PROJECT_DIR$/proto21_home/templates/iMiiMasterFooter1_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/iMiiMasterFooter1.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/iMiiMasterHeader1.pt" />
-        <option value="$PROJECT_DIR$/proto21_home/templates/CareerPathways_layout.pt" />
-        <option value="$PROJECT_DIR$/proto21_home/templates/ContactUs_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/Curricula_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/Discover_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/Mine_layout.pt" />
-        <option value="$PROJECT_DIR$/proto21_home/templates/MiningCycle_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/NewsEvents_layout.pt" />
-        <option value="$PROJECT_DIR$/proto21_home/templates/ParticipatingOrganizations_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/People_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/Plan_layout.pt" />
-        <option value="$PROJECT_DIR$/proto21_home/templates/TeacherResources_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/__init__.py" />
         <option value="$PROJECT_DIR$/proto21_home/views.py" />
+        <option value="$PROJECT_DIR$/proto21_home/templates/iMiiMasterFooter1_layout.pt" />
+        <option value="$PROJECT_DIR$/proto21_home/templates/ParticipatingOrganizations_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/About_layout.pt" />
+        <option value="$PROJECT_DIR$/proto21_home/templates/MiningCycle_layout.pt" />
+        <option value="$PROJECT_DIR$/proto21_home/templates/TeacherResources_layout.pt" />
+        <option value="$PROJECT_DIR$/proto21_home/templates/CareerPathways_layout.pt" />
+        <option value="$PROJECT_DIR$/proto21_home/templates/ContactUs_layout.pt" />
       </list>
     </option>
   </component>
@@ -346,7 +356,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2752443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2752443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37785017" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -603,30 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/iMiiMasterFooter1_layout.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/CareerPathways_layout.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/ContactUs_layout.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="144" column="8" lean-forward="false" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proto21_home/templates/Curricula_layout.pt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -651,26 +637,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/MiningCycle_layout.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proto21_home/templates/NewsEvents_layout.pt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="351" column="0" lean-forward="false" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/ParticipatingOrganizations_layout.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -695,22 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1430">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/TeacherResources_layout.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="141" column="33" lean-forward="true" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/iMiiMasterHeader1.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -747,10 +701,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/iMiiMasterHeader1.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/iMiiMasterFooter1_layout.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="82" lean-forward="true" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/ParticipatingOrganizations_layout.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="973">
+          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/proto21_home/templates/About_layout.pt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="201" column="11" lean-forward="true" selection-start-line="201" selection-start-column="11" selection-end-line="201" selection-end-column="11" />
+        <state relative-caret-position="237">
+          <caret line="177" column="51" lean-forward="false" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/MiningCycle_layout.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/TeacherResources_layout.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/CareerPathways_layout.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="58" column="31" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/ContactUs_layout.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
           <folding />
         </state>
       </provider>
