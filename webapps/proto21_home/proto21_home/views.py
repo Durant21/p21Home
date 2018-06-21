@@ -74,3 +74,8 @@ def my_view12(request):
 @view_config(route_name='ContactUs', renderer='templates/ContactUs.pt')
 def my_view13(request):
     return {'project': 'ContactUs'}
+
+
+@view_config(route_name='testHeader', renderer='templates/testHeader.pt')
+def my_view14(request):
+    return {'project': 'testHeader'}

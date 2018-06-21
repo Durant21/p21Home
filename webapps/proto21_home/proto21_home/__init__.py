@@ -26,6 +26,7 @@ def main(global_config, **settings):
     config.add_route( 'Reclaim', '/Reclaim' )
     config.add_route( 'CareerPathways', '/CareerPathways' )
     config.add_route( 'ContactUs', '/ContactUs' )
+    config.add_route( 'testHeader', '/testHeader' )
 
     config.scan()
     return config.make_wsgi_app()
