@@ -53,6 +53,24 @@ def my_view8(request):
 def my_view9(request):
     return {'project': 'Reclaim'}
 
+@view_config(route_name='About', renderer='templates/About.pt')
+def my_view9a(request):
+    return {'project': 'About'}
+
 @view_config(route_name='pythonwebdevelopment', renderer='templates/pythonwebdevelopment.pt')
 def my_view10(request):
     return {'project': 'pythonwebdevelopment'}
+
+@view_config(route_name='ParticipatingOrganizations', renderer='templates/ParticipatingOrganizations.pt')
+def my_view11(request):
+    return {'project': 'ParticipatingOrganizations'}
+
+
+@view_config(route_name='CareerPathways', renderer='templates/CareerPathways.pt')
+def my_view12(request):
+    return {'project': 'CareerPathways'}
+
+
+@view_config(route_name='ContactUs', renderer='templates/ContactUs.pt')
+def my_view13(request):
+    return {'project': 'ContactUs'}

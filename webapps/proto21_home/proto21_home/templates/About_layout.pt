@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>iMii Reclaim</title>
+  <title>iMii About</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/aa.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -28,8 +27,10 @@
       border-radius: 0;
     }
 
-    .navbtnuuu {
-      font-size : 20px;
+    .navbtn {
+        font-size : 20px;
+        white-space: normal;
+        word-wrap: break-word;
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -67,6 +68,13 @@
            color: white;
            text-align: center;
         }
+
+      .img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
   </style>
 </head>
 <body>
@@ -100,35 +108,91 @@
 
    <div id="includedHeader">ddd4</div>
 
+
 <div class="container-fluid text-center">
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <!--?<p><a href="#">Link</a></p>-->
-      <!--?<p><a href="#">Link</a></p>-->
-      <!--?<p><a href="#">Link</a></p>-->
+
+    <div class="col-sm-5 text-left" style="padding-top: 15px;">
+        <div class="row">
+            <div class="col-sm-12" style="background-color:white; height: 200px;">
+                <img src="http://localhost/sites/images1/aboutcircle1.png" alt="image" class="img1" style="width:200px;height:200px;">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="background-color:white; height: 60px;">
+                <div class="col-sm-12" style="background-color:white; height: 50px;">
+                    <img src="http://localhost/sites/images1/aboutplus.png" alt="image" class="img1" style="width:75px;height:50px;">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="background-color:white; height: 200px;">
+                <img src="http://localhost/sites/images1/aboutcircle2.png" alt="image" class="img1" style="width:200px;height:200px;">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="background-color:white; height: 60px;">
+                <div class="col-sm-12" style="background-color:white; height: 50px;">
+                    <img src="http://localhost/sites/images1/aboutequal.png" alt="image" class="img1" style="width:75px;height:50px;">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="background-color:white; height: 200px;">
+                <img src="http://localhost/sites/images1/aboutcircle3.png" alt="image" class="img1" style="width:200px;height:200px;">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="background-color:white; height: 400px;">
+                <img src="http://localhost/sites/images1/AboutMedallionLarge.png" alt="image" class="img1" style="width:400px;height:400px;">
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br>
     </div>
-    <div class="col-sm-8 text-left">
-      <h1>Reclaim</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...
-      <!--?<input type="button" class="btn btn-info" value="People" onclick="location.href='http://www.esri.com';" >-->
-      <!--?<input type="button" class="btn btn-info" value="Curricula">-->
-      <!--?<input type="button" class="btn btn-info" value="Mine">-->
-      <!--?<input type="button" class="btn btn-info" value="Reclaim">-->
-      </p>
+    <div class="col-sm-7 text-left" style="background-color:white;">
+        <br>
+        <img src="http://localhost/sites/images1/abouttext1.png" alt="image" style="width:100%">
+        <img src="http://localhost/sites/images1/abouttext2.png" alt="image" style="width:100%">
+
     </div>
-    <div class="col-sm-2 sidenav">
-      <!--?<div class="well">-->
-        <!--?<p>ADS</p>-->
-      <!--?</div>-->
-      <!--?<div class="well">-->
-        <!--?<p>ADS</p>-->
-      <!--?</div>-->
+
+    <div class="col-sm-12" style="background-color:black;height: 40px;font-size: 25px; color: white;">
+        <p>WHAT WE AIM TO DO</p>
     </div>
+
+    <div class="col-sm-12 text-left" style="background-color:red;height: 85px;font-size: 10px; color: black;">
+            <div class="row">
+                <div class="col-sm-8" style="background-color:white;padding-top: 15px;">
+                    <img src="http://localhost/sites/images1/WhatWeAimToDo_left.png" alt="image" style="max-width:100%;height:auto;">
+
+                </div>
+                <div class="col-sm-4" style="background-color:white;padding-top: 15px;">
+                    <img src="http://localhost/sites/images1/WhatWeAimToDo_right.png" alt="image" style="max-width:100%;height:auto;">
+
+                </div>
+
+            </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
   </div>
 </div>
+
+<!--?<footer class="stickyfooter">-->
+  <!--?<p>Footer Text</p>-->
+<!--?</footer>-->
+
+<!--?<div id="footer"></div>-->
+    <!--?<script>-->
+        <!--?$(document).ready(function(){-->
+            <!--?$("#footer").load("static/iMii_master_footer.html");-->
+        <!--?});-->
+    <!--?</script>-->
 
 <div id="includedFooter">ddd4</div>
 

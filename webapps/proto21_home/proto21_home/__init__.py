@@ -13,16 +13,19 @@ def main(global_config, **settings):
     config.add_route( 'iMii', '/iMii' )
     config.add_route( 'pythonwebdevelopment', '/pythonwebdevelopment' )
 
-
     config.add_route( 'MiningCycle', '/MiningCycle' )
     config.add_route( 'TeacherResources', '/TeacherResources' )
+    config.add_route( 'ParticipatingOrganizations', '/ParticipatingOrganizations' )
     config.add_route( 'NewsEvents', '/NewsEvents' )
-
+    config.add_route( 'About', '/About' )
     config.add_route( 'Discover', '/Discover' )
     config.add_route( 'Plan', '/Plan' )
     config.add_route( 'People', '/People' )
     config.add_route( 'Curricula', '/Curricula' )
     config.add_route( 'Mine', '/Mine' )
     config.add_route( 'Reclaim', '/Reclaim' )
+    config.add_route( 'CareerPathways', '/CareerPathways' )
+    config.add_route( 'ContactUs', '/ContactUs' )
+
     config.scan()
     return config.make_wsgi_app()

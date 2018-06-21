@@ -8,6 +8,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+
+      img {
+            /*max-width: 100%;*/
+            /*max-height: 100%;*/
+          height: 100px;
+          width: 200px;
+        }
+
       .button {
             background-color: black;
             border: none;
@@ -28,7 +36,9 @@
     }
 
     .navbtn {
-      font-size : 20px;
+        font-size : 20px;
+        white-space: normal;
+        word-wrap: break-word;
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -71,31 +81,34 @@
 <body>
 
    <!--?   HEADER  -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<!--?<nav class="navbar navbar-inverse">-->
+  <!--?<div class="container-fluid">-->
+    <!--?<div class="navbar-header">-->
+      <!--?<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">-->
+        <!--?<span class="icon-bar"></span>-->
+        <!--?<span class="icon-bar"></span>-->
+        <!--?<span class="icon-bar"></span>-->
+      <!--?</button>-->
       <!--?<a class="navbar-brand" href="#">Logo</a>-->
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-          <li><input type="button" class="button navbtn" value="HOME" onclick="location.href='iMii';" ></li>
-          <li><input type="button" class="button navbtn" value="MINING CYCLE" onclick="location.href='MiningCycle';" ></li>
-          <li><input type="button" class="button navbtn" value="ABOUT" onclick="location.href='About';" ></li>
-          <li><input type="button" class="button navbtn" value="TEACHER RESOURCES" onclick="location.href='TeacherResources';" ></li>
-          <li><input type="button" class="button navbtn" value="NEWS & EVENTS" onclick="location.href='NewsEvents';" ></li>
-      </ul>
+    <!--?</div>-->
+    <!--?<div class="collapse navbar-collapse" id="myNavbar">-->
+      <!--?<ul class="nav navbar-nav">-->
+          <!--?<li><input type="button" class="button navbtn" value="HOME" onclick="location.href='iMii';" ></li>-->
+          <!--?<li><input type="button" class="button navbtn" value="MINING CYCLE" onclick="location.href='MiningCycle';" ></li>-->
+          <!--?<li><input type="button" class="button navbtn" value="ABOUT" onclick="location.href='About';" ></li>-->
+          <!--?<li><input type="button" class="button navbtn" value="TEACHER RESOURCES" onclick="location.href='TeacherResources';" ></li>-->
+          <!--?<li><input type="button" class="button navbtn" value="NEWS & EVENTS" onclick="location.href='NewsEvents';" ></li>-->
+      <!--?</ul>-->
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      <!--?<ul class="nav navbar-nav navbar-right">-->
+        <!--?<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+      <!--?</ul>-->
+    <!--?</div>-->
+  <!--?</div>-->
+<!--?</nav>-->
+
+   <div id="includedHeader">ddd4</div>
+
 
 <div class="container-fluid text-center">
   <div class="row content">
@@ -108,13 +121,75 @@
       <h1>Mining Cycle</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...
-      <!--?<input type="button" class="btn btn-info" value="Discover" onclick="location.href='Discover';" >-->
-      <!--?<input type="button" class="btn btn-info" value="Plan" onclick="location.href='Plan';" >-->
-      <!--?<input type="button" class="btn btn-info" value="Mine" onclick="location.href='Mine';">-->
-      <!--?<input type="button" class="btn btn-info" value="Reclaim" onclick="location.href='Reclaim';">-->
-      </p>
+
+
+            <div class="row">
+                <div class="col-sm-2" style="background-color:white;"></div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+                <div class="col-sm-2" style="background-color:white;">
+                    <!--?<img src="http://localhost/sites/images1/discover.png" alt="image" style="width:100%">-->
+                    <a href="Discover"  >
+                        <img src="http://localhost/sites/images1/discover.png" alt="Picture Description" style="width:100%">
+                    </a>
+                </div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2" style="background-color:white;"></div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-2" style="background-color:white;">
+                    <a href="Reclaim"  >
+                        <img src="http://localhost/sites/images1/reclaim.png" alt="Picture Description" style="width:100%">
+                    </a>
+                </div>
+                <div class="col-sm-2" style="background-color:white;">
+                    <!--?<img src="http://localhost/sites/images1/theminingcycle.png" alt="image" style="width:100%">-->
+                    <a href="MiningCycle"  >
+                        <img src="http://localhost/sites/images1/theminingcycle.png" alt="Picture Description" style="width:100%">
+                    </a>
+                </div>
+                <div class="col-sm-2" style="background-color:white;">
+                    <!--?<img src="http://localhost/sites/images1/plan.png" alt="image" style="width:100%">-->
+                    <a href="Plan"  >
+                        <img src="http://localhost/sites/images1/plan.png" alt="Picture Description" style="width:100%">
+                    </a>
+                </div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2" style="background-color:white;"></div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+                <div class="col-sm-2" style="background-color:white;">
+                    <!--?<img src="http://localhost/sites/images1/mine.png" alt="image" style="width:100%">-->
+                    <a href="Mine" >
+                        <img src="http://localhost/sites/images1/mine.png" alt="Picture Description" style="width:100%">
+                    </a>
+                </div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+                <div class="col-sm-1" style="background-color:white;"></div>
+                <div class="col-sm-2" style="background-color:white;"></div>
+            </div>
+        <!--?<div class="row">-->
+            <!--?<div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>-->
+            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
+            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
+            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">-->
+                <!--?<img src="http://localhost/sites/images/map1.png" alt="image" style="width:100%">-->
+            <!--?</div>-->
+            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
+            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
+            <!--?<div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>-->
+        <!--?</div>-->
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
     <div class="col-sm-2 sidenav">
       <!--?<div class="well">-->
@@ -131,11 +206,24 @@
   <!--?<p>Footer Text</p>-->
 <!--?</footer>-->
 
-<div id="footer"></div>
+<!--?<div id="footer"></div>-->
+    <!--?<script>-->
+        <!--?$(document).ready(function(){-->
+            <!--?$("#footer").load("static/iMii_master_footer.html");-->
+        <!--?});-->
+    <!--?</script>-->
+
+<div id="includedFooter">ddd4</div>
+
     <script>
+
         $(document).ready(function(){
-            $("#footer").load("static/iMii_master_footer.html");
-            //alert('trying to load testHeader');
+            $("#includedHeader").load("static/iMiiMasterHeader.html");
+        });
+
+
+        $(document).ready(function(){
+            $("#includedFooter").load("static/iMii_master_footer.html");
         });
     </script>
 
