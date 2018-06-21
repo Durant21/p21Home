@@ -61,6 +61,7 @@ def my_view9a(request):
 def my_view10(request):
     return {'project': 'pythonwebdevelopment'}
 
+
 @view_config(route_name='ParticipatingOrganizations', renderer='templates/ParticipatingOrganizations.pt')
 def my_view11(request):
     return {'project': 'ParticipatingOrganizations'}

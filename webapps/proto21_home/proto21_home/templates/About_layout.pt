@@ -115,39 +115,39 @@
     <div class="col-sm-5 text-left" style="padding-top: 15px;">
         <div class="row">
             <div class="col-sm-12" style="background-color:white; height: 200px;">
-                <img src="http://localhost/sites/images1/aboutcircle1.png" alt="image" class="img1" style="width:200px;height:200px;">
+                <img src="http://gis.podassoc.com/iMii_images/aboutcircle1.png" alt="image" class="img1" style="width:200px;height:200px;">
             </div>
 
         </div>
         <div class="row">
             <div class="col-sm-12" style="background-color:white; height: 60px;">
                 <div class="col-sm-12" style="background-color:white; height: 50px;">
-                    <img src="http://localhost/sites/images1/aboutplus.png" alt="image" class="img1" style="width:75px;height:50px;">
+                    <img src="http://gis.podassoc.com/iMii_images/aboutplus.png" alt="image" class="img1" style="width:75px;height:50px;">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12" style="background-color:white; height: 200px;">
-                <img src="http://localhost/sites/images1/aboutcircle2.png" alt="image" class="img1" style="width:200px;height:200px;">
+                <img src="http://gis.podassoc.com/iMii_images/aboutcircle2.png" alt="image" class="img1" style="width:200px;height:200px;">
             </div>
 
         </div>
         <div class="row">
             <div class="col-sm-12" style="background-color:white; height: 60px;">
                 <div class="col-sm-12" style="background-color:white; height: 50px;">
-                    <img src="http://localhost/sites/images1/aboutequal.png" alt="image" class="img1" style="width:75px;height:50px;">
+                    <img src="http://gis.podassoc.com/iMii_images/aboutequal.png" alt="image" class="img1" style="width:75px;height:50px;">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12" style="background-color:white; height: 200px;">
-                <img src="http://localhost/sites/images1/aboutcircle3.png" alt="image" class="img1" style="width:200px;height:200px;">
+                <img src="http://gis.podassoc.com/iMii_images/aboutcircle3.png" alt="image" class="img1" style="width:200px;height:200px;">
             </div>
 
         </div>
         <div class="row">
             <div class="col-sm-12" style="background-color:white; height: 400px;">
-                <img src="http://localhost/sites/images1/AboutMedallionLarge.png" alt="image" class="img1" style="width:400px;height:400px;">
+                <img src="http://gis.podassoc.com/iMii_images/AboutMedallionLarge.png" alt="image" class="img1" style="width:400px;height:400px;">
             </div>
         </div>
 
@@ -155,8 +155,8 @@
     </div>
     <div class="col-sm-7 text-left" style="background-color:white;">
         <br>
-        <img src="http://localhost/sites/images1/abouttext1.png" alt="image" style="width:100%">
-        <img src="http://localhost/sites/images1/abouttext2.png" alt="image" style="width:100%">
+        <img src="http://gis.podassoc.com/iMii_images/abouttext1.png" alt="image" style="width:100%">
+        <img src="http://gis.podassoc.com/iMii_images/abouttext2.png" alt="image" style="width:100%">
 
     </div>
 
@@ -167,11 +167,11 @@
     <div class="col-sm-12 text-left" style="background-color:red;height: 85px;font-size: 10px; color: black;">
             <div class="row">
                 <div class="col-sm-8" style="background-color:white;padding-top: 15px;">
-                    <img src="http://localhost/sites/images1/WhatWeAimToDo_left.png" alt="image" style="max-width:100%;height:auto;">
+                    <img src="http://gis.podassoc.com/iMii_images/WhatWeAimToDo_left.png" alt="image" style="max-width:100%;height:auto;">
 
                 </div>
                 <div class="col-sm-4" style="background-color:white;padding-top: 15px;">
-                    <img src="http://localhost/sites/images1/WhatWeAimToDo_right.png" alt="image" style="max-width:100%;height:auto;">
+                    <img src="http://gis.podassoc.com/iMii_images/WhatWeAimToDo_right.png" alt="image" style="max-width:100%;height:auto;">
 
                 </div>
 
