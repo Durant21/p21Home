@@ -76,6 +76,11 @@ def my_view13(request):
     return {'project': 'ContactUs'}
 
 
-@view_config(route_name='testHeader', renderer='templates/testHeader.pt')
+@view_config(route_name='iMiiMasterHeader1', renderer='templates/iMiiMasterHeader1.pt')
 def my_view14(request):
-    return {'project': 'testHeader'}
+    return {'project': 'iMiiMasterHeader1'}
+
+
+@view_config(route_name='iMiiMasterFooter1', renderer='templates/iMiiMasterFooter1.pt')
+def my_view15(request):
+    return {'project': 'iMiiMasterFooter1'}

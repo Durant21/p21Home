@@ -155,7 +155,11 @@
     <script>
 
         $(document).ready(function(){
-            $("#includedHeader").load("testHeader");
+            $("#includedHeader").load("iMiiMasterHeader1");
+        });
+
+        $(document).ready(function(){
+            $("#includedFooter").load("iMiiMasterFooter1");
         });
 
         // $(document).ready(function(){
@@ -163,9 +167,9 @@
         // });
 
 
-        $(document).ready(function(){
-            $("#includedFooter").load("static/iMii_master_footer.html");
-        });
+        // $(document).ready(function(){
+        //     $("#includedFooter").load("static/iMii_master_footer.html");
+        // });
 
 
     </script>

@@ -410,15 +410,22 @@
 <div id="includedFooter">ddd4</div>
 
     <script>
-
         $(document).ready(function(){
-            $("#includedHeader").load("static/iMiiMasterHeader.html");
+            $("#includedHeader").load("iMiiMasterHeader1");
         });
 
-
         $(document).ready(function(){
-            $("#includedFooter").load("static/iMii_master_footer.html");
+            $("#includedFooter").load("iMiiMasterFooter1");
         });
+
+        // $(document).ready(function(){
+        //     $("#includedHeader").load("static/iMiiMasterHeader.html");
+        // });
+        //
+        //
+        // $(document).ready(function(){
+        //     $("#includedFooter").load("static/iMii_master_footer.html");
+        // });
     </script>
 
 <script>
