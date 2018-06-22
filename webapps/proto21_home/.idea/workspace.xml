@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/proto21_home$proto21_home.coverage" NAME="proto21_home Coverage Results" MODIFIED="1529639141894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/proto21_home$proto21_home.coverage" NAME="proto21_home Coverage Results" MODIFIED="1529641022850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -54,11 +54,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.pt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewsEvents_layout.pt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/proto21_home/templates/NewsEvents_layout.pt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="266" column="18" lean-forward="true" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.pt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto21_home/templates/layout.pt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="280">
+              <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -84,21 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="About_layout.pt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proto21_home/templates/About_layout.pt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="177" column="51" lean-forward="false" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MiningCycle_layout.pt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto21_home/templates/MiningCycle_layout.pt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+            <state relative-caret-position="92">
+              <caret line="132" column="34" lean-forward="false" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -141,6 +148,8 @@
       <find>salmon</find>
       <find>img</find>
       <find>http://localhost/sites/images1</find>
+      <find>black</find>
+      <find>col-sm-</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -188,7 +197,6 @@
         <option value="$PROJECT_DIR$/proto21_home/templates/Curricula_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/Discover_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/Mine_layout.pt" />
-        <option value="$PROJECT_DIR$/proto21_home/templates/NewsEvents_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/People_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/Plan_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/__init__.py" />
@@ -201,6 +209,7 @@
         <option value="$PROJECT_DIR$/proto21_home/templates/CareerPathways_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/ContactUs_layout.pt" />
         <option value="$PROJECT_DIR$/proto21_home/templates/layout.pt" />
+        <option value="$PROJECT_DIR$/proto21_home/templates/NewsEvents_layout.pt" />
       </list>
     </option>
   </component>
@@ -210,7 +219,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="709" />
@@ -359,7 +368,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -631,14 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/NewsEvents_layout.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="351" column="0" lean-forward="false" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proto21_home/templates/People_layout.pt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -703,14 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proto21_home/templates/MiningCycle_layout.pt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proto21_home/templates/TeacherResources_layout.pt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -769,9 +762,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proto21_home/templates/layout.pt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="280">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/MiningCycle_layout.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="132" column="34" lean-forward="false" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto21_home/templates/NewsEvents_layout.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="266" column="18" lean-forward="true" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
