@@ -20,15 +20,15 @@
 
 <footer class="stickyfooter">
 
-    <div class="col-sm-12" style="background-color:rgb(227,82,109);height: 30px;">
+    <div class="col-sm-12" style="background-color:rgb(227,86,109);height: 30px;">
       <!--?Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.-->
         <br><br>
     </div>
-    <div class="col-sm-12" style="background-color:rgb(243,224,185);height: 5px;">
+    <div class="col-sm-12" style="background-color:rgb(243,224,184);height: 5px;">
       <!--?Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.-->
         <br>
     </div>
-    <div class="col-sm-12" style="background-color:rgb(227,82,109);height: 30px;">
+    <div class="col-sm-12" style="background-color:rgb(227,86,109);height: 30px;">
       <!--?Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.-->
         <br><br>
     </div>

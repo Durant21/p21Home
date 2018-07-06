@@ -30,7 +30,7 @@
     float: left;
     width: 66.66%;
     padding: 5px;
-    border: 1px solid black;
+    border: 0px solid black;
 }
 .column {
     float: left;
@@ -232,11 +232,7 @@
 
 <!--?      top      -->
 
-        <div class="div2a">
-           <H2>name</H2>
-           position/title
-           <br><br>
-        </div>
+
         <div class="div2b">
             <!-- Trigger/Open The Modal -->
             <button id="myBtn">...</button>
@@ -279,105 +275,43 @@
             </div>
 
         </div>
-        <div class="div1a">
-           Phone:
-        </div>
-        <div class="div1b">
-           E-mail:
-        </div>
+
 
         <div class="outer">
               <div class="row">
                 <div class="column">
-                  <img src=img_person.jpg" alt="person" style="width:100%">
+                  <img src="http://gis.podassoc.com/iMii_images/deb_shewfelt.png" alt="person" style="width:100%">
                     <br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
                 <div class="infoBox1">
-                  info 1
+                  <h3> Deb Shewfelt, M.Sc., P.Geo</h3>
                 </div>
                 <div class="infoBox1">
-                  info 2
+                  Senior Geologist, Director of Workforce Development
+                </div>
+                  <div class="infoBox1">
+                  North Rim/RESPEC
+                </div>
+                  <div class="infoBox1">
+                      <a href="mailto:Debra.Shewfelt@RESPEC.com">Debra.Shewfelt@RESPEC.com</a>
+                </div>
+                  <div class="infoBox1">
+
+                      <a href="http://www.northrim.ca" target="_blank">www.northrim.ca</a>
+                </div>
+                  <div class="infoBox1">
+
+                      <a href="http://www.respec.com" target="_blank">www.respec.com</a>
                 </div>
                 <div class="infoBox1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Deb Shewfelt, Senior Geologist at North Rim (www.northrim.ca), a Saskatoon-based geoscience / engineering consulting firm and wholly-owned subsidiary of RESPEC (www.respec.com), manages the company's talent pipeline as Director of Workforce Development and helps guide strategies as a member of the Board of Directors.  Deb completed an undergraduate degree in Geology and a secondary degree in Anthropology at the University of Manitoba and also holds a Master of Science degree in Geology from the University of Saskatchewan.  With Permission to Consult in potash, uranium and industrial minerals as a Professional Geoscientist, Ms. Shewfelt enjoys the variety of projects and challenges that geoscience consulting brings, and holds a particular interest in the creation of innovative digital work products that support the resource sector and its educational efforts.   Over the last 15 years, Deb has accrued research, consulting and management experience.  She is active in her local geoscience societies, volunteers as a member of CGEN (Canadian Geoscience Education Network), and also leads the APEGS (Association of Professional Engineers and Geoscientists of Saskatchewan) Student Engagement subcommittee.  Deb is also a mentor to young professionals through the Leadership Development Program at the University of Saskatchewan and represents North Rim on the Education and Training panel of iMii (International Minerals Innovation Institute).  Ms. Shewfelt has recently been peer nominated to sit on the U of S Natural Sciences Museum Redesign committee.
                 </div>
               </div>
         </div>
         <!--?      bottom      -->
 
-        <!--?      top      -->
-        <div class="div2a">
-           <H2>name</H2>
-           position/title
-           <br><br>
-        </div>
-        <div class="div2b">
-            <!-- Trigger/Open The Modal -->
-            <button id="myBtn">...</button>
 
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
 
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <!--?<p>Some text in the Modal..</p>-->
-
-                  <div class="container">
-                      <h2>Edit item</h2>
-                      <form>
-                            <div class="form-group">
-                              <label for="headline">headline:</label>
-                              <input type="headline" class="form-control control-width" id="headline" placeholder="Enter headline">
-                            </div>
-                            <div class="form-group">
-                              <label for="date">Date:</label>
-                              <input type="date" class="form-control control-width" id="date" placeholder="Enter Date">
-                            </div>
-                              <div class="form-group">
-                              <label for="location">Location:</label>
-                              <input type="Location" class="form-control control-width" id="Location" placeholder="Enter Location">
-                            </div>
-                              <div class="form-group">
-                              <label for="content">Content:</label>
-                              <input type="content" class="form-control control-width" id="content" placeholder="Enter Content">
-                            </div>
-                            <div class="checkbox">
-                              <label><input type="checkbox"> Remember me</label>
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                      </form>
-                  </div>
-              </div>
-
-            </div>
-
-        </div>
-        <div class="div1a">
-           Phone:
-        </div>
-        <div class="div1b">
-           E-mail:
-        </div>
-
-        <div class="outer">
-              <div class="row">
-                <div class="column">
-                  <img src="img_person.jpg" alt="person" style="width:100%">
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
-                </div>
-                <div class="infoBox1">
-                  info 1
-                </div>
-                <div class="infoBox1">
-                  info 2
-                </div>
-                <div class="infoBox1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-              </div>
-        </div>
-        ------------
 
         <!--?<script>-->
             <!--?function afterText() {-->
@@ -394,7 +328,7 @@
         <!--?<p>Click the button to insert text after the image.</p>-->
 
         <!--?<button onclick="afterText()">Insert after</button>-->
-        -------------
+
     </div>
     <div class="col-sm-2 sidenav">
       <!--?<div class="well">-->
