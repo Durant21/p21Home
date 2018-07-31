@@ -46,13 +46,13 @@
     </nav>
 
 
-    <div class="col-sm-12" style="background-color:rgb(153,23,97); height: 30px;">
-        <br>test header
-    </div>
-    <div class="col-sm-12" style="background-color:rgb(215,180,86); height: 5px;">
+    <div class="col-sm-12" style="background-color:rgb(158,31,99); height: 30px;">
         <br>
     </div>
-    <div class="col-sm-12" style="background-color:rgb(99,70,100); height: 30px;">
+    <div class="col-sm-12" style="background-color:rgb(217,180,81); height: 20px;">
+        <br>
+    </div>
+    <div class="col-sm-12" style="background-color:rgb(99,71,101); height: 30px;">
         <br>
     </div>
   </div>
