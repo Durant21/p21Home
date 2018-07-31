@@ -4,9 +4,9 @@
         padding: 0px;
         left: 0;
         bottom: 0;
-        height: 150px;
+        height: 50px;
         width: 100%;
-        background-color: black;
+        /*background-color: black;*/
         color: white;
         text-align: center;
         }
@@ -24,11 +24,11 @@
       <!--?Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.-->
         <br><br>
     </div>
-    <div class="col-sm-12" style="background-color:rgb(243,224,184);height: 5px;">
+    <div class="col-sm-12" style="background-color:rgb(243,224,184);height: 25px;">
       <!--?Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.-->
         <br>
     </div>
-    <div class="col-sm-12" style="background-color:rgb(227,86,109);height: 30px;">
+    <div class="col-sm-12" style="background-color:rgb(147,149,152);height: 30px;">
       <!--?Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.-->
         <br><br>
     </div>

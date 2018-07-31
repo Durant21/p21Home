@@ -21,7 +21,7 @@
         }
 
         .mm {
-            background-image: url("templates/images/trees1.jpg");
+            /*background-image: url("templates/images/trees1.jpg");*/
             }
 
         .q {

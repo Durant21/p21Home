@@ -137,10 +137,20 @@
            bottom: 0;
             height: 100px;
            width: 100%;
-           background-color: dimgray;
+           background-color: white;
            color: white;
            text-align: center;
         }
+
+    .row1a {
+        background-color: red;
+        width: 70%;
+    }
+
+    .ww {
+        height: 250px;
+        overflow: auto;
+    }
 
             /* The Modal (background) */
         .modal {
@@ -186,7 +196,7 @@
         }
   </style>
 </head>
-<body>
+<body onload="populateTablesPeople()">
 
    <!--?   HEADER  -->
 <!--?<nav class="navbar navbar-inverse">-->
@@ -230,12 +240,10 @@
       <hr>
 
 
-<!--?      top      -->
-
-
+<button id="myBtn"></button>
         <div class="div2b">
             <!-- Trigger/Open The Modal -->
-            <button id="myBtn">...</button>
+
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -243,91 +251,106 @@
               <!-- Modal content -->
               <div class="modal-content">
                 <span class="close">&times;</span>
-                <!--?<p>Some text in the Modal..</p>-->
 
                   <div class="container">
-                      <h2>Edit item</h2>
-                      <form>
+                      <h2 id="lblEventModal">Edit item</h2>
+                      <!--?id,name,title,company,email,url1,url2,description, address, city,state,img1-->
+                      <!--?<form>-->
                             <div class="form-group">
-                              <label for="headline">Name:</label>
-                              <input type="name" class="form-control control-width" id="name" placeholder="Enter name">
+                                  <label for="id">id:</label>
+                                  <input type="text" class="form-control control-width" id="id" placeholder="id">
                             </div>
                             <div class="form-group">
-                              <label for="Phone">Phone:</label>
-                              <input type="Phone" class="form-control control-width" id="Phone" placeholder="Enter Phone">
+                              <label for="headline">First Name:</label>
+                              <input type="text" class="form-control control-width" id="fname" placeholder="Enter first name">
+                            </div>
+                            <div class="form-group">
+                              <label for="headline">Last Name:</label>
+                              <input type="text" class="form-control control-width" id="lname" placeholder="Enter last name">
+                            </div>
+                            <div class="form-group">
+                              <label for="title">Title:</label>
+                              <input type="text" class="form-control control-width" id="title" placeholder="Enter title">
+                            </div>
+                            <div class="form-group">
+                              <label for="company">Company:</label>
+                              <input type="text" class="form-control control-width" id="company" placeholder="Enter company">
                             </div>
                               <div class="form-group">
                               <label for="E-mail">E-mail:</label>
-                              <input type="E-mail" class="form-control control-width" id="Location" placeholder="Enter E-mail">
+                              <input type="text" class="form-control control-width" id="email" placeholder="Enter E-mail">
                             </div>
-                              <div class="form-group">
-                              <label for="content">Content:</label>
-                              <input type="content" class="form-control control-width" id="content" placeholder="Enter Content">
+                            <div class="form-group">
+                              <label for="url1">url1:</label>
+                              <input type="text" class="form-control control-width" id="url1" placeholder="Enter url1">
                             </div>
-                            <div class="checkbox">
-                              <label><input type="checkbox"> Remember me</label>
+                            <div class="form-group">
+                              <label for="url2">url2:</label>
+                              <input type="text" class="form-control control-width" id="url2" placeholder="Enter url2">
                             </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                      </form>
+                            <div class="form-group">
+                              <label for="description">description:</label>
+                              <input type="text" class="form-control control-width" id="description" placeholder="Enter description">
+                            </div>
+                            <div class="form-group">
+                              <label for="address">address:</label>
+                              <input type="text" class="form-control control-width" id="address" placeholder="Enter address">
+                            </div>
+                            <div class="form-group">
+                              <label for="city">city:</label>
+                              <input type="text" class="form-control control-width" id="city" placeholder="Enter city">
+                            </div>
+                            <div class="form-group">
+                              <label for="state">state:</label>
+                              <input type="text" class="form-control control-width" id="state" placeholder="Enter state">
+                            </div>
+                            <div class="form-group">
+                              <label for="img1">img1:</label>
+                              <input type="text" class="form-control control-width" id="img1" placeholder="Enter img1">
+                            </div>
+                            <!--?<div class="checkbox">-->
+                              <!--?<label><input type="checkbox"> Remember me</label>-->
+                            <!--?</div>-->
+                            <button id="btnWrite" type="button" class="btn btn-default" onclick="UpdatePeople()">Update</button>
+                            <!--?<button type="submit" class="btn btn-default">Submit</button>-->
+                      <!--?</form>-->
+                  </div>
+              </div>
+
+            </div>
+            <div id="imgModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close" onclick="closeImgModal()">&times;</span>
+                <!--?<p>Some text in the Modal..</p>-->
+
+                  <div class="container">
+                      <h2 id="lblImgModal">Edit image</h2>
+
+                        <!--?<div class="col-sm-8 text-left">-->
+                          <h3>File Upload</h3>
+                            <form action="/store_img1_view" method="post" accept-charset="utf-8"
+                                  enctype="multipart/form-data">
+
+                                <label for="img1">image file</label>
+                                <input id="img1" name="img1" type="file" value="" />
+                                <br>
+                                <input type="submit" value="submit" />
+                            </form>
+
+
+                        <!--?</div>-->
                   </div>
               </div>
 
             </div>
 
         </div>
-
-
-        <div class="outer">
-              <div class="row">
-                <div class="column">
-                  <img src="http://gis.podassoc.com/iMii_images/deb_shewfelt.png" alt="person" style="width:100%">
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
-                </div>
-                <div class="infoBox1">
-                  <h3> Deb Shewfelt, M.Sc., P.Geo</h3>
-                </div>
-                <div class="infoBox1">
-                  Senior Geologist, Director of Workforce Development
-                </div>
-                  <div class="infoBox1">
-                  North Rim/RESPEC
-                </div>
-                  <div class="infoBox1">
-                      <a href="mailto:Debra.Shewfelt@RESPEC.com">Debra.Shewfelt@RESPEC.com</a>
-                </div>
-                  <div class="infoBox1">
-
-                      <a href="http://www.northrim.ca" target="_blank">www.northrim.ca</a>
-                </div>
-                  <div class="infoBox1">
-
-                      <a href="http://www.respec.com" target="_blank">www.respec.com</a>
-                </div>
-                <div class="infoBox1">
-                  Deb Shewfelt, Senior Geologist at North Rim (www.northrim.ca), a Saskatoon-based geoscience / engineering consulting firm and wholly-owned subsidiary of RESPEC (www.respec.com), manages the company's talent pipeline as Director of Workforce Development and helps guide strategies as a member of the Board of Directors.  Deb completed an undergraduate degree in Geology and a secondary degree in Anthropology at the University of Manitoba and also holds a Master of Science degree in Geology from the University of Saskatchewan.  With Permission to Consult in potash, uranium and industrial minerals as a Professional Geoscientist, Ms. Shewfelt enjoys the variety of projects and challenges that geoscience consulting brings, and holds a particular interest in the creation of innovative digital work products that support the resource sector and its educational efforts.   Over the last 15 years, Deb has accrued research, consulting and management experience.  She is active in her local geoscience societies, volunteers as a member of CGEN (Canadian Geoscience Education Network), and also leads the APEGS (Association of Professional Engineers and Geoscientists of Saskatchewan) Student Engagement subcommittee.  Deb is also a mentor to young professionals through the Leadership Development Program at the University of Saskatchewan and represents North Rim on the Education and Training panel of iMii (International Minerals Innovation Institute).  Ms. Shewfelt has recently been peer nominated to sit on the U of S Natural Sciences Museum Redesign committee.
-                </div>
-              </div>
+        <div id="div2" name="div2" class="col-sm-12 text-right" style="background-color: white; align-content:right">
+            <button id="myBtnOpenAdd" onclick="OpenForAdd()">+</button>
         </div>
-        <!--?      bottom      -->
-
-
-
-
-        <!--?<script>-->
-            <!--?function afterText() {-->
-                <!--?var txt1 = "<b>I </b>";                   // Create element with HTML-->
-                <!--?var txt2 = $("<i></i>").text("love ");    // Create with jQuery-->
-                <!--?var txt3 = document.createElement("b");   // Create with DOM-->
-                <!--?txt3.innerHTML = "jQuery!";-->
-                <!--?$("img").after(txt1, txt2, txt3, '<br>');      // Insert new elements after img-->
-            <!--?}-->
-        <!--?</script>-->
-
-        <!--?<img src="/images/w3jquery.gif" alt="jQuery" width="100" height="140">-->
-
-        <!--?<p>Click the button to insert text after the image.</p>-->
-
-        <!--?<button onclick="afterText()">Insert after</button>-->
+        <div id="div1" name="div1" style="background-color: green">
 
     </div>
     <div class="col-sm-2 sidenav">
@@ -341,7 +364,9 @@
   </div>
 </div>
 
-<div id="includedFooter">ddd4</div>
+
+
+<div id="includedFooter"></div>
 
     <script>
         $(document).ready(function(){
@@ -360,34 +385,511 @@
         // $(document).ready(function(){
         //     $("#includedFooter").load("static/iMii_master_footer.html");
         // });
+
+
+        function getUrlBase() {
+            return 'http://localhost:6543/';
+        }
+
+        function OpenForEditImage(_id) {
+            var modal = document.getElementById('imgModal');
+            var loc_id = document.getElementById('id');
+            loc_id.value = _id.toString();
+
+            modal.style.display = "block";
+        }
+
+        function OpenForEdit(_id,_fname,_lname,_title,_company,_email,_url1,_url2,_description,_address,_city,_state,_img1) {
+            //id,name,title,company,email,url1,url2,description, address, city,state,img1
+
+            var modal = document.getElementById('myModal');
+
+            // var lblEventModal = document.getElementById('lblEventModal');
+            // lblEventModal.innerHTML = 'Edit Event';
+
+            var loc_id = document.getElementById('id');
+            loc_id.value = _id.toString();
+
+            // var headline = document.getElementById('headline');
+            // headline.value = _headline;
+            //
+            // var event_date = document.getElementById('event_date');
+            // event_date.value = _event_date;
+            //
+            // var description = document.getElementById('description');
+            // description.value = _description;
+
+
+            //headline.innerHTML = headline;
+            //var content = document.getElementById('headline');
+
+
+
+            var fname = document.getElementById('fname');
+            fname.value = _fname;
+
+
+            var lname = document.getElementById('lname');
+            lname.value = _lname;
+
+            var title = document.getElementById('title');
+            title.value = _title;
+
+            var company = document.getElementById('company');
+            company.value = _company;
+
+            // var location = document.getElementById('location');
+            // location = _location;
+
+            var url1 = document.getElementById('url1');
+            url1.value = _url1;
+
+            var url2 = document.getElementById('url2');
+            url2.value = _url2;
+
+            var description = document.getElementById('description');
+            description.value  = _description;
+
+            var address = document.getElementById('address');
+            address.value = _address;
+
+            var city = document.getElementById('city');
+            city.value = _city;
+
+            var state = document.getElementById('state');
+            state.value = _state;
+
+            var img1 = document.getElementById('img1');
+            img1.value = _img1;
+
+            modal.style.display = "block";
+
+        }
+
+        function OpenForAdd() {
+            //id, headline,img_url,event_date,description,event_url
+            // var modal = document.getElementById('myModal');
+            //
+            // //alert('add');
+            //
+            var lblEventModal = document.getElementById('lblEventModal');
+            lblEventModal.innerHTML = 'Add Person';
+            //
+            // var loc_id = document.getElementById('id');
+            //
+            // var txtheadline = document.getElementById('headline');
+            // txtheadline.value = '';
+            //
+            // var img_url = "aTeacherImage.jpg";
+            //
+            // var txtevent_date = document.getElementById('event_date');
+            // txtevent_date.value = '';
+            //
+            // var txtlocation = document.getElementById('location');
+            // txtlocation.value = "";
+            //
+            // var txtdescription = document.getElementById('description');
+            // txtdescription.value = "";
+            //
+            //
+            // event_url = 'www.esri.com';
+            var myModalButton = document.getElementById('btnWrite');
+            // // myModalButton.setAttribute('onclick', "OpenForAdd('" + "'" + headline + "',"
+            // //                                                     + "'" + img_url + "',"
+            // //                                                     + "'" + location + "',"
+            // //                                                     + "'" + event_date + "',"
+            // //                                                     + "'" + description + "',"
+            // //                                                     + "'" + event_url + "'"
+            // //                                                     + ")");
+            //
+             myModalButton.setAttribute('onclick', "CreatePeople()");
+
+            modal.style.display = "block";
+
+        }
+
+        function CreatePeople() {
+            //alert('CreateNewsAndEvents');
+            var aPerson = '{' +
+                '"fname": "' + document.getElementById("fname").value + '",' +
+                '"lname": "' + document.getElementById("lname").value + '",' +
+                '"title": "' + document.getElementById("title").value + '",' +
+                '"company": "' + document.getElementById("company").value + '",' +
+                '"email": "' + document.getElementById("email").value + '",' +
+                '"url1": "' + document.getElementById("url1").value + '",' +
+                '"url2": "' + document.getElementById("url2").value + '",' +
+                '"description": "' + document.getElementById("description").value + '",' +
+                '"address": "' + document.getElementById("address").value + '",' +
+                '"city": "' + document.getElementById("city").value + '",' +
+                '"state": "' + document.getElementById("state").value + '",' +
+                '"img1": "' + document.getElementById("img1").value +
+                '"}';
+
+        // "headline": "STEM Day 2018",
+        // "event_date": "2017-08-07",
+        // "description": " careers in earth sciences",
+        // "url": " www.stem.org"
+
+            alert(aPerson);
+            //alert(getUrlBase() + "api/events");
+            $.ajax({
+                url: getUrlBase() + "api/people",
+                type: "POST",
+                //data: "{'editOptions':'" + aUnduplicatedUsers + "'}",
+                data: aPerson,
+                //Host: localhost:6543,
+                //Cache-Control: no-cache
+                //dataType: "json",
+                //contentType: "application/json; charset=utf-8",
+
+                beforeSend: function () {
+                    //turnBothOff("UnduplicatedUsersSuccessResult", "UnduplicatedUsersErrorResult");
+                    //SetBusy();
+                },
+
+                success: function (response) {
+                    //SetNotBusy();
+                    alert('success called');
+                    // if (response === "True") {
+                    //     //refresh the screen
+                    //     //SiteChanged();
+                    //
+                    //     if (anumber1 != anumber2) {
+                    //         setMessageDivVisibility("UnduplicatedUsersErrorInSummation");
+                    //     } else {
+                    //         setMessageDivVisibility("UnduplicatedUsersSuccessResult");
+                    //     }
+                    // } else {
+                    //     setMessageDivVisibility("UnduplicatedUsersErrorResult");
+                    // }
+                },
+                error: function (xhr) {
+                    alert("ERROR");
+                }
+            });
+
+
+        }
+
+        function UpdatePeople() {
+            alert('UpdatePeople');
+            var modal = document.getElementById('myModal');
+            var loc_id = document.getElementById('id').value ;
+
+            //loc_id.value = _id.toString();
+            var headline = document.getElementById('headline');
+            //headline.value = _headline;
+
+            var date = document.getElementById('event_date');
+            //date.value = _event_date;
+
+            var description = document.getElementById('description');
+
+            <!--?id,name,title,company,email,url1,url2,description, address, city,state,img1-->
+            var aPerson = '{' +
+                '"fname": "' + document.getElementById("fname").value + '",' +
+                '"lname": "' + document.getElementById("lname").value + '",' +
+                '"title": "' + document.getElementById("title").value + '",' +
+                '"company": "' + document.getElementById("company").value + '",' +
+                '"email": "' + document.getElementById("email").value + '",' +
+                '"url1": "' + document.getElementById("url1").value + '",' +
+                '"url2": "' + document.getElementById("url2").value + '",' +
+                '"description": "' + document.getElementById("description").value + '",' +
+                '"address": "' + document.getElementById("address").value + '",' +
+                '"city": "' + document.getElementById("city").value + '",' +
+                '"state": "' + document.getElementById("state").value + '",' +
+                '"img1": "' + document.getElementById("img1").value + '",' +
+                '"id": "' + document.getElementById("id").value +
+                '"}';
+
+            alert(aPerson);
+            //alert(getUrlBase() + "api/event/" + loc_id);
+            $.ajax({
+                url: getUrlBase() + "api/people/" + loc_id,
+                type: "PUT",
+                //data: "{'editOptions':'" + aUnduplicatedUsers + "'}",
+                data: aPerson,
+                //Host: localhost:6543,
+                //Cache-Control: no-cache
+                //dataType: "json",
+                //contentType: "application/json; charset=utf-8",
+
+                beforeSend: function () {
+                    //turnBothOff("UnduplicatedUsersSuccessResult", "UnduplicatedUsersErrorResult");
+                    //SetBusy();
+                },
+
+                success: function (response) {
+                    //SetNotBusy();
+                    alert('success called');
+                    // if (response === "True") {
+                    //     //refresh the screen
+                    //     //SiteChanged();
+                    //
+                    //     if (anumber1 != anumber2) {
+                    //         setMessageDivVisibility("UnduplicatedUsersErrorInSummation");
+                    //     } else {
+                    //         setMessageDivVisibility("UnduplicatedUsersSuccessResult");
+                    //     }
+                    // } else {
+                    //     setMessageDivVisibility("UnduplicatedUsersErrorResult");
+                    // }
+                },
+                error: function (xhr) {
+                    alert("ERROR");
+                }
+            });
+        }
+
+        function populateTablesPeople() {
+                //alert('here');
+                // var grid = jQuery("#Grid_People").jqGrid({
+                //     datatype: "json",
+                //     contentType: "application/json",
+                //     width: 1200,
+                //     scrollerbar: true,
+                //     height: 500,
+                //     colNames: ['fname', 'lname'],
+                //     colModel: [
+                //             { name: 'fname', index: 'fname', width: 40 },
+                //             { name: 'lname', index: 'lname', width: 40 }
+                //
+                //     ],
+                //     multiselect: false,
+                //     caption: "TSGrid_People"
+                // });
+
+                //alert(getUrlBase() + "api/people");
+
+                $.ajax({
+                    type: "GET",
+                    url: getUrlBase() + "api/people",
+                    contentType: "application/json",
+                    dataType: "json",
+
+                    beforeSend: function () {
+                        //$('#Grid_People').jqGrid('clearGridData');
+                        //SetBusy();
+                    },
+
+                    success: function (data) {
+                        //SetNotBusy();
+                        var jsonObj = data;
+                        var iLength = jsonObj.length;
+                        var id = jsonObj.id;
+                        var id2 = jsonObj[0]['id'];
+                        var fname="Debra";
+                        var lname="Debra";
+                        var title="her title";
+                        var company= "her company";
+                        var position= "her position";
+                        var email = "her email";
+                        var url1 = "her url1";
+                        var url2 = "her url2";
+                        var description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+                        var address="her address";
+                        var city="her city";
+                        var state="her state";
+                        var img1='http://gis.podassoc.com/iMii_images/deb_shewfelt.png';
+
+
+                        if (iLength) {
+                            for (var i = 0; i <= data.length; i++) {
+                            //jQuery("#Grid_People").jqGrid('addRowData', i + 1, jsonObj[i]);
+                                if (jsonObj[i]) {
+                                    id = jsonObj[i]['id'];
+                                    fname = jsonObj[i]['fname'];
+                                    lname = jsonObj[i]['lname'];
+                                    title = jsonObj[i]['title'];
+                                    company = jsonObj[i]['company'];
+                                    position = jsonObj[i]['position'];
+                                    email = jsonObj[i]['email'];
+                                    url1 = jsonObj[i]['url1'];
+                                    url2 = jsonObj[i]['url2'];
+                                    description = jsonObj[i]['description'];
+                                    address = jsonObj[i]['address'];
+                                    city = jsonObj[i]['city'];
+                                    state = jsonObj[i]['state'];
+                                    //console.log(aval)
+                                    generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1);
+                                    //alert(jsonObj[i])
+                                }
+
+                            }
+                        } else {
+                            id = jsonObj[i]['id'];
+                            generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1);
+                        }
+
+
+                    },
+                    loadComplete: function () {
+                        //$("#Grid_People").jqGrid('setGridWidth', $(window).width(), true);
+                    },
+
+                    error: function (err) {
+                        //$.unblockUI();
+                        //SetNotBusy();
+                        alert("Error loading the grid:" + err.status + "    " + err.statusText);
+                    }
+                });
+            }
+
+        function generatePeopleDiv(id,fname,lname, title,company,email,url1,url2,description, address, city,state,img1) {
+                // grab the main container
+                var div1 = document.getElementById("div1");
+
+                // create an inner-div
+                var innerDiv1 = document.createElement("div")
+                innerDiv1.className = "outer";
+
+
+                var innerDiv1a = document.createElement("div")
+                innerDiv1a.className="row1a text-right";//"row1a"
+
+                var innerDiv2a = document.createElement("div")
+                innerDiv2a.className="row1";
+                var text2a = document.createElement("text")
+                text2a.innerHTML = fname + " " + lname;
+                innerDiv2a.appendChild(text2a)
+
+                var innerDiv2b = document.createElement("div")
+                innerDiv2b.className="row1"
+                var text2b = document.createElement("text")
+                text2b.innerHTML = company;
+                innerDiv2b.appendChild(text2b)
+
+                var innerDiv2c = document.createElement("div")
+                innerDiv2c.className="row1"
+                var text2c = document.createElement("text")
+                text2c.innerHTML = email;
+                innerDiv2c.appendChild(text2c)
+
+                var innerDiv2d = document.createElement("div")
+                innerDiv2d.className="row1"
+                var text2d = document.createElement("text")
+                text2d.innerHTML = url1;
+                innerDiv2d.appendChild(text2d)
+
+                var innerDiv2e = document.createElement("div")
+                innerDiv2e.className="row1"
+                var text2e = document.createElement("text")
+                text2e.innerHTML = url2;
+                innerDiv2e.appendChild(text2e)
+
+                var innerDiv2f = document.createElement("div")
+                innerDiv2f.className="row1 ww"
+                var text2f = document.createElement("text")
+                text2f.innerHTML = description;
+                innerDiv2f.appendChild(text2f)
+
+                // var innerDiv2g = document.createElement("div")
+                // innerDiv2g.className="row1"
+                // var text2g = document.createElement("text")
+                // text2g.innerHTML = "text2g";
+                // innerDiv2g.appendChild(text2g)
+
+
+                // create the EDIT button
+                var innerDiv1button = document.createElement("button");
+                innerDiv1button.setAttribute('id','ttt');
+                innerDiv1button.setAttribute('content', 'test content');
+                innerDiv1button.setAttribute('class', 'btn1');
+                innerDiv1button.innerHTML = 'edit';
+
+
+
+                //items to pass:   id,name,title,company,email,url1,url2,description, address, city,state,img1
+                innerDiv1button.setAttribute('onclick', "OpenForEdit('" + id.toString() + "',"
+                                                                    + "'" + fname + "',"
+                                                                    + "'" + lname + "',"
+                                                                    + "'" + title + "',"
+                                                                    + "'" + company + "',"
+                                                                    + "'" + email + "',"
+                                                                    + "'" + url1 + "',"
+                                                                    + "'" + url2 + "',"
+                                                                    + "'" + description + "',"
+                                                                    + "'" + address + "',"
+                                                                    + "'" + city + "',"
+                                                                    + "'" + state + "',"
+                                                                    + "'" + img1 + "'"
+                                                                    + ")");
+
+                innerDiv1a.appendChild(innerDiv1button);
+
+                var innerDiv1buttonImg = document.createElement("button");
+                innerDiv1buttonImg.setAttribute('id','ttt');
+                innerDiv1buttonImg.setAttribute('content', 'test content');
+                innerDiv1buttonImg.setAttribute('class', 'btn1');
+                innerDiv1buttonImg.innerHTML = 'image';
+
+                innerDiv1buttonImg.setAttribute('onclick', "OpenForEditImage('" + id.toString() + "'"
+                                                                    + ")");
+
+                innerDiv1a.appendChild(innerDiv1buttonImg);
+
+                var innerDiv3 = document.createElement("div")
+                innerDiv3.className="column"
+
+                var oImg = document.createElement("img");
+                // oImg.setAttribute('src', 'http://gis.podassoc.com/iMii_images/deb_shewfelt.png');
+                oImg.setAttribute('src', img1);
+
+                innerDiv3.appendChild(oImg)
+
+                innerDiv1.appendChild(innerDiv3)
+                innerDiv1.appendChild(innerDiv1a)
+                innerDiv1.appendChild(innerDiv2a)
+                innerDiv1.appendChild(innerDiv2b)
+                innerDiv1.appendChild(innerDiv2c)
+                innerDiv1.appendChild(innerDiv2d)
+                innerDiv1.appendChild(innerDiv2e)
+                innerDiv1.appendChild(innerDiv2f)
+                // innerDiv1.appendChild(innerDiv2g)
+
+                //
+                 div1.appendChild(innerDiv1)
+                // innerDiv2.appendChild(infoBox1)
+            }
+
+        function getUrlBase() {
+            return 'http://localhost:6543/';
+        }
     </script>
 
-<script>
-    // Get the modal
-    var modal = document.getElementById('myModal');
+    <script>
+        function closeImgModal() {
+            var imgModal = document.getElementById('imgModal');
+            imgModal.style.display = "none";
+        }
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
 
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
             modal.style.display = "none";
         }
-    }
-</script>
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
