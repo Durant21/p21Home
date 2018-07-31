@@ -1,7 +1,12 @@
 from pyramid.view import view_config
 
+import os
+import uuid
+import shutil
+from pyramid.response import Response
 
-@view_config(route_name='home', renderer='templates/mytemplate.pt')
+
+@view_config(route_name='homee', renderer='templates/mytemplate.pt')
 def my_view(request):
     return {'project': 'Home'}
 
@@ -85,3 +90,5 @@ def my_view14(request):
 @view_config(route_name='iMiiMasterFooter1', renderer='templates/iMiiMasterFooter1.pt')
 def my_view15(request):
     return {'project': 'iMiiMasterFooter1'}
+
+

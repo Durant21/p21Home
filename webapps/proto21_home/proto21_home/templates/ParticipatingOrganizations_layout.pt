@@ -111,10 +111,15 @@
     <div class="col-sm-12 text-left" style="background-color:white;height: 85px;font-size: 10px; color: black;">
             <div class="row">
                 <div class="col-sm-2" style="background-color:white;padding-top: 15px;">
-                    <img src="http://gis.podassoc.com/iMii_images/pg6_iMiiLogo.gif" alt="image" style="max-width:190px;height:auto;">
+                    <a href="default.asp" target="_blank">
+                      <img src="http://gis.podassoc.com/iMii_images/pg6_iMiiLogo.gif" alt="image" style="max-width:190px;height:auto;">
+                    </a>
                 </div>
                 <div class="col-sm-10" style="background-color:white;padding-top: 15px;">
-                    <img src="http://gis.podassoc.com/iMii_images/pg6_iMiiLogo_text.png" alt="image" style="max-width:100%;height:auto;">
+                    <a href="default.asp" target="_blank">
+                     <img src="http://gis.podassoc.com/iMii_images/pg6_iMiiLogo_text.png" alt="image" style="max-width:100%;height:auto;">
+                    </a>
+
                 </div>
             </div>
     </div>
@@ -124,18 +129,30 @@
     <div class="col-sm-12 text-left" style="background-color:white;padding-top: 15px;height: 210px;font-size: 10px; color: black;">
             <div class="row">
                 <div class="col-sm-2" style="background-color:white;">
-                    <img src="http://gis.podassoc.com/iMii_images/RespecLogo.png" alt="image" style="max-width:50%;height:auto;">
+                    <a href="default.asp" target="_blank">
+                     <img src="http://gis.podassoc.com/iMii_images/RespecLogo.png" alt="image" style="max-width:50%;height:auto;">
+                    </a>
+
                 </div>
                 <div class="col-sm-7" style="background-color:white;">
-                    <img src="http://gis.podassoc.com/iMii_images/RespecLogotext.png" alt="image" style="max-width:100%;height:auto;">
+                    <a href="default.asp" target="_blank">
+                     <img src="http://gis.podassoc.com/iMii_images/RespecLogotext.png" alt="image" style="max-width:100%;height:auto;">
+                    </a>
+
                 </div>
                 <div class="col-sm-3" style="background-color:white;">
                     <div class="row">
                         <div class="col-sm-12" style="background-color:white;height: 75px;padding-top: 5px;padding-bottom: 5px;padding-left: 25px;">
-                            <img src="http://gis.podassoc.com/iMii_images/UofSaskatchewanLogo.png" alt="image" style="max-width:100%;height:auto;">
+                            <a href="default.asp" target="_blank">
+                             <img src="http://gis.podassoc.com/iMii_images/UofSaskatchewanLogo.png" alt="image" style="max-width:100%;height:auto;">
+                            </a>
+
                         </div>
                         <div class="col-sm-12" style="background-color:white;">
-                            <img src="http://gis.podassoc.com/iMii_images/BP_logo_text.png" alt="image" style="max-width:100%;height:auto;">
+                            <a href="default.asp" target="_blank">
+                             <img src="http://gis.podassoc.com/iMii_images/BP_logo_text.png" alt="image" style="max-width:100%;height:auto;">
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -150,10 +167,16 @@
         <div class="col-sm-12 text-left" style="background-color:white;height: 65px;font-size: 10px; color: black;">
             <div class="row">
                 <div class="col-sm-2" style="background-color:white;">
-                    <img src="http://gis.podassoc.com/iMii_images/SaskPS_Logo.png" alt="image" style="max-width:100%;height:auto;">
+                    <a href="default.asp" target="_blank">
+                     <img src="http://gis.podassoc.com/iMii_images/SaskPS_Logo.png" alt="image" style="max-width:100%;height:auto;">
+                    </a>
+
                 </div>
                 <div class="col-sm-10" style="background-color:white;">
-                    <img src="http://gis.podassoc.com/iMii_images/SaskPS_Logo_text.png" alt="image" style="max-width:100%;height:auto;">
+                    <a href="default.asp" target="_blank">
+                     <img src="http://gis.podassoc.com/iMii_images/SaskPS_Logo_text.png" alt="image" style="max-width:100%;height:auto;">
+                    </a>
+
                 </div>
             </div>
       </div>
@@ -166,18 +189,30 @@
                 <div class="col-sm-6" style="background-color:lightblue;">
                     <div class="row">
                         <div class="col-sm-12" style="background-color:white;height: 130px;padding-top: 5px;padding-bottom: 5px;padding-left: 25px;">
-                            <img src="http://gis.podassoc.com/iMii_images/Sask_top.png" alt="image" style="max-width:700px;height:auto;">
+                            <a href="default.asp" target="_blank">
+                             <img src="http://gis.podassoc.com/iMii_images/Sask_top.png" alt="image" style="max-width:700px;height:auto;">
+                            </a>
+
                         </div>
                         <div class="col-sm-12" style="background-color:white;">
-                            <img src="http://gis.podassoc.com/iMii_images/Sask_bottom.png" alt="image" style="max-width:100%;height:auto;">
+                            <a href="default.asp" target="_blank">
+                             <img src="http://gis.podassoc.com/iMii_images/Sask_bottom.png" alt="image" style="max-width:100%;height:auto;">
+                            </a>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-2" style="background-color:white;height: 130px;padding-top: 15px;">
-                    <img src="http://gis.podassoc.com/iMii_images/WIM_logo.png" alt="image" style="max-width:150px;height:auto;">
+                    <a href="default.asp" target="_blank">
+                     <img src="http://gis.podassoc.com/iMii_images/WIM_logo.png" alt="image" style="max-width:150px;height:auto;">
+                    </a>
+
                 </div>
                 <div class="col-sm-4" style="background-color:white;padding-top: 10px;">
-                    <img src="http://gis.podassoc.com/iMii_images/WIM_text.png" alt="image" style="max-width:420px;height:auto;">
+                    <a href="default.asp" target="_blank">
+                     <img src="http://gis.podassoc.com/iMii_images/WIM_text.png" alt="image" style="max-width:420px;height:auto;">
+                    </a>
+
                 </div>
 
             </div>
