@@ -45,6 +45,7 @@ def main(global_config, **settings):
     config.add_route( 'iMiiMasterHeader1', '/iMiiMasterHeader1' )
     config.add_route( 'iMiiMasterFooter1', '/iMiiMasterFooter1' )
     config.add_route( 'store_img1_view', '/store_img1_view' )
+    config.add_route( 'store_img2_view', '/store_img2_view' )
 
 
     # register_routes( config )

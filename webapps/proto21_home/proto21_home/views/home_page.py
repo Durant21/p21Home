@@ -160,6 +160,13 @@ def store_img1_view(request):
     return Response('OK')
 
 
+@view_config(route_name='store_img2_view', renderer='proto21_home:templates/NewsEvents.pt',
+             request_method='POST')
+def my_view16(request):
+    store_img2_view(request)
+    return {'project': 'NewsEvents'}
+
+
 def store_img2_view(request):
     # src:  https://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/forms/file_uploads.html
 
