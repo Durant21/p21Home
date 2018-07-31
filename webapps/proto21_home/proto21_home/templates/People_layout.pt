@@ -854,9 +854,9 @@
                 // innerDiv2.appendChild(infoBox1)
             }
 
-        function getUrlBase() {
-            return 'http://localhost:6543/';
-        }
+        // function getUrlBase() {
+        //     return 'http://localhost:6543/';
+        // }
     </script>
 
     <script>
