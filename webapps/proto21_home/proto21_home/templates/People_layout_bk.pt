@@ -4,11 +4,15 @@
   <title>iMii Discover</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/aa.css">
+
+    <!--?<script src="scripts/common3.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+
+
       .button {
             background-color: black;
             border: none;
@@ -22,6 +26,7 @@
             cursor: pointer;
             font-family: Verdana, Geneva, sans-serif;
         }
+
 * {
     box-sizing: border-box;
 }
@@ -143,7 +148,7 @@
         }
 
     .row1a {
-        background-color: red;
+        background-color: white; /*red;*/
         width: 70%;
     }
 
@@ -198,41 +203,8 @@
 </head>
 <body onload="populateTablesPeople()">
 
-   <!--?   HEADER  -->
-<!--?<nav class="navbar navbar-inverse">-->
-  <!--?<div class="container-fluid">-->
-    <!--?<div class="navbar-header">-->
-      <!--?<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=
-"#myNavbar">-->
-        <!--?<span class="icon-bar"></span>-->
-        <!--?<span class="icon-bar"></span>-->
-        <!--?<span class="icon-bar"></span>-->
-      <!--?</button>-->
-      <!--?<a class="navbar-brand" href="#">Logo</a>-->
-    <!--?</div>-->
-    <!--?<div class="collapse navbar-collapse" id="myNavbar">-->
-      <!--?<ul class="nav navbar-nav">-->
-          <!--?<li><input type="button" class="button navbtn" value="HOME" onclick="locati
-on.href='iMii';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="MINING CYCLE" onclick
-="location.href='MiningCycle';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="ABOUT" onclick="locat
-ion.href='About';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="TEACHER RESOURCES" on
-click="location.href='TeacherResources';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="NEWS & EVENTS" onclic
-k="location.href='NewsEvents';" ></li>-->
-      <!--?</ul>-->
 
-      <!--?<ul class="nav navbar-nav navbar-right">-->
-        <!--?<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></l
-i>-->
-      <!--?</ul>-->
-    <!--?</div>-->
-  <!--?</div>-->
-<!--?</nav>-->
-
-   <div id="includedHeader">ddd4</div>
+   <div id="includedHeader"></div>
 
 <div class="container-fluid text-center">
   <div class="row content">
@@ -243,17 +215,11 @@ i>-->
     </div>
     <div class="col-sm-8 text-left">
       <h1>People</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in
-            cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat
-            ion ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupid
-            atat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectet
-            ur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
-            odo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
 
 
-<button id="myBtn"></button>
+        <button id="myBtn"></button>
         <div class="div2b">
             <!-- Trigger/Open The Modal -->
 
@@ -324,7 +290,7 @@ i>-->
                             <!--?<div class="checkbox">-->
                               <!--?<label><input type="checkbox"> Remember me</label>-->
                             <!--?</div>-->
-                            <button id="btnWrite" type="button" class="btn btn-default" on click="UpdatePeople()">Update</button>
+                            <button id="btnWrite" type="button" class="btn btn-default" onclick="UpdatePeople()">Update</button>
                             <!--?<button type="submit" class="btn btn-default">Submit</button>-->
                       <!--?</form>-->
                   </div>
@@ -343,9 +309,12 @@ i>-->
 
                         <!--?<div class="col-sm-8 text-left">-->
                           <h3>File Upload</h3>
-                            <form action="/store_img1_view" method="post" accept-charset="utf-8"
+                            <form action="/store_img1_view" method="POST" accept-charset="utf-8"
                                   enctype="multipart/form-data">
-
+                                <!--?<div class="form-group">-->
+                                    <!--?<label for="img_id">id:</label>-->
+                                <input type="text" class="form-control control-width" id="img_id" name="img_id" placeholder="id" />
+                            <!--?</div>-->
                                 <label for="img1">image file</label>
                                 <input id="img1" name="img1" type="file" value="" />
                                 <br>
@@ -360,19 +329,16 @@ i>-->
             </div>
 
         </div>
-        <div id="div2" name="div2" class="col-sm-12 text-right" style="background-color: white; align-content:right">
-            <button id="myBtnOpenAdd" onclick="OpenForAdd()">+</button>
-        </div>
-        <div id="div1" name="div1" style="background-color: green"></div>
+            <div id="div2" name="div2" class="col-sm-12 text-right" style="background-color: white; align-content:right">
+                <button id="myBtnOpenAdd" onclick="OpenForAdd()">+</button>
+            </div>
+        <!--?<div id="div1" name="div1" style="background-color: green">-->
+
+        <!--?</div>-->
 
     </div>
     <div class="col-sm-2 sidenav">
-      <!--?<div class="well">-->
-        <!--?<p>ADS</p>-->
-      <!--?</div>-->
-      <!--?<div class="well">-->
-        <!--?<p>ADS</p>-->
-      <!--?</div>-->
+
     </div>
   </div>
 </div>
@@ -408,7 +374,7 @@ i>-->
 
         function OpenForEditImage(_id) {
             var modal = document.getElementById('imgModal');
-            var loc_id = document.getElementById('id');
+            var loc_id = document.getElementById('img_id');
             loc_id.value = _id.toString();
 
             modal.style.display = "block";
@@ -509,12 +475,12 @@ i>-->
             //
             // event_url = 'www.esri.com';
             var myModalButton = document.getElementById('btnWrite');
-            // // myModalButton.setAttribute('onclick', "OpenForAdd('" + "'" + headline +"',"
+            // // myModalButton.setAttribute('onclick', "OpenForAdd('" + "'" + headline + "',"
             // //                                                     + "'" + img_url + "',"
             // //                                                     + "'" + location + "',"
-            // //                                                     + "'" + event_date +"',"
-            // //                                                     + "'" + description+ "',"
-            // //                                                     + "'" + event_url +"'"
+            // //                                                     + "'" + event_date + "',"
+            // //                                                     + "'" + description + "',"
+            // //                                                     + "'" + event_url + "'"
             // //                                                     + ")");
             //
              myModalButton.setAttribute('onclick', "CreatePeople()");
@@ -564,7 +530,7 @@ i>-->
 
                 success: function (response) {
                     //SetNotBusy();
-                    alert('success called');
+                    alert('success ');
                     // if (response === "True") {
                     //     //refresh the screen
                     //     //SiteChanged();
@@ -579,7 +545,7 @@ i>-->
                     // }
                 },
                 error: function (xhr) {
-                    alert("ERROR");
+                    alert("ERROR - CreatePeople () was not successfull");
                 }
             });
 
@@ -692,7 +658,7 @@ i>-->
                         var jsonObj = data;
                         var iLength = jsonObj.length;
                         var id = jsonObj.id;
-                        var id2 = jsonObj[0]['id'];
+                        //var id2 = jsonObj[0]['id'];
                         var fname="Debra";
                         var lname="Debra";
                         var title="her title";
@@ -701,12 +667,12 @@ i>-->
                         var email = "her email";
                         var url1 = "her url1";
                         var url2 = "her url2";
-                        var description="Lorem ipsum dolor sit amet, consectetur adipisci.";
+                        var description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
                         var address="her address";
                         var city="her city";
                         var state="her state";
                         var img1='http://gis.podassoc.com/iMii_images/deb_shewfelt.png';
-
+                        //testCommon();
 
                         if (iLength) {
                             for (var i = 0; i <= data.length; i++) {
@@ -725,14 +691,15 @@ i>-->
                                     address = jsonObj[i]['address'];
                                     city = jsonObj[i]['city'];
                                     state = jsonObj[i]['state'];
+                                    //img1 = '/images/' + jsonObj[i]['img1'];
                                     //console.log(aval)
                                     generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1);
                                     //alert(jsonObj[i])
                                 }
-
                             }
                         } else {
-                            id = jsonObj[i]['id'];
+                            // id = jsonObj[i]['id'];
+                            id = jsonObj.id;
                             generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1);
                         }
 
@@ -813,9 +780,8 @@ i>-->
                 innerDiv1button.innerHTML = 'edit';
 
 
-
-                //items to pass:   id,name,title,company,email,url1,url2,description, address, city,state,img1
-                innerDiv1button.setAttribute('onclick', "OpenForEdit('" + id.toString() + "',"
+                if (id) {
+                  innerDiv1button.setAttribute('onclick', "OpenForEdit('" + id.toString() + "',"
                                                                     + "'" + fname + "',"
                                                                     + "'" + lname + "',"
                                                                     + "'" + title + "',"
@@ -829,6 +795,9 @@ i>-->
                                                                     + "'" + state + "',"
                                                                     + "'" + img1 + "'"
                                                                     + ")");
+                }
+                //items to pass:   id,name,title,company,email,url1,url2,description, address, city,state,img1
+
 
                 innerDiv1a.appendChild(innerDiv1button);
 
@@ -838,8 +807,11 @@ i>-->
                 innerDiv1buttonImg.setAttribute('class', 'btn1');
                 innerDiv1buttonImg.innerHTML = 'image';
 
-                innerDiv1buttonImg.setAttribute('onclick', "OpenForEditImage('" + id.toString() + "'"
+                if (id) {
+                    innerDiv1buttonImg.setAttribute('onclick', "OpenForEditImage('" + id.toString() + "'"
                                                                     + ")");
+                }
+
 
                 innerDiv1a.appendChild(innerDiv1buttonImg);
 
@@ -867,9 +839,7 @@ i>-->
                 // innerDiv2.appendChild(infoBox1)
             }
 
-        // function getUrlBase() {
-        //     return 'http://localhost:6543/';
-        // }
+
     </script>
 
     <script>
