@@ -25,6 +25,7 @@ class Event(SqlAlchemyBase):
     # address = sqlalchemy.Column(sqlalchemy.String)
     # city = sqlalchemy.Column(sqlalchemy.String)
     # state = sqlalchemy.Column(sqlalchemy.String)
+    img1 = sqlalchemy.Column( sqlalchemy.String )
     date_created = sqlalchemy.Column(sqlalchemy.DateTime, index=True,
                                    default=datetime.datetime.now)
 
@@ -34,6 +35,7 @@ class Event(SqlAlchemyBase):
             'event_date': self.event_date.isoformat(),
             'description': self.description,
             'url': self.url,
+            'img1': self.img1,
             # 'date_created': self.date_created.isoformat(),
             'id': self.id,
         }

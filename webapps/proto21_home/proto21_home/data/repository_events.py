@@ -6,6 +6,7 @@ from dateutil.parser import parse
 from proto21_home.data.db_factory import DbSessionFactory
 from proto21_home.data.Event import Event
 
+
 class Repository_events:
     __events_data = {}
 

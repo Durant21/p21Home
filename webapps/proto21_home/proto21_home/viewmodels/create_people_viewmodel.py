@@ -27,7 +27,7 @@ class CreatePersonViewModel( ViewModelBase ):
         address = self.data_dict.get( 'address' )
         city = self.data_dict.get( 'city' )
         state = self.data_dict.get( 'state' )
-        img1 = self.data_dict.get( 'img1' )
+        # img1 = self.data_dict.get( 'img1' )
         # image = self.data_dict.get('image')
         # price = self.data_dict.get('price')
         # year = int(self.data_dict.get('year', -1))
@@ -62,8 +62,7 @@ class CreatePersonViewModel( ViewModelBase ):
                         address=address,
                         city=city,
                         state=state,
-                        img1=img1,
-                    id=id
+                        id=id
             )
             self.Person = person
 

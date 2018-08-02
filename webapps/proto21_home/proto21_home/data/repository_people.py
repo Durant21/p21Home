@@ -87,7 +87,7 @@ class Repository_people:
             db_people.address = person.address
             db_people.city = person.city
             db_people.state = person.state
-            db_people.img1 = person.img1
+            # db_people.img1 = person.img1
             # db_car.image = person.image if car.image else random.choice(cls.__fake_image_url)
             # db_people.year = person.year
             # db_car.teacherId = int(teacher.year)
@@ -126,7 +126,7 @@ class Repository_people:
         db_person.address = person.address
         db_person.city = person.city
         db_person.state = person.state
-        db_person.img1 = person.img1
+        # db_person.img1 = person.img1
         # db_car.image = car_data.image if car_data.image else random.choice(cls.__fake_image_url)
         # db_car.brand = car_data.brand
         # db_car.damage = car_data.damage

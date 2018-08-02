@@ -22,7 +22,7 @@ def main(global_config, **settings):
     init_db( config )
     configure_renderers( config )
 
-    config.add_static_view('static', '/static', cache_max_age=3600)
+    config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_static_view( 'scripts', 'static/scripts' )
     config.add_static_view( 'images', 'static/images' )
     config.add_route('home', '/')
