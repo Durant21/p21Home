@@ -80,7 +80,7 @@ class Repository_events:
             db_event.description = event.description
             db_event.event_date = parse(event.event_date)
             # db_car.image = person.image if car.image else random.choice(cls.__fake_image_url)
-            # db_people.year = person.year
+            db_event.url = event.url
             # db_car.teacherId = int(teacher.year)
             # db_people.price = int( person.price )
             # db_event.date_created = parse(event.date_created)

@@ -228,6 +228,10 @@
                                   <label for="content">Content:</label>
                                   <input type="text" class="form-control control-width" id="description" placeholder="Enter Content">
                                 </div>
+                                  <div class="form-group">
+                                  <label for="content">URL:</label>
+                                  <input type="text" class="form-control control-width" id="url" placeholder="Enter URL Address">
+                                </div>
                                 <!--?<div class="checkbox">-->
                                   <!--?<label><input type="checkbox"> Remember me</label>-->
                                 <!--?</div>-->
@@ -577,11 +581,11 @@
         function CreateNewsAndEvents() {
             //alert('CreateNewsAndEvents');
             var aNewsAndEvent = '{' +
-                '"headline": "' + document.getElementById("headline").value + '",' +
-                '"event_date": "' + document.getElementById("event_date").value + '",' +
-                '"description": "' + document.getElementById("description").value + '",' +
-                '"url": "' + 'www.stem.org' +
-                '"}';
+                    '"headline": "' + document.getElementById("headline").value + '",' +
+                    '"event_date": "' + document.getElementById("event_date").value + '",' +
+                    '"description": "' + document.getElementById("description").value + '",' +
+                    '"url": "' + document.getElementById("url").value + '"' +
+                '}';
 
         // "headline": "STEM Day 2018",
         // "event_date": "2017-08-07",
@@ -644,6 +648,8 @@
             var description = document.getElementById('description');
             //description.value = _description;
 
+            //var event_url = document.getElementById('url');
+
             // var aNewsAndEvent = '{\n' +
             //         '        "headline": "EarthDay 2018",\n' +
             //         '        "event_date": "2018-04-07T03:46:09",\n' +
@@ -657,20 +663,17 @@
                 '"event_date": "' + document.getElementById("event_date").value + '",' +
                 '"description": "' + document.getElementById("description").value + '",' +
                 '"location": "' + document.getElementById("location").value + '",' +
+                    '"url": "' + document.getElementById("url").value + '",' +
                 '"id": "' + document.getElementById("id").value +
                 '"}';
 
-            //alert(aNewsAndEvent);
+            alert(aNewsAndEvent);
             //alert(getUrlBase() + "api/event/" + loc_id);
             $.ajax({
                 url: getUrlBase() + "api/event/" + loc_id,
                 type: "PUT",
                 //data: "{'editOptions':'" + aUnduplicatedUsers + "'}",
                 data: aNewsAndEvent,
-                //Host: localhost:6543,
-                //Cache-Control: no-cache
-                //dataType: "json",
-                //contentType: "application/json; charset=utf-8",
 
                 beforeSend: function () {
                     //turnBothOff("UnduplicatedUsersSuccessResult", "UnduplicatedUsersErrorResult");
@@ -679,19 +682,8 @@
 
                 success: function (response) {
                     //SetNotBusy();
-                    alert('success called');
-                    // if (response === "True") {
-                    //     //refresh the screen
-                    //     //SiteChanged();
-                    //
-                    //     if (anumber1 != anumber2) {
-                    //         setMessageDivVisibility("UnduplicatedUsersErrorInSummation");
-                    //     } else {
-                    //         setMessageDivVisibility("UnduplicatedUsersSuccessResult");
-                    //     }
-                    // } else {
-                    //     setMessageDivVisibility("UnduplicatedUsersErrorResult");
-                    // }
+                    alert('success');
+
                 },
                 error: function (xhr) {
                     alert("ERROR");
@@ -828,7 +820,16 @@
             var innerDiv1eButton = document.createElement("button")
             innerDiv1eButton.className="btn btn-lg";
             innerDiv1eButton.innerText = "go"
-            innerDiv1e.appendChild(innerDiv1eButton)
+            innerDiv1eButton.setAttribute('onclick', "location.href = 'http://" + event_url + "';");
+            innerDiv1eButton.setAttribute('target', "_blank");
+            //innerDiv1e.appendChild(innerDiv1eButton)
+
+            var innerDiv1eAnchor = document.createElement("a")
+            //innerDiv1eAnchor.className="btn btn-lg";
+            innerDiv1eAnchor.innerText = "GO"
+            innerDiv1eAnchor.setAttribute('href', "http://" + event_url + "");
+            innerDiv1eAnchor.setAttribute('target', "_blank");
+            innerDiv1e.appendChild(innerDiv1eAnchor)
 
 
             div1.appendChild(innerDiv1)
