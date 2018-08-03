@@ -107,7 +107,7 @@
   <!--?</div>-->
 <!--?</nav>-->
 
-   <div id="includedHeader">ddd4</div>
+   <div id="includedHeader"></div>
 
 
 <div class="container-fluid text-center">
@@ -130,7 +130,8 @@
                 <div class="col-sm-2" style="background-color:white;">
                     <!--?<img src="http://gis.podassoc.com/iMii_images/discover.png" alt="image" style="width:100%">-->
                     <a href="Discover"  >
-                        <img src="http://gis.podassoc.com/iMii_images/discover.png" alt="Picture Description" style="width:100%">
+                        <!--?<img src="http://gis.podassoc.com/iMii_images/discover.png" alt="Picture Description" style="width:100%">-->
+                        <img src="http://localhost:6543/graphics/discover_isolated.png" alt="Picture Description" style="width:100%">
                     </a>
                 </div>
                 <div class="col-sm-2" style="background-color:white;"></div>
@@ -143,19 +144,22 @@
                 <div class="col-sm-1" style="background-color:white;"></div>
                 <div class="col-sm-2" style="background-color:white;">
                     <a href="Reclaim"  >
-                        <img src="http://gis.podassoc.com/iMii_images/reclaim.png" alt="Picture Description" style="width:100%">
+                        <!--?<img src="http://gis.podassoc.com/iMii_images/reclaim.png" alt="Picture Description" style="width:100%">-->
+                        <img src="http://localhost:6543/graphics/reclaim_isolated.png" alt="Picture Description" style="width:100%">
                     </a>
                 </div>
                 <div class="col-sm-2" style="background-color:white;">
                     <!--?<img src="http://gis.podassoc.com/iMii_images/theminingcycle.png" alt="image" style="width:100%">-->
                     <a href="MiningCycle"  >
-                        <img src="http://gis.podassoc.com/iMii_images/theminingcycle.png" alt="Picture Description" style="width:100%">
+                        <!--?<img src="http://gis.podassoc.com/iMii_images/theminingcycle.png" alt="Picture Description" style="width:100%">-->
+                        <img src="http://localhost:6543/graphics/Center_Isolated.png" alt="Picture Description" style="width:100%">
                     </a>
                 </div>
                 <div class="col-sm-2" style="background-color:white;">
                     <!--?<img src="http://gis.podassoc.com/iMii_images/plan.png" alt="image" style="width:100%">-->
                     <a href="Plan"  >
-                        <img src="http://gis.podassoc.com/iMii_images/plan.png" alt="Picture Description" style="width:100%">
+                        <!--?<img src="http://gis.podassoc.com/iMii_images/plan.png" alt="Picture Description" style="width:100%">-->
+                        <img src="http://localhost:6543/graphics/plan_isolated.png" alt="Picture Description" style="width:100%">
                     </a>
                 </div>
                 <div class="col-sm-1" style="background-color:white;"></div>
@@ -169,7 +173,8 @@
                 <div class="col-sm-2" style="background-color:white;">
                     <!--?<img src="http://gis.podassoc.com/iMii_images/mine.png" alt="image" style="width:100%">-->
                     <a href="Mine" >
-                        <img src="http://gis.podassoc.com/iMii_images/mine.png" alt="Picture Description" style="width:100%">
+                        <!--?<img src="http://gis.podassoc.com/iMii_images/mine.png" alt="Picture Description" style="width:100%">-->
+                        <img src="http://localhost:6543/graphics/mine_isolated.png" alt="Picture Description" style="width:100%">
                     </a>
                 </div>
                 <div class="col-sm-2" style="background-color:white;"></div>

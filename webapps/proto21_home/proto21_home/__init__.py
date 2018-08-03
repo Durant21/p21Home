@@ -10,10 +10,27 @@ from proto21_home.data.Event import Event
 from proto21_home.data.db_factory import DbSessionFactory
 from proto21_home.renderers.csv_renderer import CSVRendererFactory
 
+import os
+import sys
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
+
+    # import logging
+    # logging.basicConfig( filename='example.log', level=logging.DEBUG )
+    # logging.debug( 'This message should go to the log file' )
+    # logging.info( 'So should this' )
+    # logging.warning( 'And this, too' )
+
+    # new_path = 'init1.txt'
+    # new_days = open( new_path, 'w' )
+    # new_days.write('test2')
+    #
+    # f = open( "/Users/dantefernandez/Projects/Proto21/webapps/proto21_home/proto21_home/logs/guru97.txt", "w+" )
+    # for i in range( 10 ):
+    #     f.write( "This is line %d\r\n" % (i + 1) )
+    # logger.handlers  # you should have one FileHandler object
 
     config = Configurator(settings=settings)
     config.include('pyramid_chameleon')
@@ -25,6 +42,7 @@ def main(global_config, **settings):
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_static_view( 'scripts', 'static/scripts' )
     config.add_static_view( 'images', 'static/images' )
+    config.add_static_view( 'graphics', 'static/graphics' )
     config.add_route('home', '/')
     config.add_route('blog','/blog')
     config.add_route( 'gis', '/gis' )

@@ -6,6 +6,9 @@ import shutil
 from pyramid.response import Response
 import sqlite3
 
+from proto21_home.common.logfile import w
+
+
 @view_config(route_name='home', renderer='proto21_home:templates/mytemplate.pt')
 def my_view(request):
     return {'project': 'Home'}
@@ -117,61 +120,71 @@ def my_view16(request):
 def store_img1_view(request):
     # src:  https://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/forms/file_uploads.html
 
-    # ``filename`` contains the name of the file in string format.
-    #
-    # WARNING: this example does not deal with the fact that IE sends an
-    # absolute file *path* as the filename.  This example is naive; it
-    # trusts user input.
+    try:
 
-    filename = request.POST['img1'].filename
+        w('store_img1_view()')
 
-    # ``input_file`` contains the actual file data which needs to be
-    # stored somewhere.
+        # ``filename`` contains the name of the file in string format.
+        #
+        # WARNING: this example does not deal with the fact that IE sends an
+        # absolute file *path* as the filename.  This example is naive; it
+        # trusts user input.
 
-    input_file = request.POST['img1'].file
+        filename = request.POST['img1'].filename
 
-    img_id = request.POST['img_id']
+        # ``input_file`` contains the actual file data which needs to be
+        # stored somewhere.
 
-    # Note that we are generating our own filename instead of trusting
-    # the incoming filename since that might result in insecure paths.
-    # Please note that in a real application you would not use /tmp,
-    # and if you write to an untrusted location you will need to do
-    # some extra work to prevent symlink attacks.
-    settings = request.registry.settings
-    sRelativePath = settings.get( 'img_path' )
+        input_file = request.POST['img1'].file
 
-    # print( 'path: {0}'.format( img_path ) )
-    # sRelativePath = os.getcwd()
-    print( 'path: {0}'.format( sRelativePath ) )
+        img_id = request.POST['img_id']
 
-    # file_path = os.path.join('~/tmp', '%s.mp3' % uuid.uuid4())
-    # file_path = os.path.join( '/Users/dantefernandez/Projects/PythonScripts/FileUpload/prjFileUpload/prjFileUpload/tmp', '%s.jpg' % uuid.uuid4() )
-    file_path = os.path.join( sRelativePath + '/images/', '%s.jpg' % uuid.uuid4() )
+        # Note that we are generating our own filename instead of trusting
+        # the incoming filename since that might result in insecure paths.
+        # Please note that in a real application you would not use /tmp,
+        # and if you write to an untrusted location you will need to do
+        # some extra work to prevent symlink attacks.
+        settings = request.registry.settings
+        sRelativePath = settings.get( 'img_path' )
+        w('sRelativePath: ' + sRelativePath)
+
+        # print( 'path: {0}'.format( img_path ) )
+        # sRelativePath = os.getcwd()
+        # print( 'path: {0}'.format( sRelativePath ) )
+
+        # file_path = os.path.join('~/tmp', '%s.mp3' % uuid.uuid4())
+        # file_path = os.path.join( '/Users/dantefernandez/Projects/PythonScripts/FileUpload/prjFileUpload/prjFileUpload/tmp', '%s.jpg' % uuid.uuid4() )
+        file_path = os.path.join( sRelativePath + '/images/', '%s.jpg' % uuid.uuid4() )
 
 
-    # We first write to a temporary file to prevent incomplete files from
-    # being used.
+        # We first write to a temporary file to prevent incomplete files from
+        # being used.
 
-    temp_file_path = file_path + '~'
+        temp_file_path = file_path + '~'
 
-    # Finally write the data to a temporary file
-    input_file.seek(0)
-    with open(temp_file_path, 'wb') as output_file:
-        shutil.copyfileobj(input_file, output_file)
+        # Finally write the data to a temporary file
+        input_file.seek(0)
+        with open(temp_file_path, 'wb') as output_file:
+            shutil.copyfileobj(input_file, output_file)
 
-    # Now that we know the file has been fully saved to disk move it into place.
+        # Now that we know the file has been fully saved to disk move it into place.
 
-    os.rename(temp_file_path, file_path)
-    sBaseFileName = os.path.basename( file_path )
-    # TODO: "create insert statement for People images"
-    db = sqlite3.connect( '/Users/dantefernandez/Projects/Proto21/webapps/proto21_home/proto21_home/db/iMii_v3.sqlite' )
-    cursor = db.cursor()
-    # cursor.execute( '''SELECT * FROM People''' )
-    # user1 = cursor.fetchone()  # retrieve the first row
-    # print('people: ' + user1[0] )  # Print the first column retrieved(user's name)
-    cursor.execute('''UPDATE People SET img1 = ? WHERE id = ?''',(sBaseFileName,img_id))
-    db.commit()  # Commit the change
-    return Response('OK')
+        os.rename(temp_file_path, file_path)
+        sBaseFileName = os.path.basename( file_path )
+
+        # TODO: "create insert statement for People images"
+        sDBPath = settings.get( 'db_path' )
+        w('sDBPath: ' + sDBPath)
+        db = sqlite3.connect( sDBPath + '/iMii_v3.sqlite' )
+        cursor = db.cursor()
+        # cursor.execute( '''SELECT * FROM People''' )
+        # user1 = cursor.fetchone()  # retrieve the first row
+        # print('people: ' + user1[0] )  # Print the first column retrieved(user's name)
+        cursor.execute('''UPDATE People SET img1 = ? WHERE id = ?''',(sBaseFileName,img_id))
+        db.commit()  # Commit the change
+        return Response('OK')
+    except OSError as err:
+        w("error: store_img1_view - " + err)
 
 
 @view_config(route_name='store_img2_view', renderer='proto21_home:templates/NewsEvents.pt',
