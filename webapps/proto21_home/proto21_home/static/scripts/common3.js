@@ -1,8 +1,4 @@
 
-function testCommon() {
-
-    //alert('test');
-}
 
 function getUrlBase() {
     //return 'http://localhost:6543/';

@@ -242,9 +242,10 @@ def store_img2_view(request):
     # Now that we know the file has been fully saved to disk move it into place.
 
     os.rename(temp_file_path, file_path)
-    sBaseFileName = os.path.basename( file_path )
-    # TODO: "create insert statement for People images"
-    db = sqlite3.connect( '/Users/dantefernandez/Projects/Proto21/webapps/proto21_home/proto21_home/db/iMii_v3.sqlite' )
+
+    sDBPath = settings.get( 'db_path' )
+    w( 'sDBPath: ' + sDBPath )
+    db = sqlite3.connect( sDBPath + '/iMii_v3.sqlite' )
     cursor = db.cursor()
 
     cursor.execute('''UPDATE Events SET img1 = ? WHERE id = ?''',(sBaseFileName,img_id))
