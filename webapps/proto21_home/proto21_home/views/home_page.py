@@ -171,6 +171,7 @@ def store_img1_view(request):
 
         os.rename(temp_file_path, file_path)
         sBaseFileName = os.path.basename( file_path )
+        w( 'sBaseFileName: ' + sBaseFileName )
 
         # TODO: "create insert statement for People images"
         sDBPath = settings.get( 'db_path' )
@@ -220,6 +221,7 @@ def store_img2_view(request):
         # some extra work to prevent symlink attacks.
         settings = request.registry.settings
         sRelativePath = settings.get( 'img_path' )
+        w( 'sRelativePath: ' + sRelativePath )
 
         # print( 'path: {0}'.format( img_path ) )
         # sRelativePath = os.getcwd()
@@ -243,13 +245,15 @@ def store_img2_view(request):
         # Now that we know the file has been fully saved to disk move it into place.
 
         os.rename(temp_file_path, file_path)
+        sBaseFileName = os.path.basename( file_path )
+        w( 'sBaseFileName: ' + sBaseFileName )
 
         sDBPath = settings.get( 'db_path' )
         w( 'sDBPath: ' + sDBPath )
         db = sqlite3.connect( sDBPath + '/iMii_v3.sqlite' )
         cursor = db.cursor()
 
-        cursor.execute('''UPDATE Events SET img1 = ? WHERE id = ?''',(sDBPath,img_id))
+        cursor.execute('''UPDATE Events SET img1 = ? WHERE id = ?''',(sBaseFileName,img_id))
         db.commit()  # Commit the change
 
         # # src:  https://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/forms/file_uploads.html
