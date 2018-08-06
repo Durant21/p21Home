@@ -142,4 +142,5 @@ def configure_renderers(config):
 
     csv_renderer = CSVRendererFactory()
     csv_renderer.add_adapter(Car, lambda c, _: c.to_dict())
+    # csv_renderer.add_adapter(Person, lambda p, _: p.to_dict() )
     config.add_renderer('csv', csv_renderer)
