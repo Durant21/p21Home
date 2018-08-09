@@ -7,8 +7,10 @@ from pyramid.renderers import JSON
 from proto21_home.data.Car import Car
 from proto21_home.data.People import Person
 from proto21_home.data.Event import Event
+from proto21_home.data.User import User
 from proto21_home.data.db_factory import DbSessionFactory
 from proto21_home.renderers.csv_renderer import CSVRendererFactory
+from proto21_home.data.repository import Repository
 
 import os
 import sys
@@ -79,6 +81,8 @@ def main(global_config, **settings):
     config.add_route( 'events_api', '/api/events' )
     config.add_route( 'event_api', '/api/event/{event_id}' )
 
+    config.add_route('login_api','/api/login')
+
 
 
     config.scan()
@@ -91,6 +95,18 @@ def init_db(config):
     db_file = settings.get('db_filename')
 
     DbSessionFactory.global_init(db_file)
+    # Repository.create_user('jeff')
+    # Repository.create_user( 'chloe' )
+    # Repository.create_user( 'sarah' )
+    # Repository.create_user( 'mike' )
+    # Repository.create_user( 'Debra' )
+    # Repository.create_user( 'Dante' )
+    # Repository.create_user( 'Laura' )
+    # Repository.create_user( 'Chad' )
+    # Repository.create_user( 'Jon' )
+    # Repository.create_user( 'Joan' )
+    # Repository.create_user( 'Admin' )
+
 
 
 def register_routes(config):

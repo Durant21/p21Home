@@ -2,6 +2,138 @@
 
 function getUrlBase() {
     //return 'http://localhost:6543/';
-    //return 'http://www.dev1.proto21.com/';
-    return 'http://dev1.proto21.com/';
+    return 'http://www.dev1.proto21.com/';
+    //return 'http://dev1.proto21.com/';
+}
+
+function verifyUser() {
+        var user = document.getElementById('user').value;
+
+        var pw = document.getElementById('password').value;
+        //alert(user + ":" + pw);
+        $.ajax({
+                    type: "GET",
+                    url: getUrlBase() + "api/login?u=" + user + "&pw=" + pw,
+                    contentType: "application/json",
+                    dataType: "json",
+
+                    beforeSend: function () {
+                        //$('#Grid_People').jqGrid('clearGridData');
+                        //SetBusy();
+                    },
+
+                    success: function (data) {
+                        //SetNotBusy();
+                        var jsonObj = data;
+                        // var iLength = jsonObj.length;
+                        // var id = jsonObj.id;
+
+                        //write key to hidden tag
+                        var hKey = document.getElementById('hKey');
+                        hKey.value = data.api_key;
+                        var hKey1 = document.getElementById('hKey1');
+                        hKey1.value = data.api_key;
+                        //alert('success ');
+                        setLogoutVisible('true');
+
+                        // set Login panel not visible
+                        var login = document.getElementById('login');
+                        login.style.display = "none";
+
+                        resetAllAnchors();
+                        resetAllButtons();
+
+
+                    },
+                    loadComplete: function () {
+                        //$("#Grid_People").jqGrid('setGridWidth', $(window).width(), true);
+                    },
+
+                    error: function (err) {
+                        //$.unblockUI();
+                        //SetNotBusy();
+                        alert("Error verifying user:" + err.status + "    " + err.statusText);
+                    }
+        });
+    }
+
+function getHiddenKey1() {
+        var btn = document.getElementById("btnPeople")
+
+        //location.href='People?k=getHiddenKey()
+        var hKey = document.getElementById('hKey');
+        // hKey.value = data.api_key;
+        if (hKey) {
+            return hKey.value;
+        } else {
+            return "";
+        }
+}
+
+var getParams1 = function (url) {
+    var params = {};
+    var parser = document.createElement('a');
+    parser.href = url;
+    var query = parser.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        params[pair[0]] = decodeURIComponent(pair[1]);
+    }
+    return params;
+};
+
+function resetBtnURL(btnName,targetPage,sAutoClick) {
+
+    //alert(getHiddenKey());
+    hKeyVal = getHiddenKey();
+    aBtn = document.getElementById(btnName);
+    if (aBtn) {
+        //alert('resetting ' + btnName + ' to ' + hKeyVal)
+        if (hKeyVal == 'NONE' || hKeyVal == 'undefined') {
+            aBtn.setAttribute("onclick", "location.href='" + targetPage + "'");
+        } else {
+            aBtn.setAttribute("onclick", "location.href='" + targetPage + "?k=" + hKeyVal + "'");
+        }
+
+        if (sAutoClick == 'true') {
+            aBtn.click();
+        }
+    } else {
+        //alert('could not locate ' + btnName )
+    }
+}
+
+function resetAnchorURL(btnName,targetPage,sAutoClick) {
+
+    //alert(getHiddenKey());
+    hKeyVal = getHiddenKey();
+    aBtn = document.getElementById(btnName);
+    if (aBtn) {
+        //alert('resetting anchor ' + btnName + ' to ' + hKeyVal)
+        if (hKeyVal == 'NONE' || hKeyVal == 'undefined') {
+            aBtn.setAttribute("href", "" + targetPage);
+        } else {
+            aBtn.setAttribute("href", "" + targetPage + "?k=" + hKeyVal);
+        }
+
+        if (sAutoClick == 'true') {
+            aBtn.click();
+        }
+    } else {
+        //alert('could not locate ' + btnName )
+    }
+}
+
+function resetAllAnchors() {
+    resetAnchorURL('aDiscover','Discover','false');
+    resetAnchorURL('aReclaim','Reclaim','false');
+    resetAnchorURL('aMiningCycle','MiningCycle','false');
+    resetAnchorURL('aPlan','Plan','false');
+    resetAnchorURL('aMine','Mine','false');
+}
+
+function resetAllButtons() {
+    resetBtnURL('btnPeople','People','false');
+    resetBtnURL('btnCurricula','Curricula','false')
 }

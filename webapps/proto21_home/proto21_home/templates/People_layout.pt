@@ -14,8 +14,12 @@
       .id3 {
             max-width: 100%;
             height: auto;
+          padding: 0px;
       }
 
+      .yy {
+          background-color: white;
+      }
       .btn {
             background-color: dodgerblue;
             border: none;
@@ -56,9 +60,9 @@
 .column {
     float: left;
     width: 33.33%;
-    padding: 5px;
-    border: 1px solid black;
-    background-color: lightgray;
+    padding-right: 10px;
+    border: 0px solid black;
+    background-color: white;
 }
 
 /* Clearfix (clear floats) */
@@ -163,13 +167,19 @@
            text-align: center;
         }
 
+    .row1 {
+        /*background-color: rosybrown;*/
+        /*padding-left: 300px;*/
+    }
+
     .row1a {
         background-color: white;   /* red;*/
         width: 70%;
     }
 
     .ww {
-        height: 350px;
+        height: 250px;
+        /*background-color: bisque;*/
         overflow: auto;
     }
 
@@ -383,7 +393,7 @@ i>-->
 
         </div>
         <div id="div2" name="div2" class="col-sm-12 text-right" style="background-color: white; align-content:right">
-            <button id="myBtnOpenAdd" onclick="OpenForAdd()">+</button>
+            <button id="myBtnOpenAdd" hidden="true" title="Create a new Person"  onclick="OpenForAdd()">+</button>
         </div>
         <div id="div1" name="div1" style="background-color: green"></div>
 
@@ -567,7 +577,7 @@ i>-->
         // "description": " careers in earth sciences",
         // "url": " www.stem.org"
 
-            alert(aPerson);
+            //alert(aPerson);
             //alert(getUrlBase() + "api/events");
             $.ajax({
                 url: getUrlBase() + "api/people",
@@ -698,6 +708,24 @@ i>-->
 
                 //alert(getUrlBase() + "api/people");
 
+
+               // validate the user
+                var q = getParams1(window.location.href);
+                if (q) {
+                    userid = q['k'];
+                } else {
+                    userid = "";
+                }
+                //alert('userid: ' + userid);
+
+                if (userid) {
+
+                } else {
+                    userid = 'none';
+                }
+                //  if (userid.trim() == 'NONE' || userid.trim() == 'undefined') {
+
+
                 $.ajax({
                     type: "GET",
                     url: getUrlBase() + "api/people",
@@ -749,7 +777,7 @@ i>-->
                                     state = jsonObj[i]['state'];
                                     img1 = getUrlBase() + "images/" + jsonObj[i]['img1'];
                                     //console.log(aval)
-                                    generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1);
+                                    generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1,userid);
                                     //alert(jsonObj[i])
                                 }
 
@@ -773,53 +801,56 @@ i>-->
                 });
             }
 
-        function generatePeopleDiv(id,fname,lname, title,company,email,url1,url2,description, address, city,state,img1) {
+        function generatePeopleDiv(id,fname,lname, title,company,email,url1,url2,description, address, city,state,img1,userid) {
+
+
+
                 // grab the main container
                 var div1 = document.getElementById("div1");
 
                 // create an inner-div
-                var innerDiv1 = document.createElement("div")
+                var innerDiv1 = document.createElement("div");
                 innerDiv1.className = "outer";
 
 
-                var innerDiv1a = document.createElement("div")
+                var innerDiv1a = document.createElement("div");
                 innerDiv1a.className="row1a text-right";//"row1a"
 
-                var innerDiv2a = document.createElement("div")
+                var innerDiv2a = document.createElement("div");
                 innerDiv2a.className="row1";
-                var text2a = document.createElement("text")
+                var text2a = document.createElement("text");
                 text2a.innerHTML = fname + " " + lname;
-                innerDiv2a.appendChild(text2a)
+                innerDiv2a.appendChild(text2a);
 
-                var innerDiv2b = document.createElement("div")
-                innerDiv2b.className="row1"
-                var text2b = document.createElement("text")
+                var innerDiv2b = document.createElement("div");
+                innerDiv2b.className="row1";
+                var text2b = document.createElement("text");
                 text2b.innerHTML = company;
-                innerDiv2b.appendChild(text2b)
+                innerDiv2b.appendChild(text2b);
 
-                var innerDiv2c = document.createElement("div")
-                innerDiv2c.className="row1"
-                var text2c = document.createElement("text")
+                var innerDiv2c = document.createElement("div");
+                innerDiv2c.className="row1";
+                var text2c = document.createElement("text");
                 text2c.innerHTML = email;
-                innerDiv2c.appendChild(text2c)
+                innerDiv2c.appendChild(text2c);
 
-                var innerDiv2d = document.createElement("div")
-                innerDiv2d.className="row1"
-                var text2d = document.createElement("text")
+                var innerDiv2d = document.createElement("div");
+                innerDiv2d.className="row1";
+                var text2d = document.createElement("text");
                 text2d.innerHTML = url1;
-                innerDiv2d.appendChild(text2d)
+                innerDiv2d.appendChild(text2d);
 
-                var innerDiv2e = document.createElement("div")
-                innerDiv2e.className="row1"
-                var text2e = document.createElement("text")
+                var innerDiv2e = document.createElement("div");
+                innerDiv2e.className="row1";
+                var text2e = document.createElement("text");
                 text2e.innerHTML = url2;
-                innerDiv2e.appendChild(text2e)
+                innerDiv2e.appendChild(text2e);
 
-                var innerDiv2f = document.createElement("div")
-                innerDiv2f.className="row1 ww"
-                var text2f = document.createElement("text")
+                var innerDiv2f = document.createElement("div");
+                innerDiv2f.className="row1 ww";
+                var text2f = document.createElement("text");
                 text2f.innerHTML = description;
-                innerDiv2f.appendChild(text2f)
+                innerDiv2f.appendChild(text2f);
 
                 // var innerDiv2g = document.createElement("div")
                 // innerDiv2g.className="row1"
@@ -855,7 +886,15 @@ i>-->
                                                                     + "'" + img1 + "'"
                                                                     + ")");
 
-                innerDiv1a.appendChild(innerDiv1button);
+                if (userid) {
+                    if ((userid.trim() == "none") || (userid.trim() ==  "undefined")) {
+
+                    } else {
+                        innerDiv1a.appendChild(innerDiv1button);
+                    }
+                } else {
+
+                }
 
                 var innerDiv1buttonImg = document.createElement("button");
                 innerDiv1buttonImg.setAttribute('id','ttt');
@@ -866,10 +905,21 @@ i>-->
                 innerDiv1buttonImg.setAttribute('onclick', "OpenForEditImage('" + sID + "'"
                                                                     + ")");
 
-                innerDiv1a.appendChild(innerDiv1buttonImg);
+                if (userid) {
+                    if ((userid.trim() == "none") || (userid.trim() == "undefined")) {
+
+                    } else {
+                        innerDiv1a.appendChild(innerDiv1buttonImg);
+
+                        var myBtnOpenAdd = document.getElementById('myBtnOpenAdd');
+                        myBtnOpenAdd.style.display = "block";
+                    }
+                } else {
+
+                }
 
                 var innerDiv3 = document.createElement("div")
-                innerDiv3.className="column"
+                innerDiv3.className="column yy"
 
                 var oImg = document.createElement("img");
                 // oImg.setAttribute('src', 'http://gis.podassoc.com/iMii_images/deb_shewfelt.png');
@@ -931,7 +981,7 @@ i>-->
                 modal.style.display = "none";
             }
         }
-        // this is test #2
+
     </script>
 </body>
 </html>

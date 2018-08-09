@@ -170,7 +170,6 @@
 </head>
 <body onload="populateTablesEvents()">
 
-
    <div id="includedHeader"></div>
 
     <div class="container-fluid text-center">
@@ -189,7 +188,7 @@
                 <!--?<button id="myBtn" onclick="OpenForAdd()">..r.</button>-->
 
                 <div id="div2" name="div2" class="col-sm-12 text-right" style="background-color: white; align-content:right">
-                    <button id="myBtnOpenAdd" onclick="OpenForAdd()">+</button>
+                    <button id="myBtnOpenAdd" hidden="true" title="Create a new Event" onclick="OpenForAdd()">+</button>
                 </div>
                 <div id="div1" name="div1" style="background-color: green">
 
@@ -426,6 +425,21 @@
 
                 //alert(getUrlBase() + "api/Events");
 
+               // validate the user
+                var q = getParams1(window.location.href);
+                if (q) {
+                    userid = q['k'];
+                } else {
+                    userid = "";
+                }
+                //alert('userid: ' + userid);
+
+                if (userid) {
+
+                } else {
+                    userid = 'none';
+                }
+
                 $.ajax({
                     type: "GET",
                     //url: getUrlBase() + "api/event/818976f5-9ada-41c8-aac5-85b2a3ae0925",
@@ -453,7 +467,7 @@
 
 
                         if (id) {
-                            generateEventsDiv(id,event_name,img_url,event_date,description,event_url);
+                            generateEventsDiv(id,event_name,img_url,event_date,description,event_url,userid);
                         } else {
                             for (var i = 0; i <= data.length; i++) {
                                 //jQuery("#Grid_Events").jqGrid('addRowData', i + 1, jsonObj[i]);
@@ -467,7 +481,7 @@
                                     img_url = getUrlBase() + "images/" + jsonObj[i]['img1'];
 
                                     //console.log(aval)
-                                    generateEventsDiv(id,event_name,img_url,event_date,description,event_url);
+                                    generateEventsDiv(id,event_name,img_url,event_date,description,event_url,userid);
                                 }
                             }
                         }
@@ -711,7 +725,7 @@
 
         }
 
-        function generateEventsDiv(id, headline,img_url,event_date,description,event_url) {
+        function generateEventsDiv(id, headline,img_url,event_date,description,event_url,userid) {
 
             // <div class="col-sm-4 col-xs-12">
             //     <div class="panel panel-default text-center">
@@ -779,7 +793,19 @@
                                                                 + "'" + event_url + "'"
                                                                 + ")");
 
-            innerDiv1b_a.appendChild(innerDiv1button)
+            if(userid){
+                if((userid.trim()=="none")||(userid.trim()=="undefined")){
+
+                } else {
+                    innerDiv1b_a.appendChild(innerDiv1button);
+
+                    var myBtnOpenAdd = document.getElementById('myBtnOpenAdd');
+                    myBtnOpenAdd.style.display = "block";
+                }
+
+            } else {
+
+            }
 
             var innerDiv1buttonImg = document.createElement("button");
             innerDiv1buttonImg.setAttribute('id','ttt');
@@ -790,7 +816,17 @@
             innerDiv1buttonImg.setAttribute('onclick', "OpenForEditImage('" + id.toString() + "'"
                                                                 + ")");
 
-            innerDiv1b_a.appendChild(innerDiv1buttonImg);
+
+            if(userid) {
+
+                if((userid.trim()=="none")||(userid.trim()=="undefined")){
+
+                } else {
+                    innerDiv1b_a.appendChild(innerDiv1buttonImg);
+                }
+            } else {
+
+            }
 
             var innerDiv1c = document.createElement("div")
             innerDiv1c.className="column"

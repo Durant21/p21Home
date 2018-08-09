@@ -9,6 +9,7 @@ from dateutil.parser import parse
 
 from proto21_home.data.db_factory import DbSessionFactory
 from proto21_home.data.Car import Car
+from proto21_home.data.User import User
 
 
 class Repository:
@@ -135,3 +136,36 @@ class Repository:
 
         session.delete(car_id)
         session.commit()
+
+
+    @classmethod
+    def find_user_by_api_key(cls, api_key: str) -> User:
+
+        session = DbSessionFactory.create_session()
+        user = session.query(User).filter(User.api_key == api_key).first()
+        session.close()
+
+        return user
+
+    @classmethod
+    def find_user_by_u_pw(cls, u: str) -> User:
+
+        session = DbSessionFactory.create_session()
+        # user = session.query(User).filter(User.name == u, User.hashed_password == pw).first()
+        user = session.query( User ).filter( User.name == u ).first()
+        session.close()
+
+        # return "abc"
+        return user
+
+    @classmethod
+    def create_user(cls, username):
+
+        session = DbSessionFactory.create_session()
+
+        user = User(name=username,hashed_password='abc123')
+        session.add(user)
+
+        session.commit()
+
+        return user

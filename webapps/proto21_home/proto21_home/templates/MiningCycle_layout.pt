@@ -80,32 +80,7 @@
 </head>
 <body>
 
-   <!--?   HEADER  -->
-<!--?<nav class="navbar navbar-inverse">-->
-  <!--?<div class="container-fluid">-->
-    <!--?<div class="navbar-header">-->
-      <!--?<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">-->
-        <!--?<span class="icon-bar"></span>-->
-        <!--?<span class="icon-bar"></span>-->
-        <!--?<span class="icon-bar"></span>-->
-      <!--?</button>-->
-      <!--?<a class="navbar-brand" href="#">Logo</a>-->
-    <!--?</div>-->
-    <!--?<div class="collapse navbar-collapse" id="myNavbar">-->
-      <!--?<ul class="nav navbar-nav">-->
-          <!--?<li><input type="button" class="button navbtn" value="HOME" onclick="location.href='iMii';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="MINING CYCLE" onclick="location.href='MiningCycle';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="ABOUT" onclick="location.href='About';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="TEACHER RESOURCES" onclick="location.href='TeacherResources';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="NEWS & EVENTS" onclick="location.href='NewsEvents';" ></li>-->
-      <!--?</ul>-->
 
-      <!--?<ul class="nav navbar-nav navbar-right">-->
-        <!--?<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
-      <!--?</ul>-->
-    <!--?</div>-->
-  <!--?</div>-->
-<!--?</nav>-->
 
    <div id="includedHeader"></div>
 
@@ -129,7 +104,7 @@
                 <div class="col-sm-2" style="background-color:white;"></div>
                 <div class="col-sm-2" style="background-color:white;">
                     <!--?<img src="http://gis.podassoc.com/iMii_images/discover.png" alt="image" style="width:100%">-->
-                    <a href="Discover"  >
+                    <a id="aDiscover"   >
                         <img src="http://gis.podassoc.com/iMii_images/discover.png" alt="Picture Description" style="width:100%">
                         <!--?<img src="http://localhost:6543/graphics/discover_isolated.png" alt="Picture Description" style="width:100%">-->
                     </a>
@@ -143,21 +118,21 @@
                 <div class="col-sm-2" style="background-color:white;"></div>
                 <div class="col-sm-1" style="background-color:white;"></div>
                 <div class="col-sm-2" style="background-color:white;">
-                    <a href="Reclaim"  >
+                    <a id="aReclaim" >
                         <img src="http://gis.podassoc.com/iMii_images/reclaim.png" alt="Picture Description" style="width:100%">
                         <!--?<img src="http://localhost:6543/graphics/reclaim_isolated.png" alt="Picture Description" style="width:100%">-->
                     </a>
                 </div>
                 <div class="col-sm-2" style="background-color:white;">
                     <!--?<img src="http://gis.podassoc.com/iMii_images/theminingcycle.png" alt="image" style="width:100%">-->
-                    <a href="MiningCycle"  >
+                    <a id="aMiningCycle"  >
                         <img src="http://gis.podassoc.com/iMii_images/theminingcycle.png" alt="Picture Description" style="width:100%">
                         <!--?<img src="http://localhost:6543/graphics/Center_Isolated.png" alt="Picture Description" style="width:100%">-->
                     </a>
                 </div>
                 <div class="col-sm-2" style="background-color:white;">
                     <!--?<img src="http://gis.podassoc.com/iMii_images/plan.png" alt="image" style="width:100%">-->
-                    <a href="Plan"  >
+                    <a id="aPlan"  >
                         <img src="http://gis.podassoc.com/iMii_images/plan.png" alt="Picture Description" style="width:100%">
                         <!--?<img src="http://localhost:6543/graphics/plan_isolated.png" alt="Picture Description" style="width:100%">-->
                     </a>
@@ -172,7 +147,7 @@
                 <div class="col-sm-2" style="background-color:white;"></div>
                 <div class="col-sm-2" style="background-color:white;">
                     <!--?<img src="http://gis.podassoc.com/iMii_images/mine.png" alt="image" style="width:100%">-->
-                    <a href="Mine" >
+                    <a id="aMine" >
                         <img src="http://gis.podassoc.com/iMii_images/mine.png" alt="Picture Description" style="width:100%">
                         <!--?<img src="http://localhost:6543/graphics/mine_isolated.png" alt="Picture Description" style="width:100%">-->
                     </a>
@@ -237,6 +212,11 @@
         // $(document).ready(function(){
         //     $("#includedFooter").load("static/iMii_master_footer.html");
         // });
+
+        // function setControls() {
+        //     //resetBtnURL('aDiscover','Discover','false');
+        //     resetAnchorURL('aDiscover','Discover','false')
+        // }
     </script>
 
 </body>

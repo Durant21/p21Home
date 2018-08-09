@@ -1,22 +1,16 @@
+
 from pyramid.request import Request
 from pyramid.response import Response
 from pyramid.view import view_config
 
-import os
-import uuid
-import shutil
-
-
+import proto21_home.infrastructure.auth as auth
 from proto21_home.data.repository import Repository
-from proto21_home.data.repository_people import Repository_people
 from proto21_home.data.repository_events import Repository_events
-from proto21_home.data.Car import Car
+from proto21_home.data.repository_people import Repository_people
 from proto21_home.viewmodels.create_car_viewmodel import CreateCarViewModel
-from proto21_home.viewmodels.update_car_viewmodel import UpdateCarViewModel
-
-from proto21_home.viewmodels.create_people_viewmodel import CreatePersonViewModel
-
 from proto21_home.viewmodels.create_event_viewmodel import CreateEventViewModel
+from proto21_home.viewmodels.create_people_viewmodel import CreatePersonViewModel
+from proto21_home.viewmodels.update_car_viewmodel import UpdateCarViewModel
 from proto21_home.viewmodels.update_event_viewmodel import UpdateEventViewModel
 from proto21_home.viewmodels.update_person_viewmodel import UpdatePersonViewModel
 
@@ -119,11 +113,60 @@ def delete_auto(request: Request):
         return Response(status=400, body='Could not update car.')
 
 
+@view_config(route_name='login_api',
+             request_method='GET',
+             accept='application/json',
+             renderer='json')
+def verifyLogIn(request):
+
+    # u1 = request.params('u')
+    u = request.GET['u']
+    pw = request.GET['pw']
+    # p = request.params['pw']
+    y = "abc"
+
+    user = Repository.find_user_by_u_pw(u=u)
+    if not user:
+        return Response( status=403, body="Invalid user password; no user with these credentials" )
+    # request.route_url()
+    # print("------------------------------------------------  " + p)
+    # request.args['language']
+    # a = request.GET.get( 'u' )
+    # print("user: " + a)
+    # p = request.GET.get('pw')
+    # print( "pw: " + p )
+    # all_headers = dict( request.headers )
+    # # # v = t["Authorization"]
+    # user = all_headers["user"]
+    # pw = all_headers["password"]
+    return user.to_dict()
+
+
 @view_config(route_name='people_api',
              request_method='GET',
              accept='application/json',
              renderer='json')
+# @auth.require_api_auth
 def all_people(_):
+    # all_headers = dict(request.headers)
+    # # v = t["Authorization"]
+    #
+    #
+    # if "Authorization" not in request.headers:
+    #     return Response(status=403,body="No auth header")
+    #
+    # auth_header = all_headers["Authorization"]
+    # parts = auth_header.split(':')
+    # if len(parts) != 2 or parts[0].strip() != "api-key":
+    #     return Response( status=403, body="Invalid auth header" )
+    #
+    # api_key = parts[1].strip()
+    # user = Repository.find_user_by_api_key(api_key)
+    # if not user:
+    #     return Response( status=403, body="Invalid api-key; no user with this account number" )
+    #
+    # print("Listing People for {}".format(user.name))
+
     people = Repository_people.all_people(limit=25)
     return people
 

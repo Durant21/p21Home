@@ -1,5 +1,4 @@
 <style>
-
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbarHeader {
       margin-bottom: 0;
@@ -13,6 +12,71 @@
     }
 </style>
 
+<script src="scripts/common3.js"></script>
+
+<script>
+
+    // By default, login panel not visible.
+    var login = document.getElementById('login');
+    login.style.display = "none";
+
+    var aLogout = document.getElementById('aLogout');
+    aLogout.style.display = "none";
+
+    function setLogInVisible() {
+        var login = document.getElementById('login');
+        login.style.display = "block";
+
+
+        var aLogin = document.getElementById('aLogin');
+        aLogin.style.display = "none";
+    }
+
+    function closeLogin() {
+        var login = document.getElementById('login');
+        login.style.display = "none";
+
+        var aLogin = document.getElementById('aLogin');
+        aLogin.style.display = "block";
+    }
+
+    function setLoginAnchorVisible() {
+
+        var aLogin = document.getElementById('aLogin');
+        aLogin.style.display = "block";
+
+        var aLogout = document.getElementById('aLogout');
+        aLogout.style.display = "none";
+
+        // clear the URL of id string
+
+
+        // clear all controls of id string
+
+        aBtn = document.getElementById('btnHome');
+        if (aBtn) {
+            aBtn.setAttribute("onclick", "location.href='iMii'");
+            aBtn.click();
+
+        } else {
+            //alert('could not locate ' + btnName )
+        }
+
+    }
+
+
+    function setLogoutVisible(sBln) {
+        var aLogout = document.getElementById('aLogout');
+        var aLogin = document.getElementById('aLogin');
+        if (sBln == 'true') {
+            aLogout.style.display = "block";
+            aLogin.style.display = "none";
+        } else {
+            aLogout.style.display = "none";
+            aLogin.style.display = "block";
+        }
+    }
+</script>
 
 <!--?<div class="container">-->
   <div class="row">
@@ -31,15 +95,36 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-              <li><input type="button" class="button navbtn" value="HOME" onclick="location.href='iMii';" ></li>
-              <li><input type="button" class="button navbtn" value="MINING CYCLE" onclick="location.href='MiningCycle';" ></li>
-              <li><input type="button" class="button navbtn" value="ABOUT" onclick="location.href='About';" ></li>
-              <li><input type="button" class="button navbtn" value="TEACHER RESOURCES" onclick="location.href='TeacherResources';" ></li>
-              <li><input type="button" class="button navbtn" value="NEWS & EVENTS" onclick="location.href='NewsEvents';" ></li>
+              <!--?<li><input type="button" class="button navbtn" value="HOME" onclick="location.href='iMii';" ></li>-->
+              <!--?<li><input type="button" class="button navbtn" value="MINING CYCLE" onclick="location.href='MiningCycle';" ></li>-->
+              <!--?<li><input type="button" class="button navbtn" value="ABOUT" onclick="location.href='About';" ></li>-->
+              <!--?<li><input type="button" class="button navbtn" value="TEACHER RESOURCES" onclick="location.href='TeacherResources';" ></li>-->
+              <!--?<li><input type="button" class="button navbtn" value="NEWS & EVENTS" onclick="location.href='NewsEvents';" ></li>-->
+              <li><input type="button" class="button navbtn" value="HOME"              id="btnHome"             onclick="resetBtnURL('btnHome','iMii','true')" ></li>
+              <li><input type="button" class="button navbtn" value="MINING CYCLE"      id="btnMiningCycle"      onclick="resetBtnURL('btnMiningCycle','MiningCycle','true')" ></li>
+              <li><input type="button" class="button navbtn" value="ABOUT"             id="btnAbout"            onclick="resetBtnURL('btnAbout','About','true')" ></li>
+              <li><input type="button" class="button navbtn" value="TEACHER RESOURCES" id="btnTeacherResources" onclick="resetBtnURL('btnTeacherResources','TeacherResources','true')" ></li>
+              <li><input type="button" class="button navbtn" value="NEWS & EVENTS"     id="btnNewsAndEvents"    onclick="resetBtnURL('btnNewsAndEvents','NewsEvents','true')"></li>
           </ul>
+            <input id="hKey1" name="hKey" type="hidden" value="none">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a id="aLogin" href="#" onclick="setLogInVisible()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <li><a id="aLogout" href="#" onclick="setLoginAnchorVisible()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            <div id="login">
+                    <div class="form-group">
+                        <input type="text" id="user" placeholder="User" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" class="form-control">
+                    </div>
+                    <button id="btnSubmit" type="submit" class="btn btn-success" onclick="verifyUser()">Sign in</button>
+                <button id="btnCancel" type="submit" class="btn btn" onclick="closeLogin()">Cancel</button>
+                    <input id="hKey" type="hidden" name="hKey" value="none">
+
+
+            </div>
+≈
           </ul>
         </div>
       </div>
@@ -56,4 +141,72 @@
         <br>
     </div>
   </div>
+
+<script>
+    function getHiddenKey() {
+            var btn = document.getElementById("btnPeople")
+
+            //location.href='People?k=getHiddenKey()
+            var hKey = document.getElementById('hKey');
+            // hKey.value = data.api_key;
+            if (hKey) {
+                return hKey.value;
+            } else {
+                return "";
+            }
+    }
+
+</script>
+
+<script>
+
+    // document.getElementById("btnPeople").onclick = function() {
+    //     // aBtn = document.getElementById("btnPeople");
+    //     // aBtn.href="www.esri.com";
+    //     // aBtn.setAttribute("location.href", "www.esri.com");
+    //     // aBtn.setAttribute("onclick", "location.href='http://www.esri.com'");
+    //
+    //     alert('set');
+    //     return false;
+    // };
+//alert('calling getParams1');
+
+        $(document).ready(function(){
+            //alert('inside..');
+                var q = getParams1(window.location.href);
+                if (q) {
+                    userid = q['k'];
+                    var hKey = document.getElementById('hKey');
+                    if (hKey) {
+                        hKey.value = userid;
+                        resetAllAnchors();
+                        resetAllButtons();
+                        //alert('reset all anchors');
+                    }
+
+                    var hKey1 = document.getElementById('hKey1');
+                    if (hKey1) {
+                        hKey1.value = userid;
+                        //alert('aaaaa')
+                    }
+                    //alert('found q');
+
+                    //alert('useridd: ' + userid);
+                    if (userid.trim() == 'NONE' || userid.trim() == 'undefined') {
+                        //alert('setting false');
+                        setLogoutVisible('false');
+                    } else {
+                        setLogoutVisible('true');
+                        //alert('setting true');
+                    }
+
+                } else {
+                    userid = "";
+                    //alert('could not find q');
+                }
+        });
+
+
+    //alert('done with getParams1');
+  </script>
 <!--?  bottom of header -->
