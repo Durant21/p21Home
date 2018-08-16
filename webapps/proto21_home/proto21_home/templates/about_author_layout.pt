@@ -8,6 +8,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+
+    p.serif {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 18px;
+    }
+
+    p.sansserif {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
       margin-bottom: 0;
@@ -59,6 +69,10 @@
             color: white;
         }
 
+        a1 {
+            color: red;
+        }
+
     .leftpanelphoto {
 
             }
@@ -103,114 +117,42 @@
       <!--?<p><a href="#">Link</a></p>-->
     </div>
     <div class="col-sm-8 text-left">
-          <h1>Python Web Development</h1>
-          <p>Below are the steps required for building a functional, secure website with a backend data store.</p>
-          <hr>
-
-        <br>
-        <h3>Step 1: Create a new python project</h3>
-        <code>
-            # <i>create a new project</i>
-            <br>
-        </code>
-        <br>
-        We'll use cookiecutter to create our basic project scaffolding
-        <br>
-        <code>
-            $ cookiecutter https://github.com/Pylons/pyramid-cookiecutter-starter
-        </code>
-        <br><br>
-        Cookiecutter will ask you to name your project and your repo.
-        You will also select a templating language.  We'll select Chameleon for this prototype.
-        <br>
-        ...
-
-        <br><br>
-        Next, we will create and activate our python virtual environment.<br>
-        We'll specify python3.
-        <code>
-            <br>
-            # change directory into the new project<br>
-            $ cd DO_site1<br><br>
-
-            # create your virtual environment<br>
-            $ python3 -m venv --copies .env<br>
-            <br>
-            # Activate the .env <br>
-            $ . .env/bin/activate<br>
-            (.env) DO_site2 $
-            <br>
-
-        </code>
-        <br>
-        As a quick test, we'll verify the location of our virtual environment.
-        <br>
-        Note it is within our project file structure and not in the default python location.
-        <code>
-            <br>
-            $ which python<br>
-            /Users/dantefernandez/Projects/PythonScripts/DO_site2/DO_site2/.env/bin/python<br>
-
-        </code>
-
-        <br><br>
-        Next, we will download remaining requirements by running the setup.py in development-mode.
-        <code>
-            <br>
-            $ python setup.py develop
-            <br>
-        </code>
-        <br>
-        If all went well, we can launch the website<br>
-
-        <code>
-            $ pserve development.ini<br>
-            Starting server in PID 18400.<br>
-            Serving on http://localhost:6543<br>
-            Serving on http://localhost:6543<br>
-        </code>
-        <br><br>
-        In the next step we'll open the project in the PyCharm IDE.<br>
-        <br><br>
 
 
+<div class="container-fluid">
 
-        <h3>Step 2: Open the project in our development environment, PyCharm.</h3>
+<br>
+  <div class="row">
+    <div class="col-sm-1" style="background-color:white;"></div>
+      <div class="col-sm-10" style="background-color:white;">
 
+              <div class="row">
+                <div class="col-sm-6" style="background-color:white;">
+                    <img src="/images/photo1.png" alt="bio photo" style="width:100%">
+                    <br><br><br><br><br><br>
 
-        <!--?<p>My language selection was Python...</p>-->
-    <!--?-->
-        <!--?<h3>IDE</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Packages</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-    <!--?-->
-        <!--?<h3>Web Framework</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>UI</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Platform</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Source Control</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>OS</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Data Objects</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Web Server</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Add ons</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
+                </div>
+                  <div class="col-sm-6" style="background-color:white;">
+                      <h1>About the Author</h1>
+                  </div>
+                <div class="col-sm-6" style="background-color:white;">
+                    <p class="serif">
+                    <a href="http://dev1.proto21.com" target="_blank" style="color:blue; text-underline: black; text-decoration: underline; ">Proto21</a> is developed and maintained by Dante Fernandez.
+                    Dante lives in Albuquerque and currently works for <a href="http://respec.com" target="_blank"  style="color:black; text-underline: black; text-decoration: underline; ">RESPEC</a>, an information technology solution provider.
+                    </p>
 
+                    <p class="serif">
+                    You can reach him by e-mail at dante.fernandez@respec.com.
+                    </p>
+                </div>
+                  <div class="col-sm-4" style="background-color:white;"></div>
+              </div>
+
+        </div>
+    <div class="col-sm-1" style="background-color:white;"></div>
+  </div>
+
+</div>
     </div>
 
 

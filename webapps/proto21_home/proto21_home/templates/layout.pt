@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="scripts/common3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
@@ -17,11 +18,20 @@
            width: 100%;
            background-color: dimgray;
            color: white;
-           text-align: center;
+           text-align: right;
+            padding-right: 50px;
+            padding-top: 5px;
+            font-size: large;
+        }
+
+        a:link {
+            color: white;
         }
 
         .mm {
-            /*background-image: url("templates/images/trees1.jpg");*/
+            /*background-image: url(getUrlBase() + "images/trees1.jpg");*/
+            background-image: url("/images/trees1.jpg");
+
             }
 
         .q {
@@ -41,7 +51,7 @@
     <!--?<p style="color:deepskyblue; font-family: Verdana; font-size:70px;">Proto21</p>-->
 
     <!--?<p style="color:deepskyblue; font-family: Arial Black; font-size:70px;">Proto21</p>-->
-
+<!--?img_url = getUrlBase() + "images/" + jsonObj[i]['img1'];-->
     <p style="color:deepskyblue; font-family: Impact; font-size:70px;">Proto21</p>
   <!--?<p>Resize this responsive page to see the effect!</p>-->
 
@@ -51,26 +61,25 @@
   <div class="row">
     <div class="col-sm-4">
       <h3>iMii</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>This is a pre-prduction prototype we built for the GirlsInTheClassroom.org program.</p>
+
         <input type="button" class="btn btn-info" value="iMii" onclick="location.href='iMii';">
     </div>
-    <div class="col-sm-4">
-      <h3>GIS</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        <input type="button" class="btn btn-info" value="GIS" onclick="location.href='gis';">
-    </div>
-    <div class="col-sm-4">
-      <h3>Blog</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        <input type="button" class="btn btn-info" value="Blog" onclick="location.href='blog';">
-    </div>
+    <!--?<div class="col-sm-4">-->
+      <!--?<h3>GIS</h3>-->
+      <!--?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>-->
+      <!--?<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>-->
+        <!--?<input type="button" class="btn btn-info" value="GIS" onclick="location.href='gis';">-->
+    <!--?</div>-->
+    <!--?<div class="col-sm-4">-->
+      <!--?<h3>Blog</h3>-->
+      <!--?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>-->
+      <!--?<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>-->
+        <!--?<input type="button" class="btn btn-info" value="Blog" onclick="location.href='blog';">-->
+    <!--?</div>-->
     <div class="col-sm-4">
         <h3>Python Web Development</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <p>This site is built using opensource technology.  We'll build complete site and deploy it to the cloud.</p>
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='pythonwebdevelopment';">
     </div>
   </div>
@@ -78,7 +87,7 @@
 
 
 <footer class="stickyfooter">
-  <p>Footer Text</p>
+  <a href="about_author" style="color:white;">Dante Fernandez</a>
 </footer>
 
 </body>

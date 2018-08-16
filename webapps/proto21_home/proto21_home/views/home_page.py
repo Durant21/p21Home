@@ -78,6 +78,9 @@ def my_view9(request):
 def my_view9a(request):
     return {'project': 'About'}
 
+@view_config(route_name='about_author', renderer='proto21_home:templates/about_author.pt')
+def my_view9b(request):
+    return {'project': 'about_author'}
 
 @view_config(route_name='pythonwebdevelopment', renderer='proto21_home:templates/pythonwebdevelopment.pt')
 def my_view10(request):
