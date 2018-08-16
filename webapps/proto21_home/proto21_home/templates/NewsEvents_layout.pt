@@ -446,6 +446,8 @@
                     url: getUrlBase() + "api/events",
                     contentType: "application/json",
                     dataType: "json",
+                    async: "true",
+                    crossDomain: "true",
 
                     beforeSend: function () {
                         //$('#Grid_Events').jqGrid('clearGridData');
