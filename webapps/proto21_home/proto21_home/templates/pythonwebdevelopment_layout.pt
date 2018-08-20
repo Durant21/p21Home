@@ -4,6 +4,7 @@
   <title>Proto21.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -64,6 +65,8 @@
             }
   </style>
 </head>
+
+
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -170,46 +173,272 @@
             Serving on http://localhost:6543<br>
         </code>
         <br><br>
-        In the next step we'll open the project in the PyCharm IDE.<br>
+        In the next step we'll personalize our demo site<br>
         <br><br>
 
 
 
-        <h3>Step 2: Open the project in our development environment, PyCharm.</h3>
+        <h3>Step 2: Edit the landing page</h3>
+
+        Open the default landing page using your favorite text editor or IDE.
+
+        <div>
+
+            <img src="/images/initialWebpage.jpg" alt="Picture Description" style="width:50%">
+
+        </div>
+
+        <br><br>
+        As a quick demo of the ease of UI modification, we are going to modify this page.
+        <br>
+        Note the default project folder structure.  The landing page is /templates/layout.pt
+        <div>
+
+            <img src="/images/tree1.jpg" alt="Picture Description" style="width:50%">
+
+        </div>
+<br><br>
+
+        <br>
+        Replace the default HTML within the page layout.pt with the following sample:
+        <br>
+        <!--?https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_code_htmlhigh-->
+        <div class="w3-panel w3-card w3-light-grey">
+          <h4>HTML Example</h4>
+          <div class="w3-code htmlHigh notranslate">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+            &lt;title&gt;myProject&lt;/title&gt;<br>
+            &lt;body&gt;<br><br>
+            &lt;h1&gt;Welcome to your new website&lt;/h1&gt;<br>
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+          </div>
+        </div>
+        <br>
+        <br>
 
 
-        <!--?<p>My language selection was Python...</p>-->
-    <!--?-->
-        <!--?<h3>IDE</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Packages</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-    <!--?-->
-        <!--?<h3>Web Framework</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>UI</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Platform</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Source Control</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>OS</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Data Objects</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Web Server</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
-    <!--?-->
-        <!--?<h3>Add ons</h3>-->
-        <!--?<p>Lorem ipsum...</p>-->
+
+        Refreshing the site reveals the proposed changes.
+        <br><br>
+<div>
+
+    <img src="/images/newWebpage.jpg" alt="Picture Description" style="width:50%">
+
+</div>
+
+        <br><br>
+
+        In our next step we'll prepare to deploy our site to the cloud by creating a Git repository.
+
+        <br><br>
+
+<h3>Step 3: Create a Git repo</h3>
+        <br><br>
+
+        Note the working directory (folder containing the development.ini file)<br>
+        /Users/dantefernandez/Projects/PythonScripts/DO_site2/DO_site2<br>
+
+        From this location, move one directory up and create a Git repo<br>
+        <code>
+            # from the working directory, move one directory up<br>
+            $ pwd
+            /Users/dantefernandez/Projects/PythonScripts/DO_site2/DO_site2<br>
+
+            <br>
+            (.env) $ cd ..<br>
+            (.env) $ git init<br>
+            (.env) $ ls -la<br>
+                drwxr-xr-x   5 dantefernandez  staff   170 Aug 17 20:29 .<br>
+                drwxr-xr-x  36 dantefernandez  staff  1224 Aug 14 22:10 ..<br>
+                -rw-r--r--@  1 dantefernandez  staff  6148 Aug 17 19:31 .DS_Store<br>
+                drwxr-xr-x   9 dantefernandez  staff   306 Aug 17 20:29 .git<br>
+                drwxr-xr-x  15 dantefernandez  staff   510 Aug 17 19:31 DO_site2<br>
+
+
+
+        </code>
+
+        <br><br>
+
+        Create a master repository on Github.  From here, we'll deploy our new site to the cloud.
+
+        <br><br>
+
+
+        <code>
+            # set the github repo as the master<br>
+            $ git remote add origin https://github.com/Durant21/DO_site2.git<br>
+            <br>
+            # push your site up to Github<br>
+            $ git push -u origin master<br>
+            <br>
+
+        </code>
+
+        <br><br>
+
+        <h3>Step 4: Prepare the project for deployment</h3>
+
+        Below, we will add the webserver configuration files needed for serving our website.<br>
+        The needed files can be copied from my Github project
+        <br><br>
+
+        <code>
+            # create the following directories<br>
+            $ mkdir etc<br>
+            $ mkdir /etc/init<br>
+            $ mkdir /etc/nginx<br>
+            $ mkdir /etc/nginx/sites-available<br>
+
+        </code>
+
+        <br><br>
+
+        Copy these files from my Github into your project:<br>
+        /etc/init/DO_site2_svc.service<br>
+        /etc/nginx/sites-available/DO_site2_service.nginx<br>
+        /etc/setup_steps.txt<br>
+
+        <br><br>
+        Your resulting folder structure should look like this:<br><br>
+
+        <div>
+            <img src="/images/tree2.jpg" alt="Picture Description" style="width:50%">
+        </div>
+
+        <br><br>
+
+        <h3>Step 5: Deploy your app to the cloud</h3>
+
+        Below, we will go thru the steps for provisioning a VPS (virtual private server) that will host our new website. <br>
+
+        <br><br>
+
+        Go to <a href="www.digitalocean.com" style="color:blue">DigitalOcean</a> and create a Droplet.
+        Select the smallest (least expensive) configuration available, since this is an exercise. <br>
+        ubuntu 16.x<br>
+        1 GB, 1 vCPU<br>
+        <br>
+        Secure it with an ssh file for easy-access from your computer.<br>
+
+        <br><br>
+        Once you're logged-in, there are a few updates and installs we'll want to perform:
+        <br><br>
+        <code>
+            <br>
+            # Install any new or missing security patches<br>
+            $ apt-get update<br>
+            <br>
+            # Check if any packages need upgrading<br>
+            $ apt-get upgrade -y<br>
+            <br>
+            # reboot the server and ssh back in<br>
+            $ reboot<br>
+            <br>
+            # (optional)<br>
+            $ apt install fail2ban <br>
+
+            <br><br>
+            # install a few things we need <br>
+            $ apt-get install --no-install-recommends -y -q build-essential <br>
+            $ apt-get install --no-install-recommends -y -q git python3 python3-dev wget unzip nload<br>
+            <br><br>
+            # prepare to install the webserver NGINX<br>
+            $ add-apt-repository ppa:nginx/development<br>
+            $ apt-get update <br>
+            $ apt install python-software-properties<br>
+            <br><br>
+            # install the NGINX webserver<br>
+            $ apt install nginx<br>
+            # verify NGINX install by checking the version<br>
+            $ nginx -v<br>
+            $ uwsgi --version<br>
+            <br><br>
+
+            # install micro WSGI<br>
+            $ apt install python3-pip<br>
+            $ pip3 install uwsgi<br>
+            <br><br>
+
+
+
+            # Install glances to help manage and view the server<br>
+            $ pip3 install glances<br><br>
+
+            <div>
+                <img src="/images/glances.jpg" alt="glances" style="width:70%">
+            </div>
+
+            <br><br>
+
+            $ mkdir /webapps<br>
+            $ mkdir /webapps/logs<br>
+            $ mkdir /webapps/logs/DO_site2<br>
+            $ mkdir /webapps/logs/DO_site2/app_log<br>
+
+            <br><br>
+            # For git, set the cache so we don't have to type in user/password each time<br>
+            $ git config --global credential.helper cache<br>
+            $ git config --global credential.helper 'cache --timeout=360000'<br>
+
+            <br><br>
+            # verify you are in the /webapps folder and git-clone the test app created above<br>
+            $ cd /webapps<br>
+            $ git clone https://github.com/Durant21/DO_site2.git<br>
+
+            <br><br>
+            # Go to the project root and run the setup.py routine<br>
+            $ cd /webapps/DO_site2/DO_site2<br>
+            $ python3 setup.py develop<br>
+            <br><br>
+            # Most components should now be installed.<br>
+            # Test by calling pserve<br>
+            $ pserve development.ini<br>
+            # App should now be running at localhost<br>
+            <br><br>
+            # In a new terminal, ssh in and install "httpie"<br>
+            $ pip3 install httpie<br>
+            # Test the app<br>
+            $ http localhost:6543<br>
+            # Should return the html of the landing page<br>
+            <br><br>
+            # Now that we know the working directory, we can set the uWSGI config settings in production.ini<br>
+            <br><br>
+            # Verify the server_name in /etc/nginx/sites-available/DO_site2_service.nginx<br>
+            # It should be the IP given to your new VPS by DigitalOcean.<br>
+            <br><br>
+            # Upload your changes to Git and pull those changes down to the server.<br>
+            <br><br>
+            # Copy the .service config file to the /etc/systemd/system/ folder<br>
+            $ cp /webapps/DO_site2/DO_site2/DO_site2/etc/init/DO_site2_svc.service /etc/systemd/system/<br>
+            <br><br>
+            # Start the new instance of our webservice<br>
+            <br><br>
+            $ systemctl start DO_site2_svc<br>
+            $ systemctl enable DO_site2_svc<br>
+            $ systemctl status DO_site2_svc<br>
+            <br><br>
+
+            # CAREFUL HERE. If you are using default, maybe skip this<br>
+            rm /etc/nginx/sites-enabled/default<br>
+            <br><br>
+            # Copy our website .nginx config files to the nginx sites-available and sites-enabled folders<br>
+            $ cp /webapps/DO_site2/DO_site2/DO_site2/etc/nginx/sites-available/DO_site2_service.nginx /etc/nginx/sites-available/<br>
+            $ cp /webapps/DO_site2/DO_site2/DO_site2/etc/nginx/sites-available/DO_site2_service.nginx /etc/nginx/sites-enabled/<br>
+            <br><br>
+            # Make sure NGINX and WSGI start on boot<br>
+            $ update-rc.d nginx enable<br>
+            <br><br>
+            # Refresh NGINX<br>
+            $ service nginx start<br>
+            $ service nginx restart<br>
+            <br><br>
+        </code>
+
+        Your site should now be visible to the outside world.<br>
+
 
     </div>
 

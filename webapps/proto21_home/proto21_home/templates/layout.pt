@@ -61,7 +61,7 @@
   <div class="row">
     <div class="col-sm-4">
       <h3>iMii</h3>
-      <p>This is a pre-prduction prototype we built for the GirlsInTheClassroom.org program.</p>
+      <p>This is a pre-production prototype we built for the GirlsInTheClassroom.org program.</p>
 
         <input type="button" class="btn btn-info" value="iMii" onclick="location.href='iMii';">
     </div>
