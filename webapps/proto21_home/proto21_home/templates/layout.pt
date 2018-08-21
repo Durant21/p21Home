@@ -78,10 +78,16 @@
         <!--?<input type="button" class="btn btn-info" value="Blog" onclick="location.href='blog';">-->
     <!--?</div>-->
     <div class="col-sm-4">
-        <h3>Python Web Development</h3>
-        <p>This site is built using opensource technology.  We'll build complete site and deploy it to the cloud.</p>
+        <h3>Python Web Development (basic)</h3>
+        <p>This site is built using opensource technology.  We'll build a complete site and deploy it to the cloud.</p>
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='pythonwebdevelopment';">
     </div>
+
+    <!--?<div class="col-sm-4">-->
+        <!--?<h3>Python Web Development (advanced)</h3>-->
+        <!--?<p>We'll use the site built in Python Web Development (basic) to build RESTful services.</p>-->
+        <!--?<input type="button" class="btn btn-info" value="Open" onclick="location.href='resfulservices';">-->
+    <!--?</div>-->
   </div>
 </div>
 
