@@ -88,6 +88,8 @@
         <p>We'll use the site built in Python Web Development (basic) to build RESTful services.</p>
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='restfulservices';">
     </div>
+
+      <br><br>
   </div>
 </div>
 
