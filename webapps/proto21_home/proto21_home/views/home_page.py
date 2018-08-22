@@ -86,6 +86,9 @@ def my_view9b(request):
 def my_view10(request):
     return {'project': 'pythonwebdevelopment'}
 
+@view_config(route_name='restfulservices', renderer='proto21_home:templates/restfulservices.pt')
+def my_view10a(request):
+    return {'project': 'restfulservices'}
 
 @view_config(route_name='ParticipatingOrganizations', renderer='proto21_home:templates/ParticipatingOrganizations.pt')
 def my_view11(request):

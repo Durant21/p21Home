@@ -51,6 +51,7 @@ def main(global_config, **settings):
     config.add_route( 'iMii', '/iMii' )
     config.add_route( 'about_author', '/about_author' )
     config.add_route( 'pythonwebdevelopment', '/pythonwebdevelopment' )
+    config.add_route( 'restfulservices', '/restfulservices' )
 
     config.add_route( 'MiningCycle', '/MiningCycle' )
     config.add_route( 'TeacherResources', '/TeacherResources' )

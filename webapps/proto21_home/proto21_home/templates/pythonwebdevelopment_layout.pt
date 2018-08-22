@@ -56,9 +56,9 @@
             font-size: large;
         }
 
-        a:link {
-            color: white;
-        }
+        /*a:link {*/
+            /*color: white;*/
+        /*}*/
 
     .leftpanelphoto {
 
@@ -114,7 +114,7 @@
         <h3>Step 1: Create a new python project</h3>
 
         <br>
-        We'll use <a href="https://cookiecutter.readthedocs.io/en/latest/" style="font-weight: bold">cookiecutter</a> to create our basic project scaffolding
+        We'll use <a href="https://cookiecutter.readthedocs.io/en/latest/" style="font-weight: bold; color:blue">cookiecutter</a> to create our basic project scaffolding
         <br>
         <code>
             $ cookiecutter https://github.com/Pylons/pyramid-cookiecutter-starter
@@ -125,7 +125,7 @@
 
 
         <br><br>
-        Next, we will create and activate our python <a href="https://docs.python.org/3/tutorial/venv.html"  style="font-weight: bold">virtual environment</a>.<br>
+        Next, we will create and activate our python <a href="https://docs.python.org/3/tutorial/venv.html"  style="font-weight: bold; color:blue">virtual environment</a>.<br>
         We'll specify python3.
         <code>
             <br>
@@ -227,7 +227,7 @@
 
         <br><br>
 
-        In our next step we'll prepare to deploy our site to the cloud by creating a <a href="https://git-scm.com/" style="font-weight: bold">Git</a> repository.
+        In our next step we'll prepare to deploy our site to the cloud by creating a <a href="https://git-scm.com/" style="font-weight: bold; color:blue">Git</a> repository.
 
         <br><br>
 
@@ -313,7 +313,7 @@
 
         <br><br>
 
-        Go to <a href="www.digitalocean.com" style="color:blue">DigitalOcean</a> and create a Droplet.
+        Go to <a href="www.digitalocean.com" style="font-weight: bold; color:blue">DigitalOcean</a> and create a Droplet.
         Select the smallest (least expensive) configuration available, since this is an exercise. <br>
         ubuntu 16.x<br>
         1 GB, 1 vCPU<br>

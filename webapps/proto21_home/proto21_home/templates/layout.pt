@@ -83,11 +83,11 @@
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='pythonwebdevelopment';">
     </div>
 
-    <!--?<div class="col-sm-4">-->
-        <!--?<h3>Python Web Development (advanced)</h3>-->
-        <!--?<p>We'll use the site built in Python Web Development (basic) to build RESTful services.</p>-->
-        <!--?<input type="button" class="btn btn-info" value="Open" onclick="location.href='resfulservices';">-->
-    <!--?</div>-->
+    <div class="col-sm-4">
+        <h3>Python Web Development (advanced)</h3>
+        <p>We'll use the site built in Python Web Development (basic) to build RESTful services.</p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='restfulservices';">
+    </div>
   </div>
 </div>
 
