@@ -24,9 +24,9 @@
             font-size: large;
         }
 
-        a:link {
-            color: white;
-        }
+        /*a:link {*/
+            /*color: white;*/
+        /*}*/
 
         .mm {
             /*background-image: url(getUrlBase() + "images/trees1.jpg");*/
@@ -61,9 +61,9 @@
   <div class="row">
     <div class="col-sm-4">
       <h3>iMii</h3>
-      <p>This is a pre-production prototype we built for the GirlsInTheClassroom.org program.</p>
+      <p>This is a prototype <a href="http://www.respec.com" target="_blank">we</a> built for the GirlsInTheClassroom.org program.</p>
 
-        <input type="button" class="btn btn-info" value="iMii" onclick="location.href='iMii';">
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='iMii';">
     </div>
     <!--?<div class="col-sm-4">-->
       <!--?<h3>GIS</h3>-->
