@@ -349,8 +349,8 @@ i>-->
                               <input type="text" class="form-control control-width" id="state" placeholder="Enter state">
                             </div>
                             <div class="form-group">
-                              <label for="img1">img1:</label>
-                              <input type="text" class="form-control control-width" id="img1" placeholder="Enter img1">
+                              <label for="img1a">img1a:</label>
+                              <input type="text" class="form-control control-width" id="img1a" placeholder="Enter img1">
                             </div>
                             <!--?<div class="checkbox">-->
                               <!--?<label><input type="checkbox"> Remember me</label>-->

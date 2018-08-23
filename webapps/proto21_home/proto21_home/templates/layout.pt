@@ -84,9 +84,20 @@
     </div>
 
     <div class="col-sm-4">
-        <h3>Python Web Development (advanced)</h3>
-        <p>We'll use the site built in Python Web Development (basic) to build RESTful services.</p>
+        <h3>Python Web Development (advanced) <span style="font-weight:bold; color:dodgerblue;  font-size: smaller">Part 1</span></h3>
+        <p>
+            We'll use the site built in Python Web Development (basic) to build RESTful services.
+
+        </p>
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='restfulservices';">
+    </div>
+
+      <div class="col-sm-4">
+        <h3>Python Web Development (advanced) <span style="font-weight:bold; color:dodgerblue; font-size: smaller">Part 2</span></h3>
+        <p>We'll build on the work completed in Part 1 by attaching a database to our RESTful services.
+
+        </p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='sqliteDB';">
     </div>
 
       <br><br>

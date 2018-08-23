@@ -209,7 +209,7 @@
                           <!--?<form>-->
 
                                 <div class="form-group">
-                                  <label for="id">id:</label>
+                                  <label for="id"></label>
                                   <input type="text" class="form-control control-width" id="id" placeholder="id">
                                 </div>
                                 <div class="form-group">
@@ -496,7 +496,7 @@
                     error: function (err) {
                         //$.unblockUI();
                         //SetNotBusy();
-                        alert("Error loading the grid:" + err.status + "    " + err.statusText);
+                        alert("Error displaying images: " + err.status + "    " + err.statusText);
                     }
                 });
             }
@@ -524,6 +524,7 @@
 
             var loc_id = document.getElementById('id');
             loc_id.value = _id.toString();
+            if (loc_id) {loc_id.style.display = 'none'};
             var headline = document.getElementById('headline');
             headline.value = _headline;
 
@@ -556,6 +557,7 @@
 
             var loc_id = document.getElementById('id');
             //loc_id.value = _id.toString();
+            loc_id.style.display = 'none';
             var txtheadline = document.getElementById('headline');
             txtheadline.value = '';
 
@@ -581,6 +583,7 @@
             //var txtevent_url =
             event_url = 'www.esri.com';
             var myModalButton = document.getElementById('btnWrite');
+            myModalButton.innerHTML = 'Create';
             // myModalButton.setAttribute('onclick', "OpenForAdd('" + "'" + headline + "',"
             //                                                     + "'" + img_url + "',"
             //                                                     + "'" + location + "',"
@@ -684,7 +687,7 @@
                 '"id": "' + document.getElementById("id").value +
                 '"}';
 
-            alert(aNewsAndEvent);
+            //alert(aNewsAndEvent);
             //alert(getUrlBase() + "api/event/" + loc_id);
             $.ajax({
                 url: getUrlBase() + "api/event/" + loc_id,
@@ -699,7 +702,9 @@
 
                 success: function (response) {
                     //SetNotBusy();
-                    alert('success');
+                    //alert('success');
+                    modal.style.display = "none";
+                    resetBtnURL('btnNewsAndEvents','NewsEvents','true')
 
                 },
                 error: function (xhr) {

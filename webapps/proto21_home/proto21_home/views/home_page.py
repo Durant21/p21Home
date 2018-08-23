@@ -90,6 +90,10 @@ def my_view10(request):
 def my_view10a(request):
     return {'project': 'restfulservices'}
 
+@view_config(route_name='sqliteDB', renderer='proto21_home:templates/sqliteDB.pt')
+def my_view10b(request):
+    return {'project': 'sqliteDB'}
+
 @view_config(route_name='ParticipatingOrganizations', renderer='proto21_home:templates/ParticipatingOrganizations.pt')
 def my_view11(request):
     return {'project': 'ParticipatingOrganizations'}

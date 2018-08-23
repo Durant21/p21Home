@@ -106,7 +106,7 @@
       <!--?<p><a href="#">Link</a></p>-->
     </div>
     <div class="col-sm-8 text-left">
-          <h1>Python Web Development</h1>
+          <h1>Python Web Development <span style="font-weight:bold; color:dodgerblue;  font-size: smaller">Part 1</span></h1>
           <p>Below are the steps required for building a functional website with a RESTful API.</p>
           <hr>
         What you will need: <br>

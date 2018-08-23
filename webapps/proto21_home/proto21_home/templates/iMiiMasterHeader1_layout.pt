@@ -13,6 +13,8 @@
 </style>
 
 <script src="scripts/common3.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="scripts/social_media.css">
 
 <script>
 
@@ -38,6 +40,7 @@
 
         var aLogin = document.getElementById('aLogin');
         aLogin.style.display = "block";
+
     }
 
     function setLoginAnchorVisible() {
@@ -105,6 +108,7 @@
               <li><input type="button" class="button navbtn" value="ABOUT"             id="btnAbout"            onclick="resetBtnURL('btnAbout','About','true')" ></li>
               <li><input type="button" class="button navbtn" value="TEACHER RESOURCES" id="btnTeacherResources" onclick="resetBtnURL('btnTeacherResources','TeacherResources','true')" ></li>
               <li><input type="button" class="button navbtn" value="NEWS & EVENTS"     id="btnNewsAndEvents"    onclick="resetBtnURL('btnNewsAndEvents','NewsEvents','true')"></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
           </ul>
             <input id="hKey1" name="hKey" type="hidden" value="none">
 

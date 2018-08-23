@@ -1,8 +1,8 @@
 
 
 function getUrlBase() {
-    return 'http://localhost:6543/';
-    //return 'http://www.dev1.proto21.com/';
+    // return 'http://localhost:6543/';
+    return 'http://www.dev1.proto21.com/';
 }
 
 function verifyUser() {
@@ -42,6 +42,21 @@ function verifyUser() {
                         resetAllAnchors();
                         resetAllButtons();
 
+                        var q = getCurrentPage(window.location.href);
+                        //alert(q);
+                        // redirect back to Home
+                        if (q == 'People') {
+                            //resetBtnURL('btnPeople','People','true');
+                            resetBtnURL('btnHome','iMii','true');
+                            //hKeyVal = getHiddenKey();
+                            //window.location.href = getUrlBase() + "People" + "?k=" + hKeyVal + "'";
+                        } else if (q == 'NewsEvents') {
+                            resetBtnURL('btnNewsAndEvents','NewsEvents','true')
+                        } else {
+                            resetBtnURL('btnHome','iMii','true');
+                        };
+
+
 
                     },
                     loadComplete: function () {
@@ -73,7 +88,9 @@ var getParams1 = function (url) {
     var params = {};
     var parser = document.createElement('a');
     parser.href = url;
+    //alert(url);
     var query = parser.search.substring(1);
+    //alert(query);
     var vars = query.split('&');
     for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split('=');
@@ -81,6 +98,19 @@ var getParams1 = function (url) {
     }
     return params;
 };
+
+function getCurrentPage(url) {
+
+    if (url.includes("People")) {
+        //alert('yes');
+        return 'People';
+    } else if (url.includes("NewsEvents")) {
+        //alert('no');
+        return 'NewsEvents';
+    } else {
+        return 'none';
+    };
+}
 
 function resetBtnURL(btnName,targetPage,sAutoClick) {
 
