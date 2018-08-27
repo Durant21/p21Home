@@ -13,6 +13,7 @@
 
       .id3 {
             max-width: 100%;
+            max-height: 290px;
             height: auto;
           padding: 0px;
       }
@@ -177,8 +178,8 @@
         width: 70%;
     }
 
-    .ww {
-        height: 250px;
+    .desc {
+        height: 300px;
         /*background-color: bisque;*/
         overflow: auto;
     }
@@ -263,7 +264,7 @@ i>-->
   <!--?</div>-->
 <!--?</nav>-->
 
-   <div id="includedHeader">ddd4</div>
+   <div id="includedHeader"></div>
 
 <div class="container-fluid text-center">
   <div class="row content">
@@ -301,7 +302,7 @@ i>-->
                       <!--?id,name,title,company,email,url1,url2,description, address, city,state,img1-->
                       <!--?<form>-->
                             <div class="form-group">
-                                  <label for="id">id:</label>
+                                  <label for="id"></label>
                                   <input type="text" class="form-control control-width" id="id" placeholder="id">
                             </div>
                             <div class="form-group">
@@ -456,6 +457,7 @@ i>-->
 
             var loc_id = document.getElementById('id');
             loc_id.value = _id.toString();
+            if (loc_id) {loc_id.style.display = 'none'};
 
             // var headline = document.getElementById('headline');
             // headline.value = _headline;
@@ -507,7 +509,7 @@ i>-->
             state.value = _state;
 
             var img1 = document.getElementById('img1');
-            img1.value = _img1;
+            // img1.value = _img1;
 
             modal.style.display = "block";
 
@@ -847,7 +849,7 @@ i>-->
                 innerDiv2e.appendChild(text2e);
 
                 var innerDiv2f = document.createElement("div");
-                innerDiv2f.className="row1 ww";
+                innerDiv2f.className="row1 desc";
                 var text2f = document.createElement("text");
                 text2f.innerHTML = description;
                 innerDiv2f.appendChild(text2f);

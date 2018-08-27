@@ -16,7 +16,9 @@ requires = [
     'waitress',
     'requests',
     'python-dateutil',
-    'sqlalchemy'
+    'sqlalchemy',
+    'pytest',
+    'responses'
 ]
 
 tests_require = [

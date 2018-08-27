@@ -96,7 +96,7 @@
   <!--?</div>-->
 <!--?</nav>-->
 
-   <div id="includedHeader">ddd4</div>
+   <div id="includedHeader"></div>
 
 <div class="container-fluid text-center">
   <div class="row content">
@@ -138,7 +138,7 @@
         <!--?});-->
     <!--?</script>-->
 
-<div id="includedFooter">ddd4</div>
+<div id="includedFooter"></div>
 
     <script>
 

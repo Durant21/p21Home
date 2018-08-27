@@ -66,82 +66,24 @@
 
 <div class="container-fluid text-center" style="background-color:white;">
   <div class="row content">
-    <!--?<div class="col-sm-2 sidenav">left-->
-
-    <!--?</div>-->
-    <div class="col-sm-12 text-left" style="background-color:white;">
+      <div class="col-sm-12" style="background-color:rgb(99,71,101); height: 40px;">
+        <br>
+      </div>
+      <div class="col-sm-12" style="background-color:rgb(216,216,201); height: 30px;">
+        <br>
+      </div>
+      <div class="col-sm-12 text-left" style="background-color:white;">
         <img src="http://gis.podassoc.com/iMii_images/girlsintheclassroom.png" alt="image" style="width:100%">
-
-      <!--?<h1>Splash</h1>-->
-      <!--?<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
-      <!--?<hr>-->
-      <!--?<h3>Test</h3>-->
-      <!--?<p>Lorem ipsum...-->
-      <!--?<input type="button" class="btn btn-info" value="Discover" onclick="location.href='Discover';" >-->
-      <!--?<input type="button" class="btn btn-info" value="Plan" onclick="location.href='Plan';" >-->
-      <!--?<input type="button" class="btn btn-info" value="Mine" onclick="location.href='Mine';">-->
-      <!--?<input type="button" class="btn btn-info" value="Reclaim" onclick="location.href='Reclaim';">-->
-      <!--?</p>-->
-
     </div>
-    <!--?<div class="col-sm-2 sidenav">right-->
-    <!--?</div>-->
-          <div class="col-sm-12 text-left">
 
+      <div class="col-sm-12" style="background-color:rgb(227,86,109);height: 30px;">
+      <!--?Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.-->
+        <br><br>
+      </div>
 
-            <div class="row">
-                <div class="col-sm-2" style="background-color:white;"></div>
-                <div class="col-sm-1" style="background-color:white;"></div>
-                <div class="col-sm-2" style="background-color:white;"></div>
-                <div class="col-sm-2" style="background-color:white;">
-                    <img src="http://gis.podassoc.com/iMii_images/gicMedallion.png" alt="image" style="width:100%">
-                </div>
-                <div class="col-sm-2" style="background-color:white;"></div>
-                <div class="col-sm-1" style="background-color:white;"></div>
-                <div class="col-sm-2" style="background-color:white;"></div>
-            </div>
-
-            <div class="row">
-                <!--?<div class="col-sm-2" style="background-color:lavender;">.col-sm-3</div>-->
-                <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
-                <!--?<div class="col-sm-2" style="background-color:lavenderblush;">-->
-                    <!--?<img src="http://gis.podassoc.com/iMii_images/gicMedallionText.png" alt="image" style="width:100%">-->
-                <!--?</div>-->
-                <div class="col-sm-12" style="background-color:white;">
-                    <img src="http://gis.podassoc.com/iMii_images/gicMedallionText.png" alt="image" style="width:100%">
-                </div>
-                <!--?<div class="col-sm-2" style="background-color:lavenderblush;">-->
-                    <!--?<img src="http://gis.podassoc.com/iMii_images/plan.png" alt="image" style="width:100%">-->
-                <!--?</div>-->
-                <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
-                <!--?<div class="col-sm-2" style="background-color:lavender;">.col-sm-4</div>-->
-            </div>
-
-
-        <!--?<div class="row">-->
-            <!--?<div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>-->
-            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
-            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
-            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">-->
-                <!--?<img src="http://localhost/sites/images/map1.png" alt="image" style="width:100%">-->
-            <!--?</div>-->
-            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
-            <!--?<div class="col-sm-1" style="background-color:lavenderblush;">.col-sm-1</div>-->
-            <!--?<div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>-->
-        <!--?</div>-->
-
-
-        <br><br><br><br><br><br><br><br>
-    </div>
-  </div>
+   </div>
 </div>
 
-
-
-
-<!--?<footer class="stickyfooter">-->
-  <!--?<p>Footer Text</p>-->
-<!--?</footer>-->
 
 <div id="includedFooter">footer</div>
 

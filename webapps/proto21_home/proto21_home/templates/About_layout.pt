@@ -184,7 +184,7 @@
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
    <br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="includedFooter">ddd4</div>
+<div id="includedFooter"></div>
 
     <script>
         $(document).ready(function(){

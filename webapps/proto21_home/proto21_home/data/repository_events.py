@@ -21,7 +21,7 @@ class Repository_events:
         # return events
         session = DbSessionFactory.create_session()
 
-        query = session.query(Event)  # .order_by(Teacher.lName)
+        query = session.query(Event).order_by(Event.event_date)
 
         if limit:
             events = query[:limit]

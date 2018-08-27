@@ -1,0 +1,5 @@
+{
+  "proto21_home/tests.py::TestCase2::test_Example2": true,
+  "proto21_home/tests.py::TestCase::test_Example": true,
+  "proto21_home/tests.py::TutorialViewTests::test_hello_world": true
+}

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -193,7 +194,7 @@
         <!--?});-->
     <!--?</script>-->
 
-<div id="includedFooter">ddd4</div>
+<div id="includedFooter"></div>
 
     <script>
         $(document).ready(function(){

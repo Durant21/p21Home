@@ -257,7 +257,7 @@
                             <form action="/store_img2_view" method="post" accept-charset="utf-8"
                                   enctype="multipart/form-data">
 
-                                <input type="text" class="form-control control-width" id="img_id" name="img_id" placeholder="id">
+                                <input type="text" class="form-control control-width" style="display:none" id="img_id" name="img_id" placeholder="id">
 
                                 <label for="img1">image file</label>
                                 <input id="img1" name="img1" type="file" value="" />
@@ -530,17 +530,16 @@
 
             var event_date = document.getElementById('event_date');
             event_date.value = _event_date;
-            // date.innerText = _event_date;
-            // date.innerHTML = _event_date;
-            // date.dateTime = '2017';
+
             // date
             //var location = document.getElementById('location');
-            //location.value =
+
             var description = document.getElementById('description');
             description.value = _description;
             //headline.innerHTML = headline;
             //var content = document.getElementById('headline');
-
+            var url = document.getElementById('url');
+            url.value = _event_url;
 
             modal.style.display = "block";
 
@@ -866,14 +865,21 @@
             innerDiv1eButton.innerText = "go"
             innerDiv1eButton.setAttribute('onclick', "location.href = 'http://" + event_url + "';");
             innerDiv1eButton.setAttribute('target', "_blank");
+
             //innerDiv1e.appendChild(innerDiv1eButton)
 
-            var innerDiv1eAnchor = document.createElement("a")
-            //innerDiv1eAnchor.className="btn btn-lg";
-            innerDiv1eAnchor.innerText = "GO"
-            innerDiv1eAnchor.setAttribute('href', "http://" + event_url + "");
-            innerDiv1eAnchor.setAttribute('target', "_blank");
-            innerDiv1e.appendChild(innerDiv1eAnchor)
+            if (event_url) {
+                var innerDiv1eAnchor = document.createElement("a")
+                //innerDiv1eAnchor.className="btn btn-lg";
+                innerDiv1eAnchor.innerText = "GO"
+                innerDiv1eAnchor.setAttribute('href', "http://" + event_url + "");
+                innerDiv1eAnchor.setAttribute('target', "_blank");
+                if (event_url != '') {
+                    innerDiv1e.appendChild(innerDiv1eAnchor);
+                } else {
+                    innerDiv1eAnchor.setAttribute('style:display', "none");
+                }
+            }
 
 
             div1.appendChild(innerDiv1)
