@@ -58,9 +58,14 @@
     padding: 5px;
     border: 0px solid black;
 }
+
+.img1 {
+    max-width: 100%;
+    max-height: 100%;
+}
 .column {
     float: left;
-    width: 33.33%;
+    width: 100%;
     padding-right: 10px;
     border: 0px solid black;
     background-color: white;
@@ -274,7 +279,7 @@ i>-->
       <!--?<p><a href="#">Link</a></p>-->
     </div>
     <div class="col-sm-8 text-left">
-      <h1>People</h1>
+      <h1>Women In Mining</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in
             cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat
             ion ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupid
@@ -306,11 +311,15 @@ i>-->
                                   <input type="text" class="form-control control-width" id="id" placeholder="id">
                             </div>
                             <div class="form-group">
-                              <label for="headline">First Name:</label>
+                              <label for="headline">Headline:</label>
+                              <input type="text" class="form-control control-width" id="headline" placeholder="Enter headline">
+                            </div>
+                            <div class="form-group">
+                              <label for="fname">First Name:</label>
                               <input type="text" class="form-control control-width" id="fname" placeholder="Enter first name">
                             </div>
                             <div class="form-group">
-                              <label for="headline">Last Name:</label>
+                              <label for="lname">Last Name:</label>
                               <input type="text" class="form-control control-width" id="lname" placeholder="Enter last name">
                             </div>
                             <div class="form-group">
@@ -326,7 +335,7 @@ i>-->
                               <input type="text" class="form-control control-width" id="email" placeholder="Enter E-mail">
                             </div>
                             <div class="form-group">
-                              <label for="url1">url1:</label>
+                              <label for="url1">url1 (event URL):</label>
                               <input type="text" class="form-control control-width" id="url1" placeholder="Enter url1">
                             </div>
                             <div class="form-group">
@@ -349,10 +358,10 @@ i>-->
                               <label for="state">state:</label>
                               <input type="text" class="form-control control-width" id="state" placeholder="Enter state">
                             </div>
-                            <div class="form-group">
-                              <label for="img1a">img1a:</label>
-                              <input type="text" class="form-control control-width" id="img1a" placeholder="Enter img1">
-                            </div>
+                            <!--?<div class="form-group">-->
+                              <!--?<label for="img1a">img1a:</label>-->
+                              <!--?<input type="text" class="form-control control-width" id="img1a" placeholder="Enter img1">-->
+                            <!--?</div>-->
                             <!--?<div class="checkbox">-->
                               <!--?<label><input type="checkbox"> Remember me</label>-->
                             <!--?</div>-->
@@ -375,7 +384,7 @@ i>-->
 
                         <!--?<div class="col-sm-8 text-left">-->
                           <h3>File Upload</h3>
-                            <form action="/store_img1_view" method="post" accept-charset="utf-8"
+                            <form action="/store_img3_view" method="post" accept-charset="utf-8"
                                   enctype="multipart/form-data">
                                 <input type="text" class="form-control control-width" id="img_id" name="img_id" placeholder="id">
 
@@ -448,7 +457,7 @@ i>-->
             modal.style.display = "block";
         }
 
-        function OpenForEdit(_id,_fname,_lname,_title,_company,_email,_url1,_url2,_description,_address,_city,_state,_img1) {
+        function OpenForEdit(_id,_headline,_fname,_lname,_title,_company,_email,_url1,_url2,_description,_address,_city,_state,_img1) {
             //id,name,title,company,email,url1,url2,description, address, city,state,img1
 
             var modal = document.getElementById('myModal');
@@ -460,8 +469,8 @@ i>-->
             loc_id.value = _id.toString();
             if (loc_id) {loc_id.style.display = 'none'};
 
-            // var headline = document.getElementById('headline');
-            // headline.value = _headline;
+            var headline = document.getElementById('headline');
+            headline.value = _headline;
             //
             // var event_date = document.getElementById('event_date');
             // event_date.value = _event_date;
@@ -525,7 +534,9 @@ i>-->
             var lblEventModal = document.getElementById('lblEventModal');
             lblEventModal.innerHTML = 'Add Person';
             //
-            // var loc_id = document.getElementById('id');
+            var loc_id = document.getElementById('id');
+            //loc_id.value = _id.toString();
+            if (loc_id) {loc_id.style.display = 'none'};
             //
             // var txtheadline = document.getElementById('headline');
             // txtheadline.value = '';
@@ -561,18 +572,20 @@ i>-->
         function CreatePeople() {
             //alert('CreateNewsAndEvents');
             var aPerson = '{' +
-                '"fname": "' + document.getElementById("fname").value + '",' +
-                '"lname": "' + document.getElementById("lname").value + '",' +
-                '"title": "' + document.getElementById("title").value + '",' +
-                '"company": "' + document.getElementById("company").value + '",' +
-                '"email": "' + document.getElementById("email").value + '",' +
-                '"url1": "' + document.getElementById("url1").value + '",' +
-                '"url2": "' + document.getElementById("url2").value + '",' +
-                '"description": "' + document.getElementById("description").value + '",' +
-                '"address": "' + document.getElementById("address").value + '",' +
-                '"city": "' + document.getElementById("city").value + '",' +
-                '"state": "' + document.getElementById("state").value + '",' +
-                '"img1": "' + document.getElementById("img1").value +
+                            '"headline": "' + document.getElementById("headline").value + '",' +
+                            '"fname": "' + document.getElementById("fname").value + '",' +
+                            '"lname": "' + document.getElementById("lname").value + '",' +
+                            '"title": "' + document.getElementById("title").value + '",' +
+                            '"company": "' + document.getElementById("company").value + '",' +
+                            '"email": "' + document.getElementById("email").value + '",' +
+                            '"url1": "' + document.getElementById("url1").value + '",' +
+                            '"url2": "' + document.getElementById("url2").value + '",' +
+                            '"description": "' + document.getElementById("description").value + '",' +
+                            '"address": "' + document.getElementById("address").value + '",' +
+                            '"city": "' + document.getElementById("city").value + '",' +
+                            '"state": "' + document.getElementById("state").value + '",' +
+                            '"interviewed": "yes",' +
+                            '"img1": "' + document.getElementById("img1").value +
                 '"}';
 
         // "headline": "STEM Day 2018",
@@ -612,11 +625,12 @@ i>-->
                     // } else {
                     //     setMessageDivVisibility("UnduplicatedUsersErrorResult");
                     // }
+
                     modal.style.display = "none";
-                    resetBtnURL('btnPeople','People','true')
+                    resetBtnURL('btnWomenInMining','WomenInMining','true')
                 },
                 error: function (xhr) {
-                    alert("ERROR");
+                    alert("error: " + xhr.responseText);
                 }
             });
 
@@ -639,23 +653,24 @@ i>-->
 
             <!--?id,name,title,company,email,url1,url2,description, address, city,state,img1-->
             var aPerson = '{' +
-                '"fname": "' + document.getElementById("fname").value + '",' +
-                '"lname": "' + document.getElementById("lname").value + '",' +
-                '"title": "' + document.getElementById("title").value + '",' +
-                '"company": "' + document.getElementById("company").value + '",' +
-                '"email": "' + document.getElementById("email").value + '",' +
-                '"url1": "' + document.getElementById("url1").value + '",' +
-                '"url2": "' + document.getElementById("url2").value + '",' +
-                '"description": "' + document.getElementById("description").value + '",' +
-                '"address": "' + document.getElementById("address").value + '",' +
-                '"city": "' + document.getElementById("city").value + '",' +
-                '"state": "' + document.getElementById("state").value + '",' +
-                '"img1": "' + document.getElementById("img1").value + '",' +
-                '"id": "' + document.getElementById("id").value +
+                            '"headline": "' + document.getElementById("headline").value + '",' +
+                            '"fname": "' + document.getElementById("fname").value + '",' +
+                            '"lname": "' + document.getElementById("lname").value + '",' +
+                            '"title": "' + document.getElementById("title").value + '",' +
+                            '"company": "' + document.getElementById("company").value + '",' +
+                            '"email": "' + document.getElementById("email").value + '",' +
+                            '"url1": "' + document.getElementById("url1").value + '",' +
+                            '"url2": "' + document.getElementById("url2").value + '",' +
+                            '"description": "' + document.getElementById("description").value + '",' +
+                            '"address": "' + document.getElementById("address").value + '",' +
+                            '"city": "' + document.getElementById("city").value + '",' +
+                            '"state": "' + document.getElementById("state").value + '",' +
+                            '"img1": "' + document.getElementById("img1").value + '",' +
+                            '"id": "' + document.getElementById("id").value +
                 '"}';
 
-            // alert(aPerson);
-            // alert(getUrlBase() + "api/person/" + loc_id);
+            //alert(aPerson);
+            //alert(getUrlBase() + "api/event/" + loc_id);
             $.ajax({
                 url: getUrlBase() + "api/person/" + loc_id,
                 type: "PUT",
@@ -686,8 +701,9 @@ i>-->
                     // } else {
                     //     setMessageDivVisibility("UnduplicatedUsersErrorResult");
                     // }
+
                     modal.style.display = "none";
-                    resetBtnURL('btnPeople','People','true')
+                    resetBtnURL('btnWomenInMining','WomenInMining','true')
                 },
                 error: function (xhr) {
                     alert("ERROR");
@@ -726,7 +742,8 @@ i>-->
                 //alert('userid: ' + userid);
 
                 if (userid) {
-
+                    var myBtnOpenAdd = document.getElementById('myBtnOpenAdd');
+                    myBtnOpenAdd.style.display = "block";
                 } else {
                     userid = 'none';
                 }
@@ -735,7 +752,7 @@ i>-->
 
                 $.ajax({
                     type: "GET",
-                    url: getUrlBase() + "api/people",
+                    url: getUrlBase() + "api/people/yes",
                     contentType: "application/json",
                     dataType: "json",
 
@@ -745,7 +762,7 @@ i>-->
                     },
 
                     success: function (data) {
-                        //SetNotBusy();
+                        // //SetNotBusy();
                         var jsonObj = data;
                         var iLength = jsonObj.length;
                         var id = jsonObj.id;
@@ -762,39 +779,61 @@ i>-->
                         var address="her address";
                         var city="her city";
                         var state="her state";
-                        var img1='http://gis.podassoc.com/iMii_images/deb_shewfelt.png';
+                        var img_url='http://gis.podassoc.com/iMii_images/deb_shewfelt.png';
+
+                        var event_date = '1/1/2029';
+                        var event_name = 'the event name';
+                        var event_url = 'www.esri.com';
+                        //var userid = '';
 
 
                         if (iLength) {
                             for (var i = 0; i <= data.length; i++) {
-                            //jQuery("#Grid_People").jqGrid('addRowData', i + 1, jsonObj[i]);
+                                //jQuery("#Grid_People").jqGrid('addRowData', i + 1, jsonObj[i]);
                                 if (jsonObj[i]) {
                                     id = jsonObj[i]['id'];
+                                    event_name = jsonObj[i]['headline'];
                                     fname = jsonObj[i]['fname'];
                                     lname = jsonObj[i]['lname'];
                                     title = jsonObj[i]['title'];
                                     company = jsonObj[i]['company'];
                                     position = jsonObj[i]['position'];
                                     email = jsonObj[i]['email'];
-                                    url1 = jsonObj[i]['url1'];
+                                    event_url = jsonObj[i]['url1'];
                                     url2 = jsonObj[i]['url2'];
                                     description = jsonObj[i]['description'];
                                     address = jsonObj[i]['address'];
                                     city = jsonObj[i]['city'];
                                     state = jsonObj[i]['state'];
-                                    img1 = getUrlBase() + "images/" + jsonObj[i]['img1'];
+                                    img_url = getUrlBase() + "images/" + jsonObj[i]['img1'];
                                     //console.log(aval)
-                                    generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1,userid);
+                                    //generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1,userid);
+                                    generateEventsDiv(id, event_name, img_url, event_date, description, event_url, userid);
                                     //alert(jsonObj[i])
                                 }
-
                             }
+
+
                         } else {
                             //id = jsonObj[i]['id'];
                             //generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1);
+                                generateEventsDiv(id,event_name,img_url,event_date,description,event_url,userid);
                         }
 
-
+                        // var jsonObj = data;
+                        // var q = jsonObj.length;
+                        // var t = jsonObj.count;
+                        // var d = jsonObj.description;
+                        // var id = jsonObj.id;
+                        // var event_name=jsonObj.headline;
+                        // var img_url = getUrlBase() + jsonObj.img1;    //   http://gis.podassoc.com/iMii_images/stem1.png";
+                        // var event_date= jsonObj.event_date;
+                        // var description =  jsonObj.description;
+                        // var event_url= jsonObj.url;
+                        //
+                        //
+                        //
+                        //     generateEventsDiv(id,event_name,img_url,event_date,description,event_url,userid);
                     },
                     loadComplete: function () {
                         //$("#Grid_People").jqGrid('setGridWidth', $(window).width(), true);
@@ -808,9 +847,172 @@ i>-->
                 });
             }
 
+
+        function generateEventsDiv(id, headline,img_url,event_date,description,event_url,userid) {
+
+
+            // grab the main container
+            var div1 = document.getElementById("div1");
+            // div1.className = "container-fluid text-center";
+            //
+            // var div1a = document.createElement("div")
+            // div1a.className = "row content\"";
+
+            // create an inner-div
+            var innerDiv1 = document.createElement("div")
+            innerDiv1.className = "col-sm-4 col-xs-12";
+
+            var innerDiv1a = document.createElement("div")
+            innerDiv1a.className="panel panel-default text-center"
+
+            var innerDiv1b_a = document.createElement("div")
+            //innerDiv1b.className="panel-heading"
+            innerDiv1b_a.className="row1a text-right";//"row1a"
+
+            var innerDiv1b = document.createElement("div")
+            innerDiv1b.className="panel-heading"
+            //innerDiv1b.className="row1a text-right";//"row1a"
+            var text1b = document.createElement("text")
+            text1b.innerHTML = headline;
+            innerDiv1b.appendChild(text1b);
+
+            // create the EDIT button
+            var innerDiv1button = document.createElement("button")
+            innerDiv1button.setAttribute('id','ttt')
+            innerDiv1button.setAttribute('content', 'test content');
+            innerDiv1button.setAttribute('class', 'btn');
+            innerDiv1button.innerHTML = 'edit';
+
+            //items to pass:   id, headline,img_url,event_date,description,event_url
+            //items to pass:   _id,_fname,_lname,_title,_company,_email,_url1,_url2,_description,_address,_city,_state,_img1) {
+
+            // innerDiv1button.setAttribute('onclick', "OpenForEdit('" + id.toString() + "',"
+            //                                                     + "'" + headline + "',"
+            //                                                     + "'" + img_url + "',"
+            //                                                     + "'" + event_date + "',"
+            //                                                     + "'" + description + "',"
+            //                                                     + "'" + event_url + "'"
+            //                                                     + ")");
+            var fname = 'not collected';
+            var lname = 'not collected';
+            var title = 'not collected';
+            var company = 'not collected';
+            var email = 'not collected';
+            var url1 = event_url;
+            var url2 = 'not collected';
+            var address = 'not collected';
+            var city = 'not collected';
+            var state = 'not collected';
+            innerDiv1button.setAttribute('onclick', "OpenForEdit('" + id.toString() + "',"
+                                                                    + "'" + headline + "',"
+                                                                    + "'" + fname + "',"
+                                                                    + "'" + lname + "',"
+                                                                    + "'" + title + "',"
+                                                                    + "'" + company + "',"
+                                                                    + "'" + email + "',"
+                                                                    + "'" + url1 + "',"
+                                                                    + "'" + url2 + "',"
+                                                                    + "'" + description + "',"
+                                                                    + "'" + address + "',"
+                                                                    + "'" + city + "',"
+                                                                    + "'" + state + "',"
+                                                                    + "'" + img_url + "'"
+                                                                    + ")");
+            if(userid){
+                if((userid.trim()=="none")||(userid.trim()=="undefined")){
+
+                } else {
+                    innerDiv1b_a.appendChild(innerDiv1button);
+
+                    var myBtnOpenAdd = document.getElementById('myBtnOpenAdd');
+                    myBtnOpenAdd.style.display = "block";
+                }
+
+            } else {
+
+            }
+
+            var innerDiv1buttonImg = document.createElement("button");
+            innerDiv1buttonImg.setAttribute('id','ttt');
+            innerDiv1buttonImg.setAttribute('content', 'test content');
+            innerDiv1buttonImg.setAttribute('class', 'btn');
+            innerDiv1buttonImg.innerHTML = 'image';
+
+            innerDiv1buttonImg.setAttribute('onclick', "OpenForEditImage('" + id.toString() + "'"
+                                                                + ")");
+
+
+            if(userid) {
+
+                if((userid.trim()=="none")||(userid.trim()=="undefined")){
+
+                } else {
+                    innerDiv1b_a.appendChild(innerDiv1buttonImg);
+                }
+            } else {
+
+            }
+
+            var innerDiv1c = document.createElement("div")
+            innerDiv1c.className="column"
+            //var text1c = document.createElement("img")
+            var text1c = document.createElement("img")
+            text1c.className="img1";
+            text1c.src = img_url;
+            innerDiv1c.appendChild(text1c)
+
+            var innerDiv1cc = document.createElement("div")
+            innerDiv1cc.className="column"
+            var text1cc = document.createElement("text")
+            text1cc.innerHTML = event_date;
+            innerDiv1cc.appendChild(text1cc)
+
+            var innerDiv1d = document.createElement("div")
+            innerDiv1c.className="panel-body";
+            var innerDiv1dText = document.createElement("button")
+            //innerDiv1dText.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+            // <button class="btn btn-lg">READ MORE</button>
+            var innerDiv1dText = document.createElement("text")
+            innerDiv1dText.innerHTML = description;
+            innerDiv1d.appendChild(innerDiv1dText)
+
+
+            var innerDiv1e = document.createElement("div")
+            innerDiv1c.className="panel-footer"
+            var innerDiv1eButton = document.createElement("button")
+            innerDiv1eButton.className="btn btn-lg";
+            innerDiv1eButton.innerText = "go"//goo
+            innerDiv1eButton.setAttribute('onclick', "location.href = 'http://" + event_url + "';");
+            innerDiv1eButton.setAttribute('target', "_blank");
+
+            //innerDiv1e.appendChild(innerDiv1eButton)
+
+            if (event_url) {
+                var innerDiv1eAnchor = document.createElement("a")
+                //innerDiv1eAnchor.className="btn btn-lg";
+                innerDiv1eAnchor.innerText = "GO"
+                innerDiv1eAnchor.setAttribute('href', "http://" + event_url + "");
+                innerDiv1eAnchor.setAttribute('target', "_blank");
+                if (event_url != '') {
+                    innerDiv1e.appendChild(innerDiv1eAnchor);
+                } else {
+                    innerDiv1eAnchor.setAttribute('style:display', "none");
+                }
+            }
+
+
+            div1.appendChild(innerDiv1)
+            innerDiv1.appendChild(innerDiv1a)
+            innerDiv1a.appendChild(innerDiv1b_a)
+            innerDiv1a.appendChild(innerDiv1b)
+            innerDiv1a.appendChild(innerDiv1c)
+            innerDiv1a.appendChild(innerDiv1cc)
+            innerDiv1a.appendChild(innerDiv1d)
+            innerDiv1a.appendChild(innerDiv1e)
+
+        }
+
         function generatePeopleDiv(id,fname,lname, title,company,email,url1,url2,description, address, city,state,img1,userid) {
-
-
 
                 // grab the main container
                 var div1 = document.getElementById("div1");

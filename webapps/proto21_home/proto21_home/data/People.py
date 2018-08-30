@@ -14,6 +14,7 @@ class Person(SqlAlchemyBase):
 
     id = sqlalchemy.Column(sqlalchemy.String, primary_key=True,
                            default=lambda: str(uuid.uuid4()))
+    headline = sqlalchemy.Column( sqlalchemy.String )
     fname = sqlalchemy.Column(sqlalchemy.String, nullable=False)
     lname = sqlalchemy.Column(sqlalchemy.String, nullable=False)
     title = sqlalchemy.Column(sqlalchemy.String)
@@ -27,11 +28,13 @@ class Person(SqlAlchemyBase):
     city = sqlalchemy.Column(sqlalchemy.String)
     state = sqlalchemy.Column(sqlalchemy.String)
     img1 = sqlalchemy.Column( sqlalchemy.String )
+    interviewed = sqlalchemy.Column( sqlalchemy.String )
     date_created = sqlalchemy.Column(sqlalchemy.DateTime, index=True,
                                   default=datetime.datetime.now)
 
     def to_dict(self):
         return {
+            'headline': self.headline,
             'fname': self.fname,
             'lname': self.lname,
             'title': self.title,
@@ -45,6 +48,7 @@ class Person(SqlAlchemyBase):
             'city': self.city,
             'state': self.state,
             'img1': self.img1,
+            'interviewed': self.interviewed,
             'date_created': self.date_created.isoformat(),
             'id': self.id,
         }
