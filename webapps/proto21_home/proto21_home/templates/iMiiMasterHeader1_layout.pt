@@ -108,7 +108,7 @@
               <li><input type="button" class="button navbtn" value="MINING CYCLE"      id="btnMiningCycle"      onclick="resetBtnURL('btnMiningCycle','MiningCycle','true')" ></li>
               <li><input type="button" class="button navbtn" value="WOMEN IN MINING"   id="btnWomenInMining"    onclick="resetBtnURL('btnWomenInMining','WomenInMining','true')" ></li>
               <li><input type="button" class="button navbtn" value="TEACHER RESOURCES" id="btnTeacherResources" onclick="resetBtnURL('btnTeacherResources','TeacherResources','true')" ></li>
-              <li><input type="button" class="button navbtn" value="NEWS & EVENTS"     id="btnNewsAndEvents"    onclick="resetBtnURL('btnNewsAndEvents','NewsEvents','true')"></li>
+              <li><input type="button" class="button navbtn" value="OUR PROJECTS"     id="btnOurProjects"    onclick="resetBtnURL('btnOurProjects','OurProjects','true')"></li>
               <li><a href="https://twitter.com/GITC_Mining?lang=en" class="fa fa-twitter"  target="_blank"></a>
               <!--?<a href="https://twitter.com/intent/tweet?button_hashtag=gitc_mining&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #gitc_mining</a>-->
                   <!--?<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->

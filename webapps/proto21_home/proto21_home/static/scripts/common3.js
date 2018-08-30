@@ -1,8 +1,8 @@
 
 
 function getUrlBase() {
-     return 'http://localhost:6543/';
-     //return 'http://www.dev1.proto21.com/';
+     //return 'http://localhost:6543/';
+     return 'http://www.dev1.proto21.com/';
 }
 
 function verifyUser() {
@@ -50,8 +50,8 @@ function verifyUser() {
                             resetBtnURL('btnHome','iMii','true');
                             //hKeyVal = getHiddenKey();
                             //window.location.href = getUrlBase() + "People" + "?k=" + hKeyVal + "'";
-                        } else if (q == 'NewsEvents') {
-                            resetBtnURL('btnNewsAndEvents','NewsEvents','true')
+                        } else if (q == 'OurProjects') {
+                            resetBtnURL('btnOurProjects','OurProjects','true')
                         } else {
                             resetBtnURL('btnHome','iMii','true');
                         };
@@ -104,9 +104,9 @@ function getCurrentPage(url) {
     if (url.includes("People")) {
         //alert('yes');
         return 'People';
-    } else if (url.includes("NewsEvents")) {
+    } else if (url.includes("OurProjects")) {
         //alert('no');
-        return 'NewsEvents';
+        return 'OurProjects';
     } else {
         return 'none';
     };

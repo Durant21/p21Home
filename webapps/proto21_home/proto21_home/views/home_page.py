@@ -39,9 +39,9 @@ def my_view4b(request):
     return {'project': 'TeacherResources'}
 
 
-@view_config(route_name='NewsEvents', renderer='proto21_home:templates/NewsEvents.pt')
+@view_config(route_name='OurProjects', renderer='proto21_home:templates/OurProjects.pt')
 def my_view4c(request):
-    return {'project': 'NewsEvents'}
+    return {'project': 'OurProjects'}
 
 @view_config(route_name='WomenInMining', renderer='proto21_home:templates/WomenInMining.pt')
 def my_view4d(request):
@@ -201,11 +201,11 @@ def store_img1_view(request):
         w("error: store_img1_view - " + err)
 
 
-@view_config(route_name='store_img2_view', renderer='proto21_home:templates/NewsEvents.pt',
+@view_config(route_name='store_img2_view', renderer='proto21_home:templates/OurProjects.pt',
              request_method='POST')
 def my_view17(request):
     store_img2_view(request)
-    return {'project': 'NewsEvents'}
+    return {'project': 'OurProjects'}
 
 
 def store_img2_view(request):

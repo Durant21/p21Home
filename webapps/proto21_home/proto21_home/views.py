@@ -30,9 +30,9 @@ def my_view4a(request):
 def my_view4b(request):
     return {'project': 'TeacherResources'}
 
-@view_config(route_name='NewsEvents', renderer='templates/NewsEvents.pt')
+@view_config(route_name='OurProjects', renderer='templates/OurProjects.pt')
 def my_view4c(request):
-    return {'project': 'NewsEvents'}
+    return {'project': 'OurProjects'}
 
 @view_config(route_name='Discover', renderer='templates/Discover.pt')
 def my_view4(request):

@@ -57,7 +57,7 @@ def main(global_config, **settings):
     config.add_route( 'MiningCycle', '/MiningCycle' )
     config.add_route( 'TeacherResources', '/TeacherResources' )
     config.add_route( 'ParticipatingOrganizations', '/ParticipatingOrganizations' )
-    config.add_route( 'NewsEvents', '/NewsEvents' )
+    config.add_route( 'OurProjects', '/OurProjects' )
     config.add_route( 'WomenInMining', '/WomenInMining' )
     config.add_route( 'About', '/About' )
     config.add_route( 'Discover', '/Discover' )

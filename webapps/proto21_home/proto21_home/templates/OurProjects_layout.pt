@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>iMii News & Events</title>
+  <title>iMii Our Projects</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -180,7 +180,7 @@
               <!--?<p><a href="#">Link</a></p>-->
             </div>
             <div class="col-sm-8 text-left">
-          <h1>News & Events</h1>
+          <h1>Our Projects</h1>
           <!--?<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
           <hr>
 
@@ -522,7 +522,7 @@
             var modal = document.getElementById('myModal');
 
             var lblEventModal = document.getElementById('lblEventModal');
-            lblEventModal.innerHTML = 'Edit Event';
+            lblEventModal.innerHTML = 'Edit Project';
 
             var loc_id = document.getElementById('id');
             loc_id.value = _id.toString();
@@ -554,7 +554,7 @@
             //alert('add');
 
             var lblEventModal = document.getElementById('lblEventModal');
-            lblEventModal.innerHTML = 'Create Event';
+            lblEventModal.innerHTML = 'Create Project';
 
             var loc_id = document.getElementById('id');
             //loc_id.value = _id.toString();
@@ -648,10 +648,10 @@
                     //     setMessageDivVisibility("UnduplicatedUsersErrorResult");
                     // }
                     modal.style.display = "none";
-                    resetBtnURL('btnNewsAndEvents','NewsEvents','true')
+                    resetBtnURL('btnOurProjects','OurProjects','true')
                 },
                 error: function (xhr) {
-                    alert("ERROR");
+                    alert("error: " + xhr.responseText);
                 }
             });
 
@@ -709,11 +709,11 @@
                     //SetNotBusy();
                     //alert('success');
                     modal.style.display = "none";
-                    resetBtnURL('btnNewsAndEvents','NewsEvents','true')
+                    resetBtnURL('btnOurProjects','OurProjects','true')
 
                 },
                 error: function (xhr) {
-                    alert("ERROR");
+                    alert("error: " + xhr.responseText);
                 }
             });
         }
