@@ -16,7 +16,8 @@ class CreatePersonViewModel( ViewModelBase ):
         # if teacherId:
         #     teacherId = parse(teacherId)
         # brand = self.data_dict.get('brand')
-        fname = self.data_dict.get('fname' )
+        headline = self.data_dict.get('headline' )
+        fname = self.data_dict.get( 'fname' )
         lname = self.data_dict.get( 'lname' )
         title = self.data_dict.get('title')
         company = self.data_dict.get( 'company' )
@@ -27,6 +28,7 @@ class CreatePersonViewModel( ViewModelBase ):
         address = self.data_dict.get( 'address' )
         city = self.data_dict.get( 'city' )
         state = self.data_dict.get( 'state' )
+        interviewed = self.data_dict.get( 'interviewed' )
         # img1 = self.data_dict.get( 'img1' )
         # image = self.data_dict.get('image')
         # price = self.data_dict.get('price')
@@ -51,18 +53,20 @@ class CreatePersonViewModel( ViewModelBase ):
 
         if not self.errors:
             person = Person(
-                        lname=lname,
-                        fname=fname,
-                        company=company,
-                        title=title,
-                        email=email,
-                        url1=url1,
-                        url2=url2,
-                        description=description,
-                        address=address,
-                        city=city,
-                        state=state,
-                        id=id
+                headline=headline,
+                lname=lname,
+                fname=fname,
+                company=company,
+                title=title,
+                email=email,
+                url1=url1,
+                url2=url2,
+                description=description,
+                address=address,
+                city=city,
+                state=state,
+                interviewed=interviewed,
+                id=id
             )
             self.Person = person
 

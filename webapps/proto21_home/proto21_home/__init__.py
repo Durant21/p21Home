@@ -58,6 +58,7 @@ def main(global_config, **settings):
     config.add_route( 'TeacherResources', '/TeacherResources' )
     config.add_route( 'ParticipatingOrganizations', '/ParticipatingOrganizations' )
     config.add_route( 'NewsEvents', '/NewsEvents' )
+    config.add_route( 'WomenInMining', '/WomenInMining' )
     config.add_route( 'About', '/About' )
     config.add_route( 'Discover', '/Discover' )
     config.add_route( 'Plan', '/Plan' )
@@ -71,6 +72,7 @@ def main(global_config, **settings):
     config.add_route( 'iMiiMasterFooter1', '/iMiiMasterFooter1' )
     config.add_route( 'store_img1_view', '/store_img1_view' )  # http://localhost:6543/store_img1_view
     config.add_route( 'store_img2_view', '/store_img2_view' )
+    config.add_route( 'store_img3_view', '/store_img3_view' )
 
 
     # register_routes( config )
@@ -79,7 +81,8 @@ def main(global_config, **settings):
     config.add_route( 'auto_api', '/api/auto/{car_id}' )
 
     config.add_route( 'people_api', '/api/people' )
-    config.add_route( 'person_api', '/api/people/{person_id}' )
+    config.add_route( 'people_interviewed_api', '/api/people/{interviewed}' )
+    config.add_route( 'person_api', '/api/person/{person_id}' )
 
     config.add_route( 'events_api', '/api/events' )
     config.add_route( 'event_api', '/api/event/{event_id}' )
@@ -124,6 +127,7 @@ def register_routes(config):
     config.add_route( 'auto_api', '/api/auto/{car_id}' )
 
     config.add_route( 'people_api', '/api/people' )
+
     config.add_route( 'person_api', '/api/people/{person_id}' )
 
     config.add_route( 'events_api', '/api/events' )

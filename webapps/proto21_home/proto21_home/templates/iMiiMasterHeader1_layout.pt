@@ -104,8 +104,9 @@
               <!--?<li><input type="button" class="button navbtn" value="TEACHER RESOURCES" onclick="location.href='TeacherResources';" ></li>-->
               <!--?<li><input type="button" class="button navbtn" value="NEWS & EVENTS" onclick="location.href='NewsEvents';" ></li>-->
               <li><input type="button" class="button navbtn" value="HOME"              id="btnHome"             onclick="resetBtnURL('btnHome','iMii','true')" ></li>
-              <li><input type="button" class="button navbtn" value="MINING CYCLE"      id="btnMiningCycle"      onclick="resetBtnURL('btnMiningCycle','MiningCycle','true')" ></li>
               <li><input type="button" class="button navbtn" value="ABOUT"             id="btnAbout"            onclick="resetBtnURL('btnAbout','About','true')" ></li>
+              <li><input type="button" class="button navbtn" value="MINING CYCLE"      id="btnMiningCycle"      onclick="resetBtnURL('btnMiningCycle','MiningCycle','true')" ></li>
+              <li><input type="button" class="button navbtn" value="WOMEN IN MINING"   id="btnWomenInMining"    onclick="resetBtnURL('btnWomenInMining','WomenInMining','true')" ></li>
               <li><input type="button" class="button navbtn" value="TEACHER RESOURCES" id="btnTeacherResources" onclick="resetBtnURL('btnTeacherResources','TeacherResources','true')" ></li>
               <li><input type="button" class="button navbtn" value="NEWS & EVENTS"     id="btnNewsAndEvents"    onclick="resetBtnURL('btnNewsAndEvents','NewsEvents','true')"></li>
               <li><a href="https://twitter.com/GITC_Mining?lang=en" class="fa fa-twitter"  target="_blank"></a>

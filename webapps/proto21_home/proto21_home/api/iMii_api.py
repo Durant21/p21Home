@@ -142,6 +142,33 @@ def verifyLogIn(request):
     return user.to_dict()
 
 
+# @view_config(route_name='people_interviewed_api',
+#              request_method='GET',
+#              accept='application/json',
+#              renderer='json')
+# # @auth.require_api_auth
+# def all_people_interviewed(_):
+#     people = Repository_people.all_people(limit=25)
+#     return people
+
+
+@view_config(route_name='people_interviewed_api',
+             request_method='GET',
+             renderer='json')
+def interviewed_people(request: Request):
+    interviewed = request.matchdict.get('interviewed')
+    people = Repository_people.people_interviewed(interviewed,limit=25)
+    #people = Repository_people.all_people( limit=25 )
+
+    # if not person:
+    #     msg = "The person with id '{}' was not found.".format(person_id)
+    #     return Response(status=404,json_body={'error:': msg})
+    #
+    # return person
+
+    return people
+
+
 @view_config(route_name='people_api',
              request_method='GET',
              accept='application/json',

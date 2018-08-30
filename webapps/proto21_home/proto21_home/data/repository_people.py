@@ -44,6 +44,33 @@ class Repository_people:
 
         return person
 
+
+    @classmethod
+    def people_interviewed(cls, interviewed, limit=None):
+
+        #         session = DbSessionFactory.create_session()
+        #
+        #         person = session.query(Person).filter(Person.interviewed == 'yes')       #Person.id == person_id).first()
+        #
+        #         session.close()
+        #
+        #         return person
+        # ------------
+        session = DbSessionFactory.create_session()
+
+        # query = session.query( Person )  # .order_by(Teacher.lName)
+        query = session.query(Person).filter(Person.interviewed == 'yes')
+
+        if limit:
+            people = query[:limit]
+        else:
+            people = query.all()
+
+        session.close()
+
+        return people
+
+
     @classmethod
     def __load_data(cls):
         if cls.__people_data:
@@ -76,6 +103,7 @@ class Repository_people:
 
             db_people = Person()
             # db_people.last_seen = parse( person.last_seen )  # parse(teacher.certdate)
+            db_people.headline = person.headline
             db_people.fname = person.fname
             db_people.lname = person.lname
             db_people.title = person.title
@@ -87,6 +115,7 @@ class Repository_people:
             db_people.address = person.address
             db_people.city = person.city
             db_people.state = person.state
+            db_people.interviewed = person.interviewed
             # db_people.img1 = person.img1
             # db_car.image = person.image if car.image else random.choice(cls.__fake_image_url)
             # db_people.year = person.year
@@ -115,6 +144,7 @@ class Repository_people:
 
         db_person = session.query(Person).filter(Person.id == person.id).first()
         # db_car.last_seen = parse(car_data.last_seen)
+        db_person.headline = person.headline
         db_person.fname = person.fname
         db_person.lname = person.lname
         db_person.title = person.title

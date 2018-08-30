@@ -34,11 +34,11 @@
     </div>
         <div class="col-sm-12" style="background-color:black; height: 100px">
             <ul class="nav navbar-nav navbar-right">
-              <li><input type="button" class="button navbtn" value="" onclick="location.href='iMii';" ></li>
-              <li><input type="button" class="button navbtn" value=" " onclick="location.href='MiningCycle';" ></li>
-              <li><input type="button" class="button navbtn" style="width: 240px;word-wrap: break-word;" value="PARTICIPATING ORGANIZATIONS" onclick="location.href='ParticipatingOrganizations';" ></li>
-              <li><input type="button" class="button navbtn" style="width: 180px;word-wrap: break-word;" value="CAREER PATHWAYS" onclick="location.href='CareerPathways';" ></li>
-              <li><input type="button" class="button navbtn" style="width: 180px;word-wrap: break-word;" value="CONTACT US" onclick="location.href='ContactUs';" ></li>
+              <!--?<li><input type="button" class="button navbtn" value="" onclick="location.href='iMii';" ></li>-->
+              <!--?<li><input type="button" class="button navbtn" value=" " onclick="location.href='MiningCycle';" ></li>-->
+              <!--?<li><input type="button" class="button navbtn" style="width: 240px;word-wrap: break-word;" value="PARTICIPATING ORGANIZATIONS" onclick="location.href='ParticipatingOrganizations';" ></li>-->
+              <!--?<li><input type="button" class="button navbtn" style="width: 180px;word-wrap: break-word;" value="CAREER PATHWAYS" onclick="location.href='CareerPathways';" ></li>-->
+              <!--?<li><input type="button" class="button navbtn" style="width: 180px;word-wrap: break-word;" value="CONTACT US" onclick="location.href='ContactUs';" ></li>-->
             </ul>
     </div>
 </footer>
