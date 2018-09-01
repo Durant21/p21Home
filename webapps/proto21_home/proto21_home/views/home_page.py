@@ -97,6 +97,16 @@ def my_view10a(request):
 def my_view10b(request):
     return {'project': 'sqliteDB'}
 
+
+@view_config(route_name='pytest', renderer='proto21_home:templates/pytest.pt')
+def my_view10c(request):
+    return {'project': 'pytest'}
+
+
+@view_config(route_name='Logbook', renderer='proto21_home:templates/Logbook.pt')
+def my_view10d(request):
+    return {'project': 'Logbook'}
+
 @view_config(route_name='ParticipatingOrganizations', renderer='proto21_home:templates/ParticipatingOrganizations.pt')
 def my_view11(request):
     return {'project': 'ParticipatingOrganizations'}

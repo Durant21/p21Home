@@ -98,7 +98,23 @@
 
         </p>
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='sqliteDB';">
-    </div>
+      </div>
+
+      <div class="col-sm-4">
+        <h3>Python Web Development (testing)</h3>
+        <p>We'll use the site built in Python Web Development (basic) to build testing into our web application.
+
+        </p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='pytest';">
+      </div>
+
+      <div class="col-sm-4">
+        <h3>Python Web Development (logging)</h3>
+        <p>We'll use the site built in Python Web Development (basic) to add logging to our web application.
+
+        </p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='Logbook';">
+      </div>
 
       <br><br>
   </div>
