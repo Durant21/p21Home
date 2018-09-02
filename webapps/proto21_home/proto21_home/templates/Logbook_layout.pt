@@ -107,18 +107,18 @@
     </div>
     <div class="col-sm-8 text-left">
           <h1>Python Web Development <span style="font-weight:bold; color:dodgerblue;  font-size: smaller">Logbook</span></h1>
-          <p>Below are the steps required including tests in your web application.</p>
+          <p>Below are the steps required including logging in your web application.</p>
           <hr>
         What you will need: <br>
         <ul style="list-style-type:none">
           <li>Your favorite text editor.</li>
-          <li><a href="https://docs.pytest.org/en/latest/">pytest</a> - We'll use pytest to test our new API endpoints.</li>
+          <li><a href="https://pypi.org/project/Logbook/">Logbook</a> - We'll use Logbook to test our new API endpoints.</li>
         </ul>
 
         <br>
         <p>
             In the prototype <a href="/pythonwebdevelopment">Python Web Development (basic)</a>, we created a RESTful API service.
-This prototype will build on the work completed by adding a test file to the project.
+This prototype will build on the work completed by adding logging to the project.
         </p>
         <br>
         <h3>Step 1: Clone the git project</h3>

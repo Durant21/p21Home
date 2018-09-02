@@ -125,9 +125,11 @@ def verifyLogIn(request):
     # p = request.params['pw']
     y = "abc"
 
-    user = Repository.find_user_by_u_pw(u=u)
+    user = Repository.find_user_by_u_pw(u=u,plain_text_password=pw)
     if not user:
         return Response( status=403, body="Invalid user password; no user with these credentials" )
+
+
     # request.route_url()
     # print("------------------------------------------------  " + p)
     # request.args['language']

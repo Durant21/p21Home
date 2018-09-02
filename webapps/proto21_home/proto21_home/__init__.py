@@ -103,7 +103,7 @@ def init_db(config):
     db_file = settings.get('db_filename')
 
     DbSessionFactory.global_init(db_file)
-    # Repository.create_user('jeff')
+    # Repository.create_user('jeff','abc123')
     # Repository.create_user( 'chloe' )
     # Repository.create_user( 'sarah' )
     # Repository.create_user( 'mike' )

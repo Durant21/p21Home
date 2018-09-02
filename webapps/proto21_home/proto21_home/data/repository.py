@@ -7,6 +7,7 @@ import random
 # noinspection PyPackageRequirements
 from dateutil.parser import parse
 
+from passlib.handlers.sha2_crypt import sha512_crypt
 from proto21_home.data.db_factory import DbSessionFactory
 from proto21_home.data.Car import Car
 from proto21_home.data.User import User
@@ -148,21 +149,23 @@ class Repository:
         return user
 
     @classmethod
-    def find_user_by_u_pw(cls, u: str) -> User:
+    def find_user_by_u_pw(cls, u: str, plain_text_password: str) -> User:
 
         session = DbSessionFactory.create_session()
         # user = session.query(User).filter(User.name == u, User.hashed_password == pw).first()
         user = session.query( User ).filter( User.name == u ).first()
         session.close()
 
-        # return "abc"
+        # if not sha512_crypt.verify( plain_text_password, user.hashed_password ):
+        #     return None
+
         return user
 
     @classmethod
-    def create_user(cls, username):
+    def create_user(cls, username,plain_text_password):
 
         session = DbSessionFactory.create_session()
-
+        # hashed_pw = AccountService.hash_text( plain_text_password )
         user = User(name=username,hashed_password='abc123')
         session.add(user)
 
