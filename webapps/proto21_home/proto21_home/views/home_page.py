@@ -107,6 +107,17 @@ def my_view10c(request):
 def my_view10d(request):
     return {'project': 'Logbook'}
 
+
+@view_config(route_name='Authentication', renderer='proto21_home:templates/Authentication.pt')
+def my_view10e(request):
+    return {'project': 'Authentication'}
+
+
+@view_config(route_name='SecureEndpoint', renderer='proto21_home:templates/SecureEndpoint.pt')
+def my_view10f(request):
+    return {'project': 'SecureEndpoint'}
+
+
 @view_config(route_name='ParticipatingOrganizations', renderer='proto21_home:templates/ParticipatingOrganizations.pt')
 def my_view11(request):
     return {'project': 'ParticipatingOrganizations'}

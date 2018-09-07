@@ -127,20 +127,12 @@ def verifyLogIn(request):
 
     user = Repository.find_user_by_u_pw(u=u,plain_text_password=pw)
     if not user:
-        return Response( status=403, body="Invalid user password; no user with these credentials" )
+        thisdict = {
+            "api_key": "none"
+        }
+        # return Response( status=403, body="Invalid user or password; no user with these credentials" )
+        return thisdict
 
-
-    # request.route_url()
-    # print("------------------------------------------------  " + p)
-    # request.args['language']
-    # a = request.GET.get( 'u' )
-    # print("user: " + a)
-    # p = request.GET.get('pw')
-    # print( "pw: " + p )
-    # all_headers = dict( request.headers )
-    # # # v = t["Authorization"]
-    # user = all_headers["user"]
-    # pw = all_headers["password"]
     return user.to_dict()
 
 

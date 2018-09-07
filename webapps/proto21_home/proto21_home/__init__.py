@@ -55,6 +55,8 @@ def main(global_config, **settings):
     config.add_route( 'sqliteDB', '/sqliteDB' )
     config.add_route( 'pytest', '/pytest' )
     config.add_route( 'Logbook', '/Logbook' )
+    config.add_route( 'Authentication', '/Authentication' )
+    config.add_route( 'SecureEndpoint', '/SecureEndpoint' )
 
     config.add_route( 'MiningCycle', '/MiningCycle' )
     config.add_route( 'TeacherResources', '/TeacherResources' )
@@ -103,17 +105,17 @@ def init_db(config):
     db_file = settings.get('db_filename')
 
     DbSessionFactory.global_init(db_file)
-    # Repository.create_user('jeff','abc123')
+    # Repository.create_user('jeff4','abc123')
     # Repository.create_user( 'chloe' )
     # Repository.create_user( 'sarah' )
     # Repository.create_user( 'mike' )
-    # Repository.create_user( 'Debra' )
-    # Repository.create_user( 'Dante' )
-    # Repository.create_user( 'Laura' )
-    # Repository.create_user( 'Chad' )
-    # Repository.create_user( 'Jon' )
-    # Repository.create_user( 'Joan' )
-    # Repository.create_user( 'Admin' )
+    # Repository.create_user( 'Debra','abc123' )
+    # Repository.create_user( 'Dante','abc123' )
+    # Repository.create_user( 'Laura','abc123' )
+    # Repository.create_user( 'Chad','abc123' )
+    # Repository.create_user( 'Jon' ,'abc123')
+    # Repository.create_user( 'Joan' ,'abc123')
+    # Repository.create_user( 'Admin','abc123' )
 
 
 
@@ -134,8 +136,6 @@ def register_routes(config):
 
     config.add_route( 'events_api', '/api/events' )
     config.add_route( 'event_api', '/api/event/{event_id}' )
-
-
 
     # config.add_route( 'iMiiMasterHeader1', '/iMiiMasterHeader1' )
     # config.add_route( 'iMiiMasterFooter1', '/iMiiMasterFooter1' )

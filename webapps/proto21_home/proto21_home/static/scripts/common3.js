@@ -1,8 +1,8 @@
 
 
 function getUrlBase() {
-    return 'http://localhost:6543/';
-    //return 'http://www.dev1.proto21.com/';
+    //return 'http://localhost:6543/';
+    return 'http://www.dev1.proto21.com/';
 }
 
 function verifyUser() {
@@ -24,38 +24,46 @@ function verifyUser() {
                     success: function (data) {
                         //SetNotBusy();
                         var jsonObj = data;
-                        // var iLength = jsonObj.length;
-                        // var id = jsonObj.id;
 
                         //write key to hidden tag
-                        var hKey = document.getElementById('hKey');
-                        hKey.value = data.api_key;
-                        var hKey1 = document.getElementById('hKey1');
-                        hKey1.value = data.api_key;
-                        //alert('success ');
-                        setLogoutVisible('true');
 
-                        // set Login panel not visible
-                        var login = document.getElementById('login');
-                        login.style.display = "none";
+                        if (data.api_key) {
+                                var hKey = document.getElementById('hKey');
 
-                        resetAllAnchors();
-                        resetAllButtons();
+                                if (data.api_key == 'none') {
+                                    alert('Invalid user or password; no user with these credentials');
+                                } else {
+                                    hKey.value = data.api_key;
 
-                        var q = getCurrentPage(window.location.href);
-                        //alert(q);
-                        // redirect back to Home
-                        if (q == 'People') {
-                            //resetBtnURL('btnPeople','People','true');
-                            resetBtnURL('btnHome','iMii','true');
-                            //hKeyVal = getHiddenKey();
-                            //window.location.href = getUrlBase() + "People" + "?k=" + hKeyVal + "'";
-                        } else if (q == 'OurProjects') {
-                            resetBtnURL('btnOurProjects','OurProjects','true')
+                                    var hKey1 = document.getElementById('hKey1');
+                                    hKey1.value = data.api_key;
+
+                                    setLogoutVisible('true');
+
+                                    // set Login panel not visible
+                                    var login = document.getElementById('login');
+                                    login.style.display = "none";
+
+                                    resetAllAnchors();
+                                    resetAllButtons();
+
+                                    var q = getCurrentPage(window.location.href);
+
+                                    // redirect back to Home
+                                    if (q == 'People') {
+                                        resetBtnURL('btnHome','iMii','true');
+
+                                    } else if (q == 'OurProjects') {
+                                        resetBtnURL('btnOurProjects','OurProjects','true')
+                                    } else {
+                                        resetBtnURL('btnHome','iMii','true');
+                                    };
+                                }
+
                         } else {
-                            resetBtnURL('btnHome','iMii','true');
-                        };
+                            alert('Invalid user or password; no user with these credentials');
 
+                        }
 
 
                     },

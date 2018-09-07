@@ -116,11 +116,26 @@
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='Logbook';">
       </div>
 
-      <br><br>
+      <div class="col-sm-4">
+        <h3>Python Web Development (authentication) <span style="font-weight:bold; color:dodgerblue; font-size: smaller">Part 1</span></h3>
+        <p>We'll use the site built in Python Web Development (basic) to add authentication to our web application.
+
+        </p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='Authentication';">
+      </div>
+
+      <div class="col-sm-4">
+        <h3>Python Web Development (authentication) <span style="font-weight:bold; color:dodgerblue; font-size: smaller">Part 2</span></h3>
+        <p>We'll use the site built in part 1 of the authentication series to secure an API endpoint within our web application.
+
+        </p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='SecureEndpoint';">
+      </div>
+
   </div>
 </div>
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer class="stickyfooter">
   <a href="about_author" style="color:white;">Dante Fernandez</a>
 </footer>
