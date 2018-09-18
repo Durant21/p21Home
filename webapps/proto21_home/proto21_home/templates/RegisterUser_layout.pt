@@ -186,12 +186,12 @@ In this prototype, we will move to an MVC architecture and demonstrate how to us
         The landing page contains elements visible to a user who has come to the page and has not logged-in.<br>
         "sign in" and "register" are visible because the browser cookie doesn't contain a value for "logged_in_user_id" <br>
 
-        <img src="/images/Auth_cookie1.jpg" alt="Picture Description" style="width:80%">
+        <img src="/images/auth_cookie1.jpg" alt="Picture Description" style="width:80%">
 
         <br><br>
         An unauthenticated user could click on the "albums" button and see a listing of albums and tracks currently in the database.
 
-        <img src="/images/Auth_cookie2.jpg" alt="Picture Description" style="width:80%">
+        <img src="/images/auth_cookie2.jpg" alt="Picture Description" style="width:80%">
 
         <br><br>
 
@@ -199,7 +199,7 @@ The unauthenticated user has the option of either signing-in or registering as a
 On clicking register, the user is asked for e-mail and password.
 <br>
 
-<img src="/images/Auth_cookie3a.jpg" alt="Picture Description" style="width:80%">
+<img src="/images/auth_cookie3a.jpg" alt="Picture Description" style="width:80%">
 <br><br>
 
 
@@ -209,11 +209,11 @@ The method AccountService.find_account_by_email() verifies the provided e-mail a
         <table>
             <tr>
                 <th>
-                    <img src="/images/Auth_cookie3.jpg" alt="Picture Description" style="width:90%">
+                    <img src="/images/auth_cookie3.jpg" alt="Picture Description" style="width:90%">
                 </th>
 
                 <th>
-                    <img src="/images/Auth_cookie3b.jpg" alt="Picture Description" style="width:100%">
+                    <img src="/images/auth_cookie3b.jpg" alt="Picture Description" style="width:100%">
                 </th>
             </tr>
         </table>
@@ -225,11 +225,11 @@ The method AccountService.find_account_by_email() verifies the provided e-mail a
         <table>
             <tr>
                 <th>
-                    <img src="/images/Auth_cookie4b.jpg" alt="Picture Description" style="width:90%">
+                    <img src="/images/auth_cookie4b.jpg" alt="Picture Description" style="width:90%">
                 </th>
 
                 <th>
-                    <img src="/images/Auth_cookie4a.jpg" alt="Picture Description" style="width:100%">
+                    <img src="/images/auth_cookie4a.jpg" alt="Picture Description" style="width:100%">
                 </th>
             </tr>
         </table>
@@ -238,13 +238,13 @@ The method AccountService.find_account_by_email() verifies the provided e-mail a
 
 Once the e-mail address is verified as unique and a password has been provided, the user can be added to the database.
 <br>
-<img src="/images/Auth_cookie4d.jpg" alt="Picture Description" style="width:80%">
+<img src="/images/auth_cookie4d.jpg" alt="Picture Description" style="width:80%">
 
 
 <br><br>
 The user password is hashed before being entered into the database.
 <br>
-<img src="/images/Auth_cookie4c.jpg" alt="Picture Description" style="width:80%">
+<img src="/images/auth_cookie4c.jpg" alt="Picture Description" style="width:80%">
 
 
 <br><br>
@@ -252,11 +252,11 @@ Once in the system, the user can sign-in.  This process will query the user data
         <table>
             <tr>
                 <th>
-                    <img src="/images/Auth_cookie5b.jpg" alt="Picture Description" style="width:90%">
+                    <img src="/images/auth_cookie5b.jpg" alt="Picture Description" style="width:90%">
                 </th>
 
                 <th>
-                    <img src="/images/Auth_cookie5c.jpg" alt="Picture Description" style="width:100%">
+                    <img src="/images/auth_cookie5c.jpg" alt="Picture Description" style="width:100%">
                 </th>
             </tr>
         </table>
@@ -271,11 +271,11 @@ If the user account is located, the password provided at login must match the pa
         <table>
             <tr>
                 <th>
-                    <img src="/images/Auth_cookie5a.jpg" alt="Picture Description" style="width:90%">
+                    <img src="/images/auth_cookie5a.jpg" alt="Picture Description" style="width:90%">
                 </th>
 
                 <th>
-                    <img src="/images/Auth_cookie5d.jpg" alt="Picture Description" style="width:100%">
+                    <img src="/images/auth_cookie5d.jpg" alt="Picture Description" style="width:100%">
                 </th>
             </tr>
         </table>
@@ -286,7 +286,7 @@ If the user account is located, the password provided at login must match the pa
 
  If password can be verified, a user_id and a hash_val will be written to the cookie and the user will be redirected to an Account page.
  <br>
-<img src="/images/Auth_cookie6b.jpg" alt="Picture Description" style="width:80%">
+<img src="/images/auth_cookie6b.jpg" alt="Picture Description" style="width:80%">
 
 
        <br><br>
@@ -297,11 +297,11 @@ In the image below, user hash_val has been verified.  The "sign in" and "registe
         <table>
             <tr>
                 <th>
-                    <img src="/images/Auth_cookie6a.jpg" alt="Picture Description" style="width:90%">
+                    <img src="/images/auth_cookie6a.jpg" alt="Picture Description" style="width:90%">
                 </th>
 
                 <th>
-                    <img src="/images/Auth_cookie6c.jpg" alt="Picture Description" style="width:100%">
+                    <img src="/images/auth_cookie6c.jpg" alt="Picture Description" style="width:100%">
                 </th>
             </tr>
         </table>
