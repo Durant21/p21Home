@@ -386,8 +386,7 @@
 
                     <h4 style="color:blue">Next</h4>
 
-                    Part3 of our Authentication prototype series will discuss how to use the above api-key and cookies
-                    to re-authenticate a user as he or she moves from page to page.
+                    Part3 of our Authentication prototype series will discuss User registration and authentication using cookies.
 
 
 <br>    <br><br><br>

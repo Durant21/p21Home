@@ -57,6 +57,7 @@ def main(global_config, **settings):
     config.add_route( 'Logbook', '/Logbook' )
     config.add_route( 'Authentication', '/Authentication' )
     config.add_route( 'SecureEndpoint', '/SecureEndpoint' )
+    config.add_route( 'RegisterUser', '/RegisterUser' )
 
     config.add_route( 'MiningCycle', '/MiningCycle' )
     config.add_route( 'TeacherResources', '/TeacherResources' )

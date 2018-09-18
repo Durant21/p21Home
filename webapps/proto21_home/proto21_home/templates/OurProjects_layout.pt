@@ -602,7 +602,6 @@
         }
 
         function CreateNewsAndEvents() {
-            //alert('CreateNewsAndEvents');
             var aNewsAndEvent = '{' +
                     '"headline": "' + document.getElementById("headline").value + '",' +
                     '"event_date": "' + document.getElementById("event_date").value + '",' +
@@ -610,43 +609,16 @@
                     '"url": "' + document.getElementById("url").value + '"' +
                 '}';
 
-        // "headline": "STEM Day 2018",
-        // "event_date": "2017-08-07",
-        // "description": " careers in earth sciences",
-        // "url": " www.stem.org"
-
-            //alert(aNewsAndEvent);
-            //alert(getUrlBase() + "api/events");
             $.ajax({
                 url: getUrlBase() + "api/events",
                 type: "POST",
-                //data: "{'editOptions':'" + aUnduplicatedUsers + "'}",
                 data: aNewsAndEvent,
-                //Host: localhost:6543,
-                //Cache-Control: no-cache
-                //dataType: "json",
-                //contentType: "application/json; charset=utf-8",
 
                 beforeSend: function () {
-                    //turnBothOff("UnduplicatedUsersSuccessResult", "UnduplicatedUsersErrorResult");
-                    //SetBusy();
+
                 },
 
                 success: function (response) {
-                    //SetNotBusy();
-                    //alert('success called');
-                    // if (response === "True") {
-                    //     //refresh the screen
-                    //     //SiteChanged();
-                    //
-                    //     if (anumber1 != anumber2) {
-                    //         setMessageDivVisibility("UnduplicatedUsersErrorInSummation");
-                    //     } else {
-                    //         setMessageDivVisibility("UnduplicatedUsersSuccessResult");
-                    //     }
-                    // } else {
-                    //     setMessageDivVisibility("UnduplicatedUsersErrorResult");
-                    // }
                     modal.style.display = "none";
                     resetBtnURL('btnOurProjects','OurProjects','true')
                 },
@@ -671,17 +643,6 @@
             //date.value = _event_date;
 
             var description = document.getElementById('description');
-            //description.value = _description;
-
-            //var event_url = document.getElementById('url');
-
-            // var aNewsAndEvent = '{\n' +
-            //         '        "headline": "EarthDay 2018",\n' +
-            //         '        "event_date": "2018-04-07T03:46:09",\n' +
-            //         '        "description": " careers in earth and physical sciencess",\n' +
-            //         '        "url": null,\n' +
-            //         '        "id": "7c17146f-c0d6-43ec-9c2e-25f946b403b9"\n' +
-            //         '}';
 
             var aNewsAndEvent = '{' +
                 '"headline": "' + document.getElementById("headline").value + '",' +
@@ -692,17 +653,14 @@
                 '"id": "' + document.getElementById("id").value +
                 '"}';
 
-            //alert(aNewsAndEvent);
-            //alert(getUrlBase() + "api/event/" + loc_id);
+
             $.ajax({
                 url: getUrlBase() + "api/event/" + loc_id,
                 type: "PUT",
-                //data: "{'editOptions':'" + aUnduplicatedUsers + "'}",
                 data: aNewsAndEvent,
 
                 beforeSend: function () {
-                    //turnBothOff("UnduplicatedUsersSuccessResult", "UnduplicatedUsersErrorResult");
-                    //SetBusy();
+
                 },
 
                 success: function (response) {

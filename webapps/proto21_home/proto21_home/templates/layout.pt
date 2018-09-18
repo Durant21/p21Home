@@ -132,6 +132,13 @@
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='SecureEndpoint';">
       </div>
 
+      <div class="col-sm-4">
+        <h3>Python Web Development (authentication) <span style="font-weight:bold; color:dodgerblue; font-size: smaller">Part 3</span></h3>
+        <p>We'll look at User registration and authentication using cookies.
+        </p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='RegisterUser';">
+      </div>
+
   </div>
 </div>
 

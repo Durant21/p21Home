@@ -118,6 +118,11 @@ def my_view10f(request):
     return {'project': 'SecureEndpoint'}
 
 
+@view_config(route_name='RegisterUser', renderer='proto21_home:templates/RegisterUser.pt')
+def my_view10g(request):
+    return {'project': 'RegisterUser'}
+
+
 @view_config(route_name='ParticipatingOrganizations', renderer='proto21_home:templates/ParticipatingOrganizations.pt')
 def my_view11(request):
     return {'project': 'ParticipatingOrganizations'}
