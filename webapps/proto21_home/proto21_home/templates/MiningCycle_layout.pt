@@ -10,6 +10,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+
+      body {
+          font-family: Courier New;
+        }
+
 div#header {
  margin: 0 auto;
  width: 90%;
@@ -36,19 +41,19 @@ div.column2 {
           width: 200px;
         }
 
-      .button {
-            background-color: black;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 24px;
-            margin: 4px 2px;
-            cursor: pointer;
-            font-family: Verdana, Geneva, sans-serif;
-        }
+      /*.button {*/
+            /*background-color: red;*/
+            /*border: none;*/
+            /*color: white;*/
+            /*padding: 15px 32px;*/
+            /*text-align: center;*/
+            /*text-decoration: none;*/
+            /*display: inline-block;*/
+            /*font-size: 24px;*/
+            /*margin: 4px 2px;*/
+            /*cursor: pointer;*/
+            /*font-family: Verdana, Geneva, sans-serif;*/
+        /*}*/
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
       margin-bottom: 0;

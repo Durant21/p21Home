@@ -29,6 +29,8 @@ class CreatePersonViewModel( ViewModelBase ):
         city = self.data_dict.get( 'city' )
         state = self.data_dict.get( 'state' )
         interviewed = self.data_dict.get( 'interviewed' )
+        interview = self.data_dict.get( 'interview' )
+        doc1 = self.data_dict.get( 'doc1' )
         # img1 = self.data_dict.get( 'img1' )
         # image = self.data_dict.get('image')
         # price = self.data_dict.get('price')
@@ -66,6 +68,8 @@ class CreatePersonViewModel( ViewModelBase ):
                 city=city,
                 state=state,
                 interviewed=interviewed,
+                interview=interview,
+                doc1=doc1,
                 id=id
             )
             self.Person = person

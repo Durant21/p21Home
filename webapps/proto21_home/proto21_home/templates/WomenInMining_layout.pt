@@ -25,7 +25,7 @@
             background-color: dodgerblue;
             border: none;
             color: white;
-            padding: 6px 12px;
+            padding: 4px 5px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -208,6 +208,10 @@
             width: 80%;
         }
 
+        .control-height {
+            height: 100px;
+        }
+
         /* Modal Content */
         .modal-content {
             background-color: #fefefe;
@@ -358,6 +362,17 @@ i>-->
                               <label for="state">state:</label>
                               <input type="text" class="form-control control-width" id="state" placeholder="Enter state">
                             </div>
+                            <div class="form-group">
+                              <label for="interview">interview1:</label>
+                              <input type="text" class="form-control control-width control-height" id="interview" placeholder="Enter inteview">
+                            </div>
+                            <!--?<div class="form-group">-->
+                                <!--?<label for="interview">interview:</label>-->
+                                <!--?<br>-->
+                                <!--?<textarea style="width:250px;height:150px;" class="form-control control-width"  id="interview">-->
+                                <!--?Enter interview1-->
+                                <!--?</textarea>-->
+                            <!--?</div>-->
                             <!--?<div class="form-group">-->
                               <!--?<label for="img1a">img1a:</label>-->
                               <!--?<input type="text" class="form-control control-width" id="img1a" placeholder="Enter img1">-->
@@ -401,6 +416,34 @@ i>-->
 
             </div>
 
+            <div id="doc1Modal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close" onclick="closeDoc1Modal()">&times;</span>
+                <!--?<p>Some text in the Modal..</p>-->
+
+                  <div class="container">
+                      <h2 id="lblDoc1Modal">Edit document</h2>
+
+                        <!--?<div class="col-sm-8 text-left">-->
+                          <h3>Document Upload</h3>
+                            <form action="/store_doc1_view" method="post" accept-charset="utf-8"
+                                  enctype="multipart/form-data">
+                                <input type="text" class="form-control control-width" id="doc1_id" name="doc1_id" placeholder="id">
+
+                                <label for="img1">document file</label>
+                                <input id="doc1" name="doc1" type="file" value="" />
+                                <br>
+                                <input type="submit" value="submit" class="btn btn-default" />
+                            </form>
+
+
+                        <!--?</div>-->
+                  </div>
+              </div>
+
+            </div>
         </div>
         <div id="div2" name="div2" class="col-sm-12 text-right" style="background-color: white; align-content:right">
             <button id="myBtnOpenAdd" hidden="true" title="Create a new Person"  onclick="OpenForAdd()">+</button>
@@ -451,6 +494,15 @@ i>-->
         function OpenForEditImage(_id) {
             var modal = document.getElementById('imgModal');
             var loc_id = document.getElementById('img_id');
+            loc_id.value = _id.toString();
+            loc_id.style.display = "none";
+
+            modal.style.display = "block";
+        }
+
+        function OpenForEditDoc1(_id) {
+            var modal = document.getElementById('doc1Modal');
+            var loc_id = document.getElementById('doc1_id');
             loc_id.value = _id.toString();
             loc_id.style.display = "none";
 
@@ -638,7 +690,6 @@ i>-->
         }
 
         function UpdatePeople() {
-            //alert('UpdatePeople');
             var modal = document.getElementById('myModal');
             var loc_id = document.getElementById('id').value ;
 
@@ -666,10 +717,11 @@ i>-->
                             '"city": "' + document.getElementById("city").value + '",' +
                             '"state": "' + document.getElementById("state").value + '",' +
                             '"img1": "' + document.getElementById("img1").value + '",' +
+                    '"interview": "' + document.getElementById("interview").value + '",' +
                             '"id": "' + document.getElementById("id").value +
                 '"}';
 
-            //alert(aPerson);
+            alert(aPerson);
             //alert(getUrlBase() + "api/event/" + loc_id);
             $.ajax({
                 url: getUrlBase() + "api/person/" + loc_id,
@@ -783,7 +835,13 @@ i>-->
 
                         var event_date = '1/1/2029';
                         var event_name = 'the event name';
-                        var event_url = 'www.esri.com';
+                        var event_url = 'www.respec.com';
+                        if (jsonObj.id) {
+                            var doc_url = getUrlBase() + 'docs/' + jsonObj.id;
+                        } else {
+                            var doc_url = '';
+                        }
+
                         //var userid = '';
 
 
@@ -806,9 +864,15 @@ i>-->
                                     city = jsonObj[i]['city'];
                                     state = jsonObj[i]['state'];
                                     img_url = getUrlBase() + "images/" + jsonObj[i]['img1'];
+                                    if (jsonObj[i]['doc1']) {
+                                        doc_url = getUrlBase() + "docs/" + jsonObj[i]['doc1'];
+                                    } else {
+                                        doc_url = '';
+                                    }
+
                                     //console.log(aval)
                                     //generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1,userid);
-                                    generateEventsDiv(id, event_name, img_url, event_date, description, event_url, userid);
+                                    generateEventsDiv(id, event_name, img_url, event_date, description, event_url,doc_url, userid);
                                     //alert(jsonObj[i])
                                 }
                             }
@@ -817,7 +881,7 @@ i>-->
                         } else {
                             //id = jsonObj[i]['id'];
                             //generatePeopleDiv(id,fname,lname,title,company,email,url1,url2,description, address, city,state,img1);
-                                generateEventsDiv(id,event_name,img_url,event_date,description,event_url,userid);
+                                generateEventsDiv(id,event_name,img_url,event_date,description,event_url,doc_url, userid);
                         }
 
                         // var jsonObj = data;
@@ -848,7 +912,7 @@ i>-->
             }
 
 
-        function generateEventsDiv(id, headline,img_url,event_date,description,event_url,userid) {
+        function generateEventsDiv(id, headline,img_url,event_date,description,event_url,doc_url,userid) {
 
 
             // grab the main container
@@ -867,11 +931,11 @@ i>-->
 
             var innerDiv1b_a = document.createElement("div")
             //innerDiv1b.className="panel-heading"
-            innerDiv1b_a.className="row1a text-right";//"row1a"
+            innerDiv1b_a.className="row1a text-center";//"row1a"
 
             var innerDiv1b = document.createElement("div")
             innerDiv1b.className="panel-heading"
-            //innerDiv1b.className="row1a text-right";//"row1a"
+            //innerDiv1b.className="row1a text-center";//"row1a"
             var text1b = document.createElement("text")
             text1b.innerHTML = headline;
             innerDiv1b.appendChild(text1b);
@@ -916,7 +980,8 @@ i>-->
                                                                     + "'" + address + "',"
                                                                     + "'" + city + "',"
                                                                     + "'" + state + "',"
-                                                                    + "'" + img_url + "'"
+                                                                    + "'" + img_url + "',"
+                                                                    + "'" + doc_url + "'"
                                                                     + ")");
             if(userid){
                 if((userid.trim()=="none")||(userid.trim()=="undefined")){
@@ -948,6 +1013,27 @@ i>-->
 
                 } else {
                     innerDiv1b_a.appendChild(innerDiv1buttonImg);
+                }
+            } else {
+
+            }
+
+            var innerDiv1buttonDoc1 = document.createElement("button");
+            innerDiv1buttonDoc1.setAttribute('id','ttt');
+            innerDiv1buttonDoc1.setAttribute('content', 'test content');
+            innerDiv1buttonDoc1.setAttribute('class', 'btn');
+            innerDiv1buttonDoc1.innerHTML = 'document';
+
+            innerDiv1buttonDoc1.setAttribute('onclick', "OpenForEditDoc1('" + id.toString() + "'"
+                                                                + ")");
+
+
+            if(userid) {
+
+                if((userid.trim()=="none")||(userid.trim()=="undefined")){
+
+                } else {
+                    innerDiv1b_a.appendChild(innerDiv1buttonDoc1);
                 }
             } else {
 
@@ -985,7 +1071,7 @@ i>-->
             innerDiv1eButton.setAttribute('onclick', "location.href = 'http://" + event_url + "';");
             innerDiv1eButton.setAttribute('target', "_blank");
 
-            //innerDiv1e.appendChild(innerDiv1eButton)
+
 
             if (event_url) {
                 var innerDiv1eAnchor = document.createElement("a")
@@ -1001,6 +1087,28 @@ i>-->
             }
 
 
+            var innerDiv1f = document.createElement("div")
+            innerDiv1f.className="panel-footer"
+            var innerDiv1fButton = document.createElement("button")
+            innerDiv1fButton.className="btn btn-lg";
+            innerDiv1fButton.innerText = "go2";
+            innerDiv1fButton.setAttribute('onclick', "location.href = 'http://" + event_url + "';");
+            innerDiv1fButton.setAttribute('target', "_blank");
+
+            if (doc_url) {
+                var innerDiv1fAnchor = document.createElement("a")
+                //innerDiv1eAnchor.className="btn btn-lg";
+                innerDiv1fAnchor.innerText = "Download Document"
+                // innerDiv1fAnchor.setAttribute('href', "http://" + doc_url + "");
+                innerDiv1fAnchor.setAttribute('href', doc_url);
+                innerDiv1fAnchor.setAttribute('target', "_blank");
+                if (doc_url != '') {
+                    innerDiv1f.appendChild(innerDiv1fAnchor);
+                } else {
+                    innerDiv1fAnchor.setAttribute('style:display', "none");
+                }
+            }
+
             div1.appendChild(innerDiv1)
             innerDiv1.appendChild(innerDiv1a)
             innerDiv1a.appendChild(innerDiv1b_a)
@@ -1009,6 +1117,7 @@ i>-->
             innerDiv1a.appendChild(innerDiv1cc)
             innerDiv1a.appendChild(innerDiv1d)
             innerDiv1a.appendChild(innerDiv1e)
+            innerDiv1a.appendChild(innerDiv1f)
 
         }
 
@@ -1023,7 +1132,7 @@ i>-->
 
 
                 var innerDiv1a = document.createElement("div");
-                innerDiv1a.className="row1a text-right";//"row1a"
+                innerDiv1a.className="row1a text-center";//"row1a"
 
                 var innerDiv2a = document.createElement("div");
                 innerDiv2a.className="row1";
@@ -1158,9 +1267,9 @@ i>-->
     </script>
 
     <script>
-        function closeImgModal() {
-            var imgModal = document.getElementById('imgModal');
-            imgModal.style.display = "none";
+        function closeDoc1Modal() {
+            var doc1Modal = document.getElementById('doc1Modal');
+            doc1Modal.style.display = "none";
         }
 
     </script>

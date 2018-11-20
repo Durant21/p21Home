@@ -44,6 +44,7 @@ def main(global_config, **settings):
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_static_view( 'scripts', 'static/scripts' )
     config.add_static_view( 'images', 'static/images' )
+    config.add_static_view( 'docs', 'static/docs' )
     config.add_static_view( 'graphics', 'static/graphics' )
     config.add_route('home', '/')
     config.add_route('blog','/blog')
@@ -78,6 +79,7 @@ def main(global_config, **settings):
     config.add_route( 'store_img1_view', '/store_img1_view' )  # http://localhost:6543/store_img1_view
     config.add_route( 'store_img2_view', '/store_img2_view' )
     config.add_route( 'store_img3_view', '/store_img3_view' )
+    config.add_route( 'store_doc1_view', '/store_doc1_view' )
 
 
     # register_routes( config )
