@@ -71,61 +71,52 @@
 </head>
 <body>
 
-   <!--?   HEADER  -->
-<!--?<nav class="navbar navbar-inverse">-->
-  <!--?<div class="container-fluid">-->
-    <!--?<div class="navbar-header">-->
-      <!--?<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">-->
-        <!--?<span class="icon-bar"></span>-->
-        <!--?<span class="icon-bar"></span>-->
-        <!--?<span class="icon-bar"></span>-->
-      <!--?</button>-->
-      <!--?<a class="navbar-brand" href="#">Logo</a>-->
-    <!--?</div>-->
-    <!--?<div class="collapse navbar-collapse" id="myNavbar">-->
-      <!--?<ul class="nav navbar-nav">-->
-          <!--?<li><input type="button" class="button navbtn" value="HOME" onclick="location.href='iMii';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="MINING CYCLE" onclick="location.href='MiningCycle';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="ABOUT" onclick="location.href='About';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="TEACHER RESOURCES" onclick="location.href='TeacherResources';" ></li>-->
-          <!--?<li><input type="button" class="button navbtn" value="NEWS & EVENTS" onclick="location.href='NewsEvents';" ></li>-->
-      <!--?</ul>-->
 
-      <!--?<ul class="nav navbar-nav navbar-right">-->
-        <!--?<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
-      <!--?</ul>-->
-    <!--?</div>-->
-  <!--?</div>-->
-<!--?</nav>-->
 
    <div id="includedHeader"></div>
 
 <div class="container-fluid text-center">
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <!--?<p><a href="#">Link</a></p>-->
-      <!--?<p><a href="#">Link</a></p>-->
-      <!--?<p><a href="#">Link</a></p>-->
+    <div class="col-sm-6 text-left" style="padding-top: 15px; padding-bottom: 0px;">
+      <div class="row">
+                <div class="col-sm-1" style="background-color:white; color:green; height:500px; align-content: center"></div>
+                <div class="col-sm-10" style="background-color:white; color:green; height:500px; align-content: center">
+                    <img src="/graphics/Plan_Blur.png" alt="Picture Description" usemap="#planetmap" style="width: 500px; height: 500px; left:300px">
+                    <map name="planetmap">
+                        <!--?<area shape="circle" coords="<top left><bottom right>" alt="Mercury" href="https://www.google.com">-->
+                        <area shape="rect" id="aDiscover" style="color:green" coords="150,0,350,150" href="Discover">
+                        <area shape="rect" id="aPlan" style="color:white" coords="350,130,500,350" href="Plan">
+                        <area shape="rect" id="aMiningCycle" style="color:white" coords="150,200,300,300" href="MiningCycle">
+                        <area shape="rect" id="aMine" style="color:white" coords="170,350,330,600" href="Mine">
+                        <area shape="rect" id="aReclaim" style="color:white" coords="0,130,130,350" href="Reclaim">
+
+                        <!--?<img src="http://localhost:6543/graphics/reclaim_isolated.png" alt="Picture Description" style="width:100%">-->
+                    </map>
+
+                </div>
+                <div class="col-sm-1" style="background-color:white; color:green; height:500px; align-content: center"></div>
+            </div>
     </div>
-    <div class="col-sm-8 text-left">
-      <h1>Plan</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...
-      <!--?<input type="button" class="btn btn-info" value="People" onclick="location.href='http://www.esri.com';" >-->
-      <!--?<input type="button" class="btn btn-info" value="Curricula">-->
-      <!--?<input type="button" class="btn btn-info" value="Mine">-->
-      <!--?<input type="button" class="btn btn-info" value="Reclaim">-->
+    <div class="col-sm-6 text-left">
+      <h1>PLAN</h1>
+      <p>
+The Plan stage of the Mining Cycle diagram marks the second stage of mining
+and minerals activities. In this stage, minerals of potentially economic
+concentrations have been established, and the plans for the financing,
+engineering and processing of the extraction of the minerals from the ground
+need to be laid out. This stage tends to involve sciences, including geoscience,
+environmental science and biology to name a few, as well as engineering,
+financial experts, and project management professionals. As mentioned, the
+continued focus on community engagement and environmental assessment
+work is a key part of the Plan stage. If a project can pass the scientific,
+economic, environmental, engineering and community considerations,
+the project can advance on to the Mine Stage.
+ <br><br><H3><strong>OUR PROJECTS</strong></H3><br>
+Click on the Projects tab below to find out more about curriculum connections
+to the Plan stage.
       </p>
-    </div>
-    <div class="col-sm-2 sidenav">
-      <!--?<div class="well">-->
-        <!--?<p>ADS</p>-->
-      <!--?</div>-->
-      <!--?<div class="well">-->
-        <!--?<p>ADS</p>-->
-      <!--?</div>-->
+      <hr>
+
     </div>
   </div>
 </div>
