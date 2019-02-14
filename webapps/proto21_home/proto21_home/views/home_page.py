@@ -47,6 +47,7 @@ def my_view4c(request):
 def my_view4d(request):
     return {'project': 'WomenInMining'}
 
+
 @view_config(route_name='Discover', renderer='proto21_home:templates/Discover.pt')
 def my_view4(request):
     return {'project': 'Discover'}
@@ -120,6 +121,16 @@ def my_view10f(request):
 
 @view_config(route_name='RegisterUser', renderer='proto21_home:templates/RegisterUser.pt')
 def my_view10g(request):
+    return {'project': 'RegisterUser'}
+
+
+@view_config(route_name='Leaflet1', renderer='proto21_home:templates/Leaflet1.pt')
+def my_view10h(request):
+    return {'project': 'RegisterUser'}
+
+
+@view_config(route_name='Angular1', renderer='proto21_home:templates/Angular1.pt')
+def my_view10i(request):
     return {'project': 'RegisterUser'}
 
 

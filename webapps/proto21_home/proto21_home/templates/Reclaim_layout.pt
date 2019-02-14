@@ -102,30 +102,47 @@
 
 <div class="container-fluid text-center">
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <!--?<p><a href="#">Link</a></p>-->
-      <!--?<p><a href="#">Link</a></p>-->
-      <!--?<p><a href="#">Link</a></p>-->
+    <div class="col-sm-6 text-left" style="padding-top: 15px; padding-bottom: 0px;">
+      <div class="row">
+                <div class="col-sm-1" style="background-color:white; color:green; height:500px; align-content: center"></div>
+                <div class="col-sm-10" style="background-color:white; color:green; height:500px; align-content: center">
+                    <img src="/graphics/Reclaim_Blur.png" alt="Picture Description" usemap="#planetmap" style="width: 500px; height: 500px; left:300px">
+                    <map name="planetmap">
+                        <!--?<area shape="circle" coords="<top left><bottom right>" alt="Mercury" href="https://www.google.com">-->
+                        <area shape="rect" id="aDiscover" style="color:green" coords="150,0,350,150" href="Discover">
+                        <area shape="rect" id="aPlan" style="color:white" coords="350,130,500,350" href="Plan">
+                        <area shape="rect" id="aMiningCycle" style="color:white" coords="150,200,300,300" href="MiningCycle">
+                        <area shape="rect" id="aMine" style="color:white" coords="170,350,330,600" href="Mine">
+                        <area shape="rect" id="aReclaim" style="color:white" coords="0,130,130,350" href="Reclaim">
+
+                        <!--?<img src="http://localhost:6543/graphics/reclaim_isolated.png" alt="Picture Description" style="width:100%">-->
+                    </map>
+
+                </div>
+                <div class="col-sm-1" style="background-color:white; color:green; height:500px; align-content: center"></div>
+            </div>
     </div>
-    <div class="col-sm-8 text-left">
-      <h1>Reclaim</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...
-      <!--?<input type="button" class="btn btn-info" value="People" onclick="location.href='http://www.esri.com';" >-->
-      <!--?<input type="button" class="btn btn-info" value="Curricula">-->
-      <!--?<input type="button" class="btn btn-info" value="Mine">-->
-      <!--?<input type="button" class="btn btn-info" value="Reclaim">-->
+    <div class="col-sm-6 text-left">
+      <h1>RECLAIM</h1>
+      <p>
+The Reclaim stage of the Mining Cycle diagram marks the fourth and final
+stage of mining and minerals activities. In this stage, the mine, tailings or
+other surface wastes and buildings are decommissioned and the land is
+returned back to its former landscape. Additionally, mine workings can be
+repurposed for other uses as determined by stakeholders, such as an
+underground dirt bike tracks, in the case of a conventional mine, or a garden,
+in the case of an open pit mine. Reclamation activities must be approved by
+regulators and must be undertaken as per the activities established in the
+Plan stage. The Reclaim stage involves many disciplines of mining experts,
+including environmental scientists, biologists, engineers, project managers
+and financial experts, to name a few. Community engagement and
+environmental assessment continues through the Reclaim stage.
+ <br><br><H3><strong>OUR PROJECTS</strong></H3><br>
+Click on the Projects tab below to find out more about curriculum connections
+to the Reclaim stage.
       </p>
-    </div>
-    <div class="col-sm-2 sidenav">
-      <!--?<div class="well">-->
-        <!--?<p>ADS</p>-->
-      <!--?</div>-->
-      <!--?<div class="well">-->
-        <!--?<p>ADS</p>-->
-      <!--?</div>-->
+      <hr>
+
     </div>
   </div>
 </div>
