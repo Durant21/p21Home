@@ -139,6 +139,20 @@
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='RegisterUser';">
       </div>
 
+      <div class="col-sm-4">
+        <h3>Python Web Development (GIS) <span style="font-weight:bold; color:dodgerblue; font-size: smaller"></span></h3>
+        <p>We'll use Python and Leaflet to create the base of our Geographic Information System.
+        </p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='Leaflet1';">
+      </div>
+
+      <div class="col-sm-4">
+        <h3>Python Web Development (Angular) <span style="font-weight:bold; color:dodgerblue; font-size: smaller"></span></h3>
+        <p>We'll use a Python RESTful service project in our exploration of Angular.
+        </p>
+        <input type="button" class="btn btn-info" value="Open" onclick="location.href='Angular1';">
+      </div>
+
   </div>
 </div>
 
