@@ -61,6 +61,7 @@ def main(global_config, **settings):
     config.add_route( 'RegisterUser', '/RegisterUser' )
     config.add_route( 'Leaflet1', '/Leaflet1')
     config.add_route('Angular1', '/Angular1')
+    config.add_route( 'File_Compare', '/File_Compare' )
 
     config.add_route( 'MiningCycle', '/MiningCycle' )
     config.add_route( 'TeacherResources', '/TeacherResources' )
