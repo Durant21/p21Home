@@ -51,6 +51,7 @@ systemctl status auto_svc
 rm /etc/nginx/sites-enabled/default
 
 cp /webapps/proto21/p21Home/webapps/proto21_home/proto21_home/etc/nginx/sites-available/proto21_service.nginx /etc/nginx/sites-available/
+cp /webapps/proto21/p21Home/webapps/proto21_home/proto21_home/etc/nginx/sites-available/proto21_service.nginx /etc/nginx/sites-enabled/
 
 update-rc.d nginx enable
 
