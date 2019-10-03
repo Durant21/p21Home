@@ -1,9 +1,9 @@
 import unittest
-import requests
-import responses
-
-from pyramid import testing
-from pyramid.view import view_config
+# import requests
+# import responses
+#
+# from pyramid import testing
+# from pyramid.view import view_config
 
 
 # class ViewTests(unittest.TestCase):
