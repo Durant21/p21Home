@@ -154,7 +154,7 @@
       </div>
       
       <div class="col-sm-4">
-        <h3>File Compare (Linux) <span style="font-weight:bold; color:dodgerblue; font-size: smaller"></span></h3>
+        <h3>File Compare (Linux).. <span style="font-weight:bold; color:dodgerblue; font-size: smaller"></span></h3>
         <p>We'll explore several ways of comparing files.
         </p>
         <input type="button" class="btn btn-info" value="Open" onclick="location.href='File_Compare';">

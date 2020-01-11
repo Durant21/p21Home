@@ -23,6 +23,7 @@ Getting Started
 - Run your project's tests.
 
     env/bin/pytest
+    python -m pytest
 
 - Run your project.
 

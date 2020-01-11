@@ -18,6 +18,7 @@ requires = [
     'requests',
     'python-dateutil',
     'sqlalchemy',
+    'pytest-cov',
     'pytest',
     'responses'
 ]
